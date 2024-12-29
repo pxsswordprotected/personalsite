@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 20px;
+            line-height: 1.6;
+            background: url('post_bg.jpg');
+            font-weight: normal;
+        }
+        header {
+            margin-bottom: 0px;
+        }
+        
+        .home-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .home-link:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+
+        }
+        
+        .post-date {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+
+        }
+        
+        .post-content {
+            font-size: 16px;
+        }
+        
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        
+        /* Style for code blocks */
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        
+        code {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="{{ site.baseurl }}/" class="home-link">MY WRITING</a>
+        </header>
+    <article>
+        <h1>{{ page.title }}</h1>
+        <div class="post-date">LAST UPDATED: {{ page.date | date: "%B %d, %Y" }}</div>
+        
+        <div class="post-content">
+            {{ content }}
+        </div>
+    </article>
+</body>
+</html>
