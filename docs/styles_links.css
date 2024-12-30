@@ -86,3 +86,10 @@ body {
     margin-bottom: 6px; /* Adds spacing below each link */
     margin-top: 10px;
 }
+
+.last-edited {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    font-size: 12px;
+}
