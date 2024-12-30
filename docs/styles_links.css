@@ -7,16 +7,14 @@
 body {
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-transform: uppercase;
+    overflow-y: auto;
 }
 
 .home-div {
     position: absolute;
     top: 15px;
-    right: 0;
-    margin-right: 20px; 
+    right: 20px;
 }
 
 .home-button{
@@ -28,4 +26,63 @@ body {
 
 .home-button:hover {
     text-decoration: underline;
+}
+
+.links-header-top {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 25px;
+}
+
+.links-subheader {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 15px;
+    width: 1000px;
+}
+
+.links-list {
+    position: relative;  
+    top: 165px;
+    left: 20px;
+}
+
+.links-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-list li {
+    margin-bottom: 30px; 
+}
+
+.list-title {
+    font-size: 20px;
+    font-weight: bold; 
+    bottom: 10px;
+    position: relative;
+}
+
+.sub-links {
+    position: relative;
+    left: 30px; 
+}
+
+.sub-links li {
+    margin-bottom: 0px; 
+}
+
+.sub-links a {
+    font-size: 16px; 
+    text-decoration: underline; 
+}
+
+.link-item {
+    font-weight: bold;
+    display: inline-block; /* Ensures margin is applied */
+    margin-bottom: 6px; /* Adds spacing below each link */
+    margin-top: 10px;
 }
