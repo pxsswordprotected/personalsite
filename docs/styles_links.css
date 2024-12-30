@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-div {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    margin-right: 20px; 
+}
+
+.home-button{
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+    display: block;
+    }
+
+.home-button:hover {
+    text-decoration: underline;
+}
