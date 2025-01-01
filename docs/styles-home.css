@@ -102,3 +102,23 @@ a:hover{
     right: 35px;
     font-size: 14px;
 }
+
+@media (max-width: 1000px) {
+    body {
+        background-size:contain;
+    }
+    .last-updated {
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        font-size: 14px;
+    }
+    .presentation {
+        position: fixed;
+        right: 5px;
+        top: 5px;
+        transform: scaleY(1.4);
+        transform-origin: 0 0;
+    }
+
+}
