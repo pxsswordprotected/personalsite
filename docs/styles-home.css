@@ -1,0 +1,104 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    background-image: url('background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.content {
+    position: absolute;
+    text-align: left;
+    top: 20%;
+    left: 10%;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 4.2rem;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 110;
+    transform: scaleY(1.2);
+    transform-origin: 0 0;
+}
+
+.stretched-text {
+    display: inline-block;
+    font-size: 50px;
+    transform: scaleY(1.8);
+    transform-origin: 0 0;
+    position: fixed;
+    top: 400px;
+    left: 100px;
+  }
+
+  .about-me {
+    position: fixed;
+    top: 10px;
+    left: 30px;
+  }
+
+  .my-writing {
+    position: fixed;
+    top: 200px;
+    left: 50px;
+  }
+
+  .contact-me {
+    position: fixed;
+    bottom: 0px;
+    left: 50px;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+ 
+a:hover{
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+    text-shadow:10px 50px 0px rgb(255, 0, 0),
+    10px 100px 0px rgba(255, 0, 0),
+    10px 200px 0px rgba(255, 0, 0),
+    10px 300px 0px rgba(255, 0, 0),
+    10px 400px 0px rgba(255, 0, 0),
+    10px 500px 0px rgba(255, 0, 0),
+    10px 600px 0px rgba(255, 0, 0),
+    10px 700px 0px rgba(255, 0, 0),
+    500px 0px 0px rgb(255, 0, 0),
+    800px 0px 0px rgba(255, 0, 0),
+    1000px 0px 0px rgba(255, 0, 0),
+    12000px 0px 0px rgba(255, 0, 0),
+    1400px 0px 0px rgba(255, 0, 0);
+}
+
+.presentation {
+    position: fixed;
+    right: 35px;
+    top: 80px;
+    transform: scaleY(1.4);
+    transform-origin: 0 0;
+}
+
+.last-updated {
+    position: fixed;
+    bottom: 95px;
+    right: 35px;
+    font-size: 14px;
+}
