@@ -22,7 +22,7 @@ title: MY WRITING
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   des
-baseurl: "/docs" 
+baseurl: "" 
 url: "https://psswordprotectd.com" #  custom domain
 
 
