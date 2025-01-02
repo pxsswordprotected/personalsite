@@ -4,6 +4,7 @@
     box-sizing: border-box;
     border-radius: 0;
     box-shadow: none;
+    background-color: rgb(0, 0, 0);
 }
 
 body {
@@ -13,21 +14,124 @@ body {
     width: 100%;
     position: relative;
     padding: 15px;
+    color:white;
 }
+
 
 .home-div {
     position: absolute !important;
     top: 32px !important;
     right: 20px !important;
     padding: 5px 10px;
-    z-index: 1000;
+    z-index:1000;
 }
 
 .home-button {
     text-decoration: none;
-    color: #000;
+    color: rgb(255, 255, 255);
     font-weight: normal;
     display: block;
+    text-shadow: 
+        10px 10px 0px rgba(255, 0, 0),
+        10px 20px 0px rgba(255, 0, 0),
+        10px 30px 0px rgba(255, 0, 0),
+        10px 40px 0px rgba(255, 0, 0),
+        10px 50px 0px rgba(255, 0, 0),
+        10px 60px 0px rgba(255, 0, 0),
+        10px 70px 0px rgba(255, 0, 0),
+        10px 80px 0px rgba(255, 0, 0),
+        10px 90px 0px rgba(255, 0, 0),
+        10px 100px 0px rgba(255, 0, 0),
+        10px 110px 0px rgba(255, 0, 0),
+        10px 120px 0px rgba(255, 0, 0),
+        10px 130px 0px rgba(255, 0, 0),
+        10px 140px 0px rgba(255, 0, 0),
+        10px 150px 0px rgba(255, 0, 0),
+        10px 160px 0px rgba(255, 0, 0),
+        10px 170px 0px rgba(255, 0, 0),
+        10px 180px 0px rgba(255, 0, 0),
+        10px 190px 0px rgba(255, 0, 0),
+        10px 200px 0px rgba(255, 0, 0),
+        10px 210px 0px rgba(255, 0, 0),
+        10px 220px 0px rgba(255, 0, 0),
+        10px 230px 0px rgba(255, 0, 0),
+        10px 240px 0px rgba(255, 0, 0),
+        10px 250px 0px rgba(255, 0, 0),
+        10px 260px 0px rgba(255, 0, 0),
+        10px 270px 0px rgba(255, 0, 0),
+        10px 280px 0px rgba(255, 0, 0),
+        10px 290px 0px rgba(255, 0, 0),
+        10px 300px 0px rgba(255, 0, 0),
+        10px 310px 0px rgba(255, 0, 0),
+        10px 320px 0px rgba(255, 0, 0),
+        10px 330px 0px rgba(255, 0, 0),
+        10px 340px 0px rgba(255, 0, 0),
+        10px 350px 0px rgba(255, 0, 0),
+        10px 360px 0px rgba(255, 0, 0),
+        10px 370px 0px rgba(255, 0, 0),
+        10px 380px 0px rgba(255, 0, 0),
+        10px 390px 0px rgba(255, 0, 0),
+        10px 400px 0px rgba(255, 0, 0),
+        10px 410px 0px rgba(255, 0, 0),
+        10px 420px 0px rgba(255, 0, 0),
+        10px 430px 0px rgba(255, 0, 0),
+        10px 440px 0px rgba(255, 0, 0),
+        10px 450px 0px rgba(255, 0, 0),
+        10px 460px 0px rgba(255, 0, 0),
+        10px 470px 0px rgba(255, 0, 0),
+        10px 480px 0px rgba(255, 0, 0),
+        10px 490px 0px rgba(255, 0, 0),
+        10px 500px 0px rgba(255, 0, 0),
+        10px 510px 0px rgba(255, 0, 0),
+        10px 520px 0px rgba(255, 0, 0),
+        10px 530px 0px rgba(255, 0, 0),
+        10px 540px 0px rgba(255, 0, 0),
+        10px 550px 0px rgba(255, 0, 0),
+        10px 560px 0px rgba(255, 0, 0),
+        10px 570px 0px rgba(255, 0, 0),
+        10px 580px 0px rgba(255, 0, 0),
+        10px 590px 0px rgba(255, 0, 0),
+        10px 600px 0px rgba(255, 0, 0),
+        10px 610px 0px rgba(255, 0, 0),
+        10px 620px 0px rgba(255, 0, 0),
+        10px 630px 0px rgba(255, 0, 0),
+        10px 640px 0px rgba(255, 0, 0),
+        10px 650px 0px rgba(255, 0, 0),
+        10px 660px 0px rgba(255, 0, 0),
+        10px 670px 0px rgba(255, 0, 0),
+        10px 680px 0px rgba(255, 0, 0),
+        10px 690px 0px rgba(255, 0, 0),
+        10px 700px 0px rgba(255, 0, 0),
+        10px 710px 0px rgba(255, 0, 0),
+        10px 720px 0px rgba(255, 0, 0),
+        10px 730px 0px rgba(255, 0, 0),
+        10px 740px 0px rgba(255, 0, 0),
+        10px 750px 0px rgba(255, 0, 0),
+        10px 760px 0px rgba(255, 0, 0),
+        10px 770px 0px rgba(255, 0, 0),
+        10px 780px 0px rgba(255, 0, 0),
+        10px 790px 0px rgba(255, 0, 0),
+        10px 800px 0px rgba(255, 0, 0),
+        10px 810px 0px rgba(255, 0, 0),
+        10px 820px 0px rgba(255, 0, 0),
+        10px 830px 0px rgba(255, 0, 0),
+        10px 840px 0px rgba(255, 0, 0),
+        10px 850px 0px rgba(255, 0, 0),
+        10px 860px 0px rgba(255, 0, 0),
+        10px 870px 0px rgba(255, 0, 0),
+        10px 880px 0px rgba(255, 0, 0),
+        10px 890px 0px rgba(255, 0, 0),
+        10px 900px 0px rgba(255, 0, 0),
+        10px 910px 0px rgba(255, 0, 0),
+        10px 920px 0px rgba(255, 0, 0),
+        10px 930px 0px rgba(255, 0, 0),
+        10px 940px 0px rgba(255, 0, 0),
+        10px 950px 0px rgba(255, 0, 0),
+        10px 960px 0px rgba(255, 0, 0),
+        10px 970px 0px rgba(255, 0, 0),
+        10px 980px 0px rgba(255, 0, 0),
+        10px 990px 0px rgba(255, 0, 0),
+        10px 1000px 0px rgba(255, 0, 0);
 }
 
 .home-button:hover {
@@ -35,8 +139,9 @@ body {
 }
 
 .links-header-top {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 3rem;
+    transform: scaleY(3);
+    transform-origin: 0 0;
     margin: 0.8rem 0;
     padding-right: 60px; /* Make space for home button */
 }
@@ -64,13 +169,15 @@ body {
 }
 
 .list-title {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
     margin-bottom: 10px;
+    transform: scaleY(1.7);
+    transform-origin: 0 0;
+
 }
 
 .sub-links {
-    padding-left: 35px; /* Increased indentation */
+    padding-left: 35px; 
     margin-top: 10px;
 }
 
@@ -88,15 +195,15 @@ body {
 
 .link-item {
     display: inline-block;
-    border: 2px solid #000;
     padding: 0.25rem 0.5rem;
     margin: 0.5rem 0;
-    font-weight: 700;
     text-transform: uppercase;
+    transform: scaleY(1.5);
+    transform-origin: 0 0;
 }
 
 .link-item:hover {
-    background-color: #000;
+    background-color: rgb(255, 0, 0);
     color: #fff;
 }
 
@@ -107,7 +214,7 @@ body {
 }
 
 a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -120,22 +227,23 @@ a:hover {
         padding: 10px;
     }
     
-    .links-header-top {
-        font-size: 1.5rem;
-    }
     
     .links-subheader {
         font-size: 14px;
-            width: 100% !important;
+            width: 300px !important;
             max-width: 100% !important;
     }
     
     .sub-links {
-        padding-left: 20px; /* Reduced indentation on mobile */
+        padding-left: 30px; 
     }
     
     .home-div {
         top: 20px !important;
         right: 10px;
     }
+    .list-content {
+        width:300px !important;
+    }
+
 }
