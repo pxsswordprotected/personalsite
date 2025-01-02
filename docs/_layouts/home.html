@@ -36,6 +36,7 @@
 
     .my-writing {
       margin-top: 15px;
+      transform: scaleY(2);
     }
 
     header {
@@ -119,10 +120,9 @@
   </style>
 </head>
 <body>
-  <!-- “Home” button (top-right) -->
   <div class="home-div">
     <p>
-      <a href="https://pxsswordprotected.github.io/personalsite/" class="home-button">HOME</a>
+      <a href="../index.html" class="home-button">HOME</a>
     </p>
   </div>
 
@@ -144,7 +144,7 @@
     {% assign pinned_posts = site.posts | where: "pinned", true | sort: "date" | reverse %}
     {% assign regular_posts = site.posts | where_exp: "post", "post.pinned != true" | sort: "date" | reverse %}
   
-    <!-- Loop over pinned posts first -->
+    <!-- loop over pinned posts first -->
     {% for post in pinned_posts %}
       <li class="post-item">
         <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
@@ -152,7 +152,7 @@
       </li>
     {% endfor %}
   
-    <!-- Then loop over regular (non-pinned) posts -->
+    <!-- then loop over regular (non-pinned) posts -->
     {% for post in regular_posts %}
       <li class="post-item">
         <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
@@ -161,7 +161,6 @@
     {% endfor %}
   </ul>
 
-  <!-- Dark Mode toggle button (bottom-right) -->
   <div class="dark-mode-div">
     <a href="#" class="dark-mode-button" onclick="toggleDarkMode()">TOGGLE DARK MODE</a>
   </div>
