@@ -110,14 +110,14 @@ a:hover{
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;               /* Disables scrolling */
-    overscroll-behavior: none;      /* Prevents "bounce" on mobile */
+    overflow: hidden;               
+    overscroll-behavior: none;      
   }
 
   body {
-    background-size: contain;       /* Fits background within the viewport */
-    background-repeat: no-repeat;   /* No repeat of image */
-    background-position: center;    /* Center the image */
+    background-size: contain;       
+    background-repeat: no-repeat;   
+    background-position: center;    
   }
 
   .last-updated {
@@ -140,16 +140,25 @@ a:hover{
     text-shadow:
       150px 0   0 rgb(255, 0, 0),
       290px 0   0 rgb(255, 0, 0);
+      font-size:40px;
   }
 
   .my-writing {
     text-shadow:
       100px 50px 0 rgb(255, 0, 0),
       200px 0    0 rgb(255, 0, 0);
+      font-size:40px;
+
   }
 
   .contact-me {
     text-shadow:
       150px -40px 0 rgb(255, 0, 0);
+      font-size:40px;
+
+  }
+  .stretched-text{
+    font-size:40px;
+
   }
 }
