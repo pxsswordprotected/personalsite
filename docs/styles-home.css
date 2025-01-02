@@ -136,29 +136,11 @@ a:hover{
     font-size: 12px;
   }
 
-  .about-me {
-    text-shadow:
-      150px 0   0 rgb(255, 0, 0),
-      290px 0   0 rgb(255, 0, 0);
-      font-size:40px;
-  }
-
-  .my-writing {
-    text-shadow:
-      100px 50px 0 rgb(255, 0, 0),
-      200px 0    0 rgb(255, 0, 0);
-      font-size:40px;
-
-  }
 
   .contact-me {
-    text-shadow:
-      150px -40px 0 rgb(255, 0, 0);
-      font-size:40px;
+
+      bottom: 12px;
 
   }
-  .stretched-text{
-    font-size:40px;
 
-  }
 }
