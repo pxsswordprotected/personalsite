@@ -4,7 +4,7 @@ body {
     font-family: sans-serif;
     background-color: black;
     color: white;
-    background-image: url('background2.jpg');
+    background-image: url('../background2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,9 +62,9 @@ body {
 
 .about-me-div{
     position: absolute;
-    top:500px;
+    top:260px;
     left:222px;
-    transform: scaleY(0.8);
+    transform: scaleY(1.5);
     transform-origin: 0 0;
     width: 700px;
 }
