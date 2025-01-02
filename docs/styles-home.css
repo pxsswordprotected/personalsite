@@ -138,9 +138,16 @@ a:hover{
 
 
   .contact-me {
-
+    left:0px;
       bottom: 12px;
-
+      font-size: 50px;
+  }
+  .my-writing {
+    top:140px;
+  }
+  .stretched-text{
+    top: 320px;
+    left:50px;
   }
 
 }
