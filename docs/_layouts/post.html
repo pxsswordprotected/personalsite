@@ -23,10 +23,11 @@
 
         header {
             margin-bottom: 0px;
+            transform: scaleY(2);
         }
 
         .post-date{
-            margin-top:30px;
+            margin-top:-10px;
         }
 
         .home-link {
@@ -48,7 +49,6 @@
             margin: 0;
             margin-bottom: 10px;
             text-transform: uppercase;
-            transform: scaleY(2);
         }
 
         .post-date {
@@ -176,8 +176,7 @@
 </head>
 <body class="post-background">
     <header>
-        <a href="../my_writing/index.html" class="home-link">MY WRITING</a>
-    </header>
+        <a href="{{ '/my_writing/' | relative_url }}" class="home-link">MY WRITING</a>    </header>
     <article>
         <h1>{{ page.title }}</h1>
         <div class="post-date">LAST UPDATED: {{ page.date | date: "%B %d, %Y" }}</div>
