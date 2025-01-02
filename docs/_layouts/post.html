@@ -14,7 +14,11 @@
             padding: 0 1%;
             box-sizing: border-box;
             margin-top: 15px;
-            margin-left:9px;
+            margin-left: 9px;
+            width: 320px;
+            color: #000; 
+            background-color: #fff; 
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         header {
@@ -24,7 +28,7 @@
         .home-link {
             color: #000;
             text-decoration: none;
-            font-size: 1.5rem; /* Use relative units */
+            font-size: 1.5rem; 
             font-weight: normal;
             display: block;
             margin-bottom: 20px;
@@ -38,26 +42,26 @@
             font-size: 24px;
             font-weight: normal;
             margin: 0;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             text-transform: uppercase;
+            transform: scaleY(2);
         }
 
         .post-date {
             color: rgb(0, 0, 0);
-            font-size: 0.75rem; /* Use relative units */
+            font-size: 0.75rem; 
             margin-bottom: 20px;
             text-transform: uppercase;
         }
 
         .post-content {
-            font-size: 1rem; /* Use relative units */
+            font-size: 1rem;
         }
 
         .post-content p {
             margin-bottom: 20px;
         }
 
-        /* Style for code blocks */
         pre {
             background-color: #f5f5f5;
             padding: 15px;
@@ -69,55 +73,106 @@
             font-family: monospace;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             body {
-                padding: 0 10px; /* Adjust padding for smaller devices */
+                padding: 0 10px;
             }
 
             .home-link {
-                font-size: 1.2rem; /* Adjust font size for smaller devices */
+                font-size: 1.2rem; 
             }
 
             h1 {
-                font-size: 1.3rem; /* Adjust heading size for smaller devices */
+                font-size: 1.3rem; 
             }
 
             .post-date {
-                font-size: 0.7rem; /* Adjust date size for smaller devices */
+                font-size: 0.7rem; 
             }
 
             .post-content {
-                font-size: 0.9rem; /* Adjust content size for smaller devices */
+                font-size: 0.9rem; 
             }
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 0 5px; /* Further reduce padding for very small screens */
+                padding: 0 5px; 
             }
 
             .home-link {
-                font-size: 1rem; /* Adjust font size further */
+                font-size: 1rem; 
             }
 
             h1 {
-                font-size: 1.2rem; /* Further adjust heading size */
+                font-size: 1.2rem; 
             }
 
             .post-date {
-                font-size: 0.65rem; /* Adjust date size */
+                font-size: 0.65rem; 
             }
 
             .post-content {
-                font-size: 0.85rem; /* Further adjust content size */
+                font-size: 0.85rem; 
             }
         }
+
+        body.dark-mode {
+            background-color: #000000;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .home-link {
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .post-date {
+            color: #cccccc;
+        }
+
+        body.dark-mode pre {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+
+        .dark-mode-div {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .dark-mode-button {
+            text-decoration: none;
+            color: #000;
+            font-weight: normal;
+            display: block;
+            text-align: center;
+            margin-top: 5px;
+            background-color: transparent; 
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body.dark-mode .dark-mode-button {
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            .dark-mode-div {
+                top: 2px;     
+                right: 2px;  
+                bottom: auto;  
+                position: absolute;
+            }
+            .dark-mode-button {
+                font-size: 0.8rem;
+            }
     </style>
 </head>
 <body class="post-background">
     <header>
-        <a href="{{ site.baseurl }}/" class="home-link">MY WRITING</a>
+        <a href="../my_writing/index.html" class="home-link">MY WRITING</a>
     </header>
     <article>
         <h1>{{ page.title }}</h1>
@@ -127,5 +182,21 @@
             {{ content }}
         </div>
     </article>
+
+    <div class="dark-mode-div">
+      <a href="#" class="dark-mode-button" onclick="toggleDarkMode()">TOGGLE DARK MODE</a>
+    </div>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        const button = document.querySelector('.dark-mode-button');
+        if (document.body.classList.contains('dark-mode')) {
+          button.textContent = 'TOGGLE LIGHT MODE';
+        } else {
+          button.textContent = 'TOGGLE DARK MODE';
+        }
+      }
+    </script>
 </body>
 </html>

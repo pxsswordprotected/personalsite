@@ -1,104 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY WRITING</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            max-width: 800px;
-            padding: 0 20px;
-            line-height: 1.6;
-            text-transform: uppercase;
-            background: url('/background_blog.jpg');
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>MY WRITING</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      padding: 0 20px;
+      line-height: 1.6;
+      text-transform: uppercase;
+      color: #000;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
 
-        .home-div {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin-right: 20px; 
-        }
+    .home-div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-right: 20px;
+    }
 
-        .home-button{
-            text-decoration: none;
-            color: #000;
-            font-weight: normal;
-            display: block;
-            }
+    .home-button {
+      text-decoration: none;
+      color: #000;
+      font-weight: normal;
+      display: block;
+    }
 
-        .home-button:hover {
-            text-decoration: underline;
-        }
+    .home-button:hover {
+      text-decoration: underline;
+    }
 
-        .my-writing{
-            margin-top: 15px;
-        }
-        
-        header {
-            margin-bottom: 40px;
-        }
-        
-        h1 {
-            font-size: 24px;
-            font-weight: normal;
-            margin: 0;
-        }
-        
-        .last-updated {
-            color: rgb(0, 0, 0);
-            font-size: 14px;
-            margin-top: 0px;
-        }
-        
-        .posts {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .post-item {
-            margin-bottom: 20px;
-        }
-        
-        .post-link {
-            color: #000;
-            text-decoration: none;
-        }
-        
-        .post-link:hover {
-            text-decoration: underline;
-        }
-        
-        .post-date {
-            color: #666;
-            font-size: 10px;
-        }
+    .my-writing {
+      margin-top: 15px;
+    }
 
+    header {
+      margin-bottom: 40px;
+    }
 
+    h1 {
+      font-size: 24px;
+      font-weight: normal;
+      margin: 0;
+    }
 
-    </style>
+    .last-updated {
+      color: #000;
+      font-size: 14px;
+      margin-top: 0px;
+    }
+
+    .posts {
+      list-style: none;
+      padding: 0;
+    }
+
+    .post-item {
+      margin-bottom: 20px;
+    }
+
+    .post-link {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .post-link:hover {
+      text-decoration: underline;
+    }
+
+    .post-date {
+      color: #666;
+      font-size: 10px;
+    }
+
+    body.dark-mode {
+      background: #000000;
+      color: #f0f0f0;
+    }
+    body.dark-mode .home-button {
+      color: #f0f0f0;
+    }
+    body.dark-mode .last-updated {
+      color: #f0f0f0;
+    }
+    body.dark-mode .post-link {
+      color: #f0f0f0;
+    }
+    body.dark-mode .post-date {
+      color: #aaaaaa;
+    }
+
+    .dark-mode-div {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .dark-mode-button {
+      text-decoration: none;
+      color: #000;
+      font-weight: normal;
+      display: block;
+      text-align: center;
+      margin-top: 5px;
+      background-color: transparent; 
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    body.dark-mode .dark-mode-button {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-    <div class="home-div">
-        <p>
-            <a href="https://pxsswordprotected.github.io/personalsite/"  class="home-button">HOME</a>
-        </p>
+  <!-- “Home” button (top-right) -->
+  <div class="home-div">
+    <p>
+      <a href="https://pxsswordprotected.github.io/personalsite/" class="home-button">HOME</a>
+    </p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1 class="my-writing">MY WRITING</h1>
+    <div class="last-updated">
+      Last updated: {{ site.time | date: "%B %d, %Y" }}
     </div>
+  </header>
 
-    <header>
-        <h1 class="my-writing">MY WRITING</h1>
-        <div class="last-updated">Last updated: {{ site.time | date: "%B %d, %Y" }}</div>
-    </header>
+  <!-- Posts -->
+  <ul class="posts">
+    {%- comment -%}
+      First, gather pinned posts (pinned: true), sorted by date (newest first).
+      Then gather the rest (where pinned is not true), also newest first.
+    {%- endcomment -%}
+  
+    {% assign pinned_posts = site.posts | where: "pinned", true | sort: "date" | reverse %}
+    {% assign regular_posts = site.posts | where_exp: "post", "post.pinned != true" | sort: "date" | reverse %}
+  
+    <!-- Loop over pinned posts first -->
+    {% for post in pinned_posts %}
+      <li class="post-item">
+        <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+      </li>
+    {% endfor %}
+  
+    <!-- Then loop over regular (non-pinned) posts -->
+    {% for post in regular_posts %}
+      <li class="post-item">
+        <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+      </li>
+    {% endfor %}
+  </ul>
 
+  <!-- Dark Mode toggle button (bottom-right) -->
+  <div class="dark-mode-div">
+    <a href="#" class="dark-mode-button" onclick="toggleDarkMode()">TOGGLE DARK MODE</a>
+  </div>
 
-    <ul class="posts">
-        {%- for post in site.posts -%}
-        <li class="post-item">
-            <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
-        </li>
-        {%- endfor -%}
-    </ul>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const button = document.querySelector('.dark-mode-button');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        button.textContent = 'TOGGLE LIGHT MODE';
+      } else {
+        button.textContent = 'TOGGLE DARK MODE';
+      }
+    }
+  </script>
 </body>
 </html>
