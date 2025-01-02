@@ -114,11 +114,22 @@ a:hover{
         font-size: 14px;
     }
     .presentation {
-        position: fixed;
         right: 5px;
         top: 5px;
         transform: scaleY(1.4);
         transform-origin: 0 0;
+        font-size: 12px;
     }
+    .about-me{
+        text-shadow:150px 0px 0px rgb(255, 0, 0),
+                    290px 0px 0px rgb(255, 0, 0);
+        }
+        .my-writing{
+            text-shadow:100px 50px 0px rgb(255, 0, 0),
+            200px 0px 0px rgb(255, 0, 0);
+        }
+        .contact-me{
+            text-shadow:150px -40px 0px rgb(255, 0, 0);
+        }
 
 }
