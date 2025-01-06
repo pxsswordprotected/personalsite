@@ -52,3 +52,5 @@ plugins:
 #   - vendor/ruby/
 
 permalink: pretty
+timezone: America/Chicago
+
