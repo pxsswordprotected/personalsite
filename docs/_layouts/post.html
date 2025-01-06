@@ -14,8 +14,8 @@
             padding: 0 1%;
             box-sizing: border-box;
             margin-top: 15px;
-            margin-left: 9px;
-            width: 320px;
+            margin-left: 90px;
+            width: 400px;
             color: #000; 
             background-color: #fff; 
             transition: background-color 0.3s ease, color 0.3s ease;
@@ -33,10 +33,11 @@
         .home-link {
             color: #000;
             text-decoration: none;
-            font-size: 1.5rem; 
+            font-size: 1rem; 
             font-weight: normal;
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            margin-top:10px;
         }
 
         .home-link:hover {
@@ -78,7 +79,7 @@
         }
 
         img {
-            max-width:320px;
+            max-width:400px;
         }
 
         @media (max-width: 768px) {
@@ -180,10 +181,10 @@
     </style>
 </head>
 <body class="post-background">
-    <header>
-        <a href="{{ '/my_writing/' | relative_url }}" class="home-link">MY WRITING</a>    </header>
+    <!-- <header class ="my-writing"> MY WRITING   </header> -->
     <article>
-        <h1>{{ page.title }}</h1>
+        <a href="{{ '/my_writing/' | relative_url }}" class="home-link">BACK TO HOME</a>    
+    </header>        <h1>{{ page.title }}</h1>
         <div class="post-date">LAST UPDATED: {{ page.date | date: "%B %d, %Y" }}</div>
         
         <div class="post-content">
