@@ -27,7 +27,7 @@ This brings up an important topic of attachment to the reality we think we are g
 
 To make my point clear: nothing is owed to us, what we *currently* posses and what our *future* will posses. We like to think based on people around us, television shows, movies, the media, etc. that everything will work out fine. Hopefully we'll get married have a family, maybe travel, have a decently peaceful death, etc. right? No! This is a delusion! It's a false sense of attachment to a future that is not owed or guaranteed. Of course, I realize we get attached to our future for many reasons including security, anxiety, etc. but that is not my point.
 
-My conclusion is this: nothing is owed, everything is a gift. Every minute, every second, every color you can see, every piece of music you can hear, every time you have a conversation with a loved one, all the moments between birth and death, all of these are supreme gifts given to us that we should recognize everyday, and they are as volatile as the seconds that pass. 
+We should shift our perspective: nothing is owed, everything is a gift. Every minute, every second, every color you can see, every piece of music you can hear, every time you have a conversation with a loved one, all the moments between birth and death, all of these are supreme gifts given to us that we should recognize everyday, and they are as volatile as the seconds that pass. 
 
 Thank you for reading. 
 
