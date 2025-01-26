@@ -82,3 +82,6 @@ body {
 .line.vertical:nth-child(3) {
     right: 43px;
 }
+.line.vertical:nth-child(4) {
+    left: 709px;
+}
