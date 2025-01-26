@@ -46,10 +46,12 @@
     {% for file in media_files %}
         <div class="media-item">
             {% if file.extname == '.mp4' or file.extname == '.webm' or file.extname == '.ogg' %}
-            <video controls playsinline>  
-                    <source src="{{ file.path | relative_url }}" type="video/{{ file.extname | remove: '.' }}">
-                </video>
-            {% else %}
+            <video controls playsinline style="width: 100%">
+                <source src="{{ file.path | relative_url }}" 
+                        type="video/{% case file.extname %}{% when '.mp4' %}mp4{% when '.webm' %}webm{% when '.ogg' %}ogg{% endcase %}">
+                Your browser does not support the video tag.
+            </video>
+        {% else %}
                 <img src="{{ file.path | relative_url }}" alt="">
             {% endif %}
         </div>
@@ -57,22 +59,46 @@
 </div>
 
 <script>
-    // Shuffle function using Fisher-Yates algorithm
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
-    
-    // Shuffle the grid items on page load
     document.addEventListener('DOMContentLoaded', function() {
+        const MIN_HEIGHT = 400;
+        const COLUMN_SPAN = 2;
+    
+        // Shuffle function
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+    
+        // Shuffle items
         const grid = document.querySelector('.moodboard');
         const items = Array.from(grid.children);
-        
-        // Shuffle and re-insert items
         shuffleArray(items).forEach(item => grid.appendChild(item));
+    
+        // Handle media sizing
+        document.querySelectorAll('.media-item').forEach(container => {
+            const media = container.querySelector('img, video');
+            
+            if (media.tagName === 'IMG') {
+                media.addEventListener('load', checkSize);
+                if (media.complete) media.dispatchEvent(new Event('load'));
+            } else {
+                media.addEventListener('loadedmetadata', checkSize);
+            }
+    
+            function checkSize() {
+                const height = media.tagName === 'IMG' ? 
+                    media.naturalHeight : 
+                    media.videoHeight;
+    
+                if (height < MIN_HEIGHT) {
+                    container.style.gridColumn = `span ${COLUMN_SPAN}`;
+                    container.style.gridRow = `span 2`;
+                }
+            }
+        });
     });
     </script>
 
