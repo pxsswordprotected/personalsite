@@ -15,3 +15,8 @@ paginate: 10
 paginate_path: /page:num/
 permalink: pretty  # <- Fixed line
 timezone: America/Chicago
+
+include:
+  - Media
+  - Media/images
+  - Media/videos
