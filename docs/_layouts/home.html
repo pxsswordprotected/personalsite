@@ -1,181 +1,173 @@
+---
+pagination:
+  enabled: true
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>MY WRITING</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      padding: 0 20px;
-      line-height: 1.6;
-      text-transform: uppercase;
-      color: #000;
-      transition: background 0.3s ease, color 0.3s ease;
-      max-width: 320px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WRITING</title>
+    <style>
+        html {
+            overflow-x: hidden;
+        }
 
-    .home-div {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-right: 20px;
-    }
+        body {
+            font-family: sans-serif;
+            max-width: 100%;
+            margin: 0px;
+            line-height: 1.6;
+            font-weight: normal;
+            padding: 0 1%;
+            box-sizing: border-box;
+            margin-top: 15px;
+            margin-left: 761px;
+            width: 1000px;
+            color: #000; 
+            background-color: #eeeeee;
+        }
 
-    .home-button {
-      text-decoration: none;
-      color: #000;
-      font-weight: normal;
-      display: block;
-    }
+        .line {
+            position: fixed;
+            background-color: #0000fe;
+            z-index:-1000;
+        }
+        
+        .line.horizontal {
+            height: 0.06vh;
+            width: 100vw;
+            position:absolute;
+            left: 0; 
+            top: 24px;
+        }
+        
+        .line.vertical {
+            width: 1px; 
+            height: 100%;
+            position: fixed;
+        }
+        
+        .line.vertical:nth-child(2) {
+            right: 43px;
+            top: 0; 
+        }
+        
+        .line.vertical:nth-child(3) {
+            left: 777px;
+            top: 0; 
+            z-index:1000 !important;
+        }
 
-    .home-button:hover {
-      text-decoration: underline;
-    }
+        .menu-item {
+            position: fixed;
+            color: black;
+            text-decoration: none;
+            font-size: 10vh;
+            transition: all 0.3s ease;
+        }
 
-    .my-writing {
-      margin-top: 15px;
-      transform: scaleY(2);
-    }
+        .bottom-right {
+            bottom: 2%;
+            right: 2%;
+        }
 
-    header {
-      margin-bottom: 40px;
-    }
+        .menu-item:hover {
+            color: #0000fe;
+            text-decoration: underline;
+        }
 
-    h1 {
-      font-size: 24px;
-      font-weight: normal;
-      margin: 0;
-    }
+        .list-items {
+            font-size: 4vh;
+            color: #0000ff;
+            text-transform: uppercase;
+        }
 
-    .last-updated {
-      color: #000;
-      font-size: 14px;
-      margin-top: 0px;
-    }
+        .item {
+            margin-bottom: 2rem;
+        }
 
-    .posts {
-      list-style: none;
-      padding: 0;
-    }
+        .item a {
+            text-decoration: none !important;
+            color: inherit;
+        }
 
-    .post-item {
-      margin-bottom: 20px;
-    }
+        .item a:hover {
+            text-decoration: underline !important;
+        }
 
-    .post-link {
-      color: #000;
-      text-decoration: none;
-    }
+        .description {
+            margin-top:-11px;
+            font-size: 0.9rem;
+            color: #000;
+            text-transform: uppercase;
+        }
 
-    .post-link:hover {
-      text-decoration: underline;
-    }
+        .pagination {
+            position: fixed;
+            top: 2%;
+            right: 2%;
+            display: flex;
+            gap: 20px;
+        }
 
-    .post-date {
-      color: #666;
-      font-size: 10px;
-    }
+        .pagination a, .current-page {
+            color: black;
+            text-decoration: none;
+            font-size: 10vh;
+        }
 
-    body.dark-mode {
-      background: #000000;
-      color: #f0f0f0;
-    }
-    body.dark-mode .home-button {
-      color: #f0f0f0;
-    }
-    body.dark-mode .last-updated {
-      color: #f0f0f0;
-    }
-    body.dark-mode .post-link {
-      color: #f0f0f0;
-    }
-    body.dark-mode .post-date {
-      color: #aaaaaa;
-    }
+        .pagination a:hover {
+            color: #0000fe;
+            text-decoration: underline;
+        }
 
-    .dark-mode-div {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-    }
-
-    .dark-mode-button {
-      text-decoration: none;
-      color: #000;
-      font-weight: normal;
-      display: block;
-      text-align: center;
-      margin-top: 5px;
-      background-color: transparent; 
-      padding: 8px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    }
-
-    body.dark-mode .dark-mode-button {
-      color: #fff;
-    }
-  </style>
+        .top-left {
+            position: fixed;
+            right: 44px;
+            top: 41px;
+            font-size: 2vh;
+        }
+    </style>
 </head>
 <body>
-  <div class="home-div">
-    <p>
-      <a href="https://www.psswordprotectd.com/" class="home-button">HOME</a>
-    </p>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <h1 class="my-writing">MY WRITING</h1>
-    <div class="last-updated">
-      Last updated: {{ site.time | date: "%B %d, %Y" }}
+    <div class="list-items">
+        <!-- Pinned Posts First -->
+        {% assign pinned_posts = site.posts | where: 'pinned', true %}
+        {% for post in pinned_posts %}
+            <div class="item">
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
+            </div>
+        {% endfor %}
+    
+        <!-- Regular Posts After -->
+        {% assign regular_posts = site.posts | where_exp: 'post', 'post.pinned != true' %}
+        {% for post in regular_posts %}
+            <div class="item">
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
+            </div>
+        {% endfor %}
     </div>
-  </header>
 
-  <!-- Posts -->
-  <ul class="posts">
-    {%- comment -%}
-      First, gather pinned posts (pinned: true), sorted by date (newest first).
-      Then gather the rest (where pinned is not true), also newest first.
-    {%- endcomment -%}
-  
-    {% assign pinned_posts = site.posts | where: "pinned", true | sort: "date" | reverse %}
-    {% assign regular_posts = site.posts | where_exp: "post", "post.pinned != true" | sort: "date" | reverse %}
-  
-    <!-- loop over pinned posts first -->
-    {% for post in pinned_posts %}
-      <li class="post-item">
-        <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
-      </li>
-    {% endfor %}
-  
-    <!-- then loop over regular (non-pinned) posts -->
-    {% for post in regular_posts %}
-      <li class="post-item">
-        <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="grid">
+        <div class="line horizontal"></div>
+        <div class="line vertical"></div>
+        <div class="line vertical"></div>
+    </div>
 
-  <div class="dark-mode-div">
-    <a href="#" class="dark-mode-button" onclick="toggleDarkMode()">TOGGLE DARK MODE</a>
-  </div>
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}">←</a>
+        {% endif %}
+        <span class="current-page">{{ paginator.page }}</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}">→</a>
+        {% endif %}
+    </div>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      const button = document.querySelector('.dark-mode-button');
-      
-      if (document.body.classList.contains('dark-mode')) {
-        button.textContent = 'TOGGLE LIGHT MODE';
-      } else {
-        button.textContent = 'TOGGLE DARK MODE';
-      }
-    }
-  </script>
+    <div class="top-left">{{ paginator.page }}</div>
+    <a href="https://www.psswordprotectd.com/" class="menu-item bottom-right">HOME</a>
 </body>
 </html>
