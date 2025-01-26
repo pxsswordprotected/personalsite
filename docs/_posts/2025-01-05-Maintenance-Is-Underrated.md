@@ -11,8 +11,9 @@ I don't think most people are aware of how fast our current systems, mental heal
 
 Here is a simple graph in which I attempt to illustrate the point I am making.
 
-<img src="{{site.baseurl}}/assets/images/progress_graph.jpg" alt="Alt text for the image">
-
+<img src="{{site.baseurl}}/assets/images/progress_graph.jpg" 
+     alt="Alt text for the image" 
+     style="width: 100%;">
 
 
 Maintenance provides leeway and permission for progress. It is an axiom in any given system or model that cannot be bypassed.

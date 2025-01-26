@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <style>
+
+        html {
+            overflow-x: hidden;
+        }
+        .menu-item {
+            position: fixed;
+            color: black;
+            text-decoration: none;
+            font-size: 10vh;
+            transition: all 0.3s ease;
+        }
+
+        .bottom-right {
+            bottom: 2%;
+            right: 2%;
+        }
+
+        .menu-item:hover {
+            color: #0000fe;
+            text-decoration: underline;
+        }
+
         body {
             font-family: sans-serif;
             max-width: 100%;
@@ -14,34 +36,15 @@
             padding: 0 1%;
             box-sizing: border-box;
             margin-top: 15px;
-            margin-left: 90px;
-            width: 400px;
+            margin-left: 761px;
+            width: 600px;
             color: #000; 
-            background-color: #fff; 
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        header {
-            margin-bottom: 0px;
-            transform: scaleY(2);
+            background-color: #eeeeee;
         }
 
         .post-date{
             margin-top:-10px;
-        }
-
-        .home-link {
-            color: #000;
-            text-decoration: none;
-            font-size: 1rem; 
-            font-weight: normal;
-            display: block;
-            margin-bottom: 10px;
-            margin-top:10px;
-        }
-
-        .home-link:hover {
-            text-decoration: underline;
+            text-transform: uppercase;
         }
 
         h1 {
@@ -52,167 +55,60 @@
             text-transform: uppercase;
         }
 
-        .post-date {
-            color: rgb(0, 0, 0);
-            font-size: 0.75rem; 
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .post-content {
-            font-size: 1rem;
-        }
-
-        .post-content p {
-            margin-bottom: 20px;
-        }
-
-        pre {
-            background-color: #f5f5f5;
-            padding: 15px;
-            overflow-x: auto;
-            border-radius: 5px;
-        }
-
-        code {
-            font-family: monospace;
-        }
-
-        img {
-            max-width:400px;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 0 10px;
-                margin-left: 10px;
-                max-width: 320px;
-            }
-
-            img {
-             max-width: 320px;
-
-            }
-
-            .home-link {
-                font-size: 1.2rem; 
-            }
-
-            h1 {
-                font-size: 1.3rem; 
-            }
-
-            .post-date {
-                font-size: 0.7rem; 
-            }
-
-            .post-content {
-                font-size: 0.9rem; 
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 0 5px; 
-            }
-
-            .home-link {
-                font-size: 1rem; 
-            }
-
-            h1 {
-                font-size: 1.2rem; 
-            }
-
-            .post-date {
-                font-size: 0.65rem; 
-            }
-
-            .post-content {
-                font-size: 0.85rem; 
-            }
-        }
-
-        body.dark-mode {
-            background-color: #000000;
-            color: #f0f0f0;
-        }
-
-        body.dark-mode .home-link {
-            color: #f0f0f0;
-        }
-
-        body.dark-mode .post-date {
-            color: #cccccc;
-        }
-
-        body.dark-mode pre {
-            background-color: #333;
-            color: #f0f0f0;
-        }
-
-        .dark-mode-div {
+        .line {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            background-color: #0000fe;
+            z-index:-1000;
+        }
+        
+        .line.horizontal {
+            height: 0.06vh;
+            width: 100vw;
+            position:absolute;
+            left: 0; 
+        }
+        
+        .line.horizontal:nth-child(1) {
+            top: 24px;
+        }
+        
+        .line.vertical {
+            width: 1px; 
+            height: 100%;
+            position: fixed;
+        }
+        
+        .line.vertical:nth-child(2) {
+            right: 43px;
+            top: 0; 
+        }
+        
+        .line.vertical:nth-child(3) {
+            left: 777px;
+            top: 0; 
+            z-index:1000 !important;
         }
 
-        .dark-mode-button {
-            text-decoration: none;
-            color: #000;
-            font-weight: normal;
-            display: block;
-            text-align: center;
-            margin-top: 5px;
-            background-color: transparent; 
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-        }
-
-        body.dark-mode .dark-mode-button {
-            color: #fff;
-        }
-
-        @media (max-width: 480px) {
-            .dark-mode-div {
-                top: 2px;     
-                right: 2px;  
-                bottom: auto;  
-                position: absolute;
-            }
-            .dark-mode-button {
-                font-size: 0.8rem;
-            }
-        }
     </style>
 </head>
 <body class="post-background">
-    <!-- <header class ="my-writing"> MY WRITING   </header> -->
     <article>
-        <a href="{{ '/my_writing/' | relative_url }}" class="home-link">BACK TO HOME</a>    
-    </header>        <h1>{{ page.title }}</h1>
-        <div class="post-date">LAST UPDATED: {{ page.date | date: "%B %d, %Y" }}</div>
+        <header>
+            <h1>{{ page.title }}</h1>
+            <div class="post-date">LAST UPDATED: {{ page.date | date: "%B %d, %Y" }}</div>
+        </header>
         
         <div class="post-content">
             {{ content }}
         </div>
     </article>
 
-    <div class="dark-mode-div">
-      <a href="#" class="dark-mode-button" onclick="toggleDarkMode()">TOGGLE DARK MODE</a>
+    <div class="grid">
+        <div class="line horizontal"></div>
+        <div class="line vertical"></div>
+        <div class="line vertical"></div>
     </div>
 
-    <script>
-      function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
-        const button = document.querySelector('.dark-mode-button');
-        if (document.body.classList.contains('dark-mode')) {
-          button.textContent = 'TOGGLE LIGHT MODE';
-        } else {
-          button.textContent = 'TOGGLE DARK MODE';
-        }
-      }
-    </script>
+    <a href="{{ '/my_writing/' | relative_url }}" class="menu-item bottom-right">HOME</a>
 </body>
 </html>
