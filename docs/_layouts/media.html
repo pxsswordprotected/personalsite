@@ -10,7 +10,7 @@
   {% for file in media_files %}
   <div class="media-item">
     {% if file.extname == '.mp4' or file.extname == '.webm' or file.extname == '.ogg' %}
-    <video controls playsinline preload="none" style="width:100%">
+    <video controls playsinline style="width:100%">
       <source src="{{ file.path | relative_url }}" type="video/{% case file.extname %}{% when '.mp4' %}mp4{% when '.webm' %}webm{% when '.ogg' %}ogg{% endcase %}">
     </video>
     {% else %}
@@ -25,19 +25,22 @@
         const MIN_HEIGHT=400,COLUMN_SPAN=2,grid=document.querySelector(".moodboard"),
             items=Array.from(grid.children);
         
-        // Shuffle
         for(let i=items.length-1;i>0;i--){
             const j=Math.floor(Math.random()*(i+1));
             [items[i],items[j]]=[items[j],items[i]]
         }
         items.forEach(e=>grid.appendChild(e));
     
-        // Media sizing
+        // media sizing
         document.querySelectorAll(".media-item").forEach(container=>{
             const media=container.querySelector("img, video");
             const checkSize=()=>{
                 const height=media.tagName==="IMG" ? media.naturalHeight : media.videoHeight;
-                if(height<MIN_HEIGHT){
+                if(height<500){
+                    container.style.gridColumn=`span ${COLUMN_SPAN}`;
+                    container.style.gridRow="span 2";
+                }
+                if(width<300){
                     container.style.gridColumn=`span ${COLUMN_SPAN}`;
                     container.style.gridRow="span 2";
                 }

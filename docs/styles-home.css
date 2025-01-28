@@ -16,20 +16,19 @@ body {
 
 .black-rect {
   position: absolute;
-  width: 46px;
+  width: 3.2%; /* Converted from 46px (assuming 1440px viewport width) */
   height: 24%;
   background-color: black;
 }
 
 .black-rect.left {
   left: 0;
-  top: 286px;
-
+  top: 31.78%; /* Converted from 286px (assuming 900px viewport height) */
 }
 
 .black-rect.right {
   right: 0;
-  bottom: 286px;
+  bottom: 31.78%; /* Converted from 286px */
 }
 
 .grid {
@@ -42,45 +41,45 @@ body {
 .line {
   position: absolute;
   background-color: #0000fe;
-  z-index:-1000;
+  z-index: -1000;
 }
 
 .line.horizontal {
-  height: 0.06vh;
+  height: 0.2vh;
   width: 100%;
 }
 
 .line.horizontal:nth-child(1) {
-  top: 446px;
+  top: 46.3%; /* 446px */
 }
 
 .line.horizontal:nth-child(2) {
-  top: 517px;
+  top: 53.6%; /* 517px */
 }
 .line.horizontal:nth-child(3) {
-  top: 40px;
+  top: 4.3%; /* 40px */
 }
 .line.horizontal:nth-child(4) {
-  top: 110px;
+  top: 11.5%; 
 }
 .line.horizontal:nth-child(5) {
-  bottom: 110px;
+  bottom: 11.5%; /* 110px */
 }
 .line.horizontal:nth-child(6) {
-  bottom: 40px;
+  bottom: 4.1%; /* 40px */
 }
 
 .line.vertical {
-  width: 0.06vh;
+  width: 0.1vw;
   height: 100%;
 }
 
 .line.vertical:nth-child(7) {
-  left: 710px;
+  left: 62.8%; /* 710px */
 }
 
 .line.vertical:nth-child(8) {
-  right: 713px;
+  right: 63%; /* 713px */
 }
 
 .menu-item {
@@ -120,4 +119,73 @@ body {
 .menu-item.bottom-right {
   bottom: 2%;
   right: 2%;
+}
+
+/* Mobile-first media queries */
+@media (max-width: 768px) {
+  html, body {
+    overflow: hidden;
+  }
+
+  .menu-item {
+    font-size: 3vh;
+  }
+  
+  .menu-item.center {
+    font-size: 1px;
+  }
+
+  .black-rect {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    font-size: 3vh;
+  }
+  
+  .menu-item.center {
+    font-size: 4vh;
+    white-space: nowrap;
+  }
+
+
+  .line.horizontal {
+    height: 0.1vh;
+    width: 100%;
+  }
+  
+  .line.horizontal:nth-child(1) {
+    top: 48.5%; /* 446px */
+  }
+  
+  .line.horizontal:nth-child(2) {
+    top: 51.4%; /* 517px */
+  }
+  .line.horizontal:nth-child(3) {
+    top: 2.5%; /* 40px */
+  }
+  .line.horizontal:nth-child(4) {
+    top: 4.7%; 
+  }
+  .line.horizontal:nth-child(5) {
+    bottom: 5%; /* 110px */
+  }
+  .line.horizontal:nth-child(6) {
+    bottom: 2.6%; /* 40px */
+  }
+  
+  .line.vertical {
+    width: 0.1vw;
+    height: 100%;
+  }
+  
+  .line.vertical:nth-child(7) {
+    left: 76.5%; /* 710px */
+  }
+  
+  .line.vertical:nth-child(8) {
+    right: 63%; /* 713px */
+  }
 }
