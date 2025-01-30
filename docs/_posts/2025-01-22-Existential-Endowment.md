@@ -29,7 +29,6 @@ To make my point clear: nothing is owed to us, what we *currently* posses and wh
 
 We should shift our perspective: nothing is owed, everything is a gift. Every minute, every second, every color you can see, every piece of music you can hear, every time you have a conversation with a loved one, all the moments between birth and death, all of these are supreme gifts given to us that we should recognize everyday, and they are as volatile as the seconds that pass. 
 
-Thank you for reading. 
 
 
 ### Notes
