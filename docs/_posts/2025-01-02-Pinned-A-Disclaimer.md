@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PINNED: A DISCLAIMER"
+title:  "Pinned: A Disclaimer"
 pinned: true
 ---
 

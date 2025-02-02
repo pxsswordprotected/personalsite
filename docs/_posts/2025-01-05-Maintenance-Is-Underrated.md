@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MAINTENANCE IS UNDERRATED"
+title:  "Maintence Is Underrated"
 ---
 
 I believe one of the most harmful principles we hold today is that of ultra-progress. That if we aren't progressing in one way or another every single day, every single minute, that is a waste of time, a waste of life. I'm mainly talking about technological progress here. What time as humanity do we have to *not* progress? What sense does it make to have all of this disposable and amazing technology now if we aren't going to progress? 
