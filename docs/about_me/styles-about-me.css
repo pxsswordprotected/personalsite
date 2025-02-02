@@ -71,7 +71,7 @@ body {
 }
 
 .line.horizontal:nth-child(2) {
-    top: 102px;
+    top: 101px;
 }
 
 .line.vertical {
@@ -83,7 +83,7 @@ body {
     right: 43px;
 }
 .line.vertical:nth-child(4) {
-    left: 709px;
+    left: 707px;
 }
 
 
