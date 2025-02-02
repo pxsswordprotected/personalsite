@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Thank Yourself After Hard Work"
