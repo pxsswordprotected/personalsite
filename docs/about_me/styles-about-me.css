@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
@@ -6,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-x: hidden; 
 }
 
 .container {
@@ -27,7 +29,7 @@ body {
     top: 100px;
     max-width: 500px;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
 .menu-item:hover {
@@ -58,7 +60,7 @@ body {
 .line {
     position: absolute;
     background-color: #0000fe;
-    z-index:-1000;
+    z-index: -1000;
 }
 
 .line.horizontal {
@@ -66,6 +68,7 @@ body {
     width: 100%;
 }
 
+/* Original horizontal line positions */
 .line.horizontal:nth-child(1) {
     bottom: 40px;
 }
@@ -79,11 +82,50 @@ body {
     height: 100%;
 }
 
+/* Original vertical line positions */
 .line.vertical:nth-child(3) {
     right: 43px;
 }
+
 .line.vertical:nth-child(4) {
     left: 707px;
 }
 
+/* ===========================================
+   Responsive Adjustments for Mobile View
+   =========================================== */
+@media (max-width: 800px) {
+    .about-me-text {
+        top: 50px;
+        max-width: 90%;
+        padding: 0 10px;
+    }
+    
+    .menu-item {
+        /* Scale down the menu item size */
+        font-size: 8vh;
+    }
+    
+    .line.horizontal:nth-child(1) {
+        bottom: 3%;
+    }
+    
+    .line.horizontal:nth-child(2) {
+        top: 15%;  /* Adjusted to ensure the line stays in view */
+    }
+    
+    /* Reposition the vertical line that was originally fixed at 707px */
+    .line.vertical:nth-child(4) {
+        left: 80%;  /* Use a percentage value for better responsiveness */
+    }
+}
 
+@media (max-width: 480px) {
+    .about-me-text {
+        top: 40px;
+    }
+    
+    .menu-item {
+        font-size: 6vh;
+    }
+}

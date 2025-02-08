@@ -1,0 +1,97 @@
+---
+---
+
+<style>
+    /* Add caption styling */
+    .media-caption {
+        padding: 10px;
+        font-family: helvetica, arial, sans-serif;
+        font-size: 0.9rem;
+        color: #444;
+        text-align: center;
+        background: #f8f8f8;
+        border-top: 1px solid #eee;
+    }
+
+    .header {
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        font-family: helvetica, arial, sans-serif;
+    }
+
+    .moodboard {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+        grid-gap: 15px;
+        padding: 15px;
+        align-items: start;
+    }
+
+    .media-item {
+        break-inside: avoid;
+        margin-bottom: 15px;
+        contain: layout;
+    }
+
+    .media-item img,
+    .media-item video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .menu-item {
+        font-family: helvetica, arial, sans-serif;
+        position: fixed;
+        color: #000;
+        text-decoration: none;
+        font-size: 10vh;
+        transition: all .3s ease;
+    }
+
+    .bottom-right {
+        bottom: 2%;
+        right: 2%;
+    }
+
+    .menu-item:hover {
+        color: #00f;
+        text-decoration: underline;
+    }
+</style>
+
+<link rel="preconnect" href="https://www.psswordprotectd.com">
+
+<div class="header">ALL WORK MADE BY ME</div>
+
+<div class="moodboard">
+    {% assign media_files = site.static_files | where_exp: "file", "file.path contains 'portfolio/'" %}
+    {% assign captions = site.data.portfolio_captions %}
+    
+    {% for file in media_files %}
+    <div class="media-item">
+        {% if file.extname == '.mp4' or file.extname == '.webm' or file.extname == '.ogg' %}
+        <video controls playsinline style="width:100%">
+            <source src="{{ file.path | relative_url }}" type="video/{% case file.extname %}{% when '.mp4' %}mp4{% when '.webm' %}webm{% when '.ogg' %}ogg{% endcase %}">
+        </video>
+        {% else %}
+        <img src="{{ file.path | relative_url }}" alt="" loading="lazy" width="250" height="250">
+        {% endif %}
+
+        <!-- Caption section -->
+        <div class="media-caption">
+            {% assign filename = file.path | split: '/' | last %}
+            {% for item in captions %}
+                {% if item.filename == filename %}
+                    {{ item.caption }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+    // ... keep existing JavaScript unchanged ...
+</script>
