@@ -66,7 +66,7 @@ body {
   }
 
   .left-container {
-    margin-top: 5vh;
+    margin-top: 1vh;
     width: 100%;
     margin-bottom: 40px;
     order: 1; /* Image appears first */
