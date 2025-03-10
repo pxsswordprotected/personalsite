@@ -1,77 +1,58 @@
-body {
+/* styles-contact-me.css */
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f2f2f0;
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #eeeeee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    color: #0d0d0f;
 }
 
 .container {
-    position: relative;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-}
-
-.menu-item {
-    position: absolute;
-    color: black;
-    text-decoration: none;
-    font-size: 10vh;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.menu-item:hover {
-    color: #0000fe;
-    text-decoration: underline;
-}
-
-.menu-item.top-left {
-    top: 2%;
-    left: 2%;
-}
-
-.menu-item.top-right {
-    top: 2%;
-    right: 2%;
-}
-
-.menu-item.bottom-left {
-    bottom: 2%;
-    left: 2%;
-}
-
-.menu-item.bottom-right {
-    bottom: 2%;
-    right: 2%;
-}
-
-.line {
-    position: absolute;
-    background-color: #0000fe;
-    z-index:-1000;
-}
-
-.line.horizontal {
-    height: 0.06vh;
     width: 100%;
+    position: relative;
 }
 
-.line.horizontal:nth-child(1) {
-    top: 40px;
-}
-.line.horizontal:nth-child(2) {
-    top: 110px;
-}
-.line.horizontal:nth-child(3) {
-    bottom: 110px;
-}
-.line.horizontal:nth-child(4) {
-    bottom: 40px;
+.email, .instagram, .twitter {
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #0d0d0f;
 }
 
-.line.horizontal:nth-child(5) {
-    bottom: 50%
+.home-button {
+    position: absolute;
+    text-decoration: none;
+    font-size: 16px;
+    color: #0d0d0f;
+    top: calc(50% + 40px);
 }
 
+/* Mobile responsive styles */
+@media screen and (max-width: 720px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .email, .instagram, .twitter {
+        margin: 10px 0;
+    }
+    
+    .home-button {
+        position: relative;
+        top: auto;
+        margin-top: 40px;
+    }
+}
