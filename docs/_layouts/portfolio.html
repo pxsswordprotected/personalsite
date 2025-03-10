@@ -1,25 +1,22 @@
 ---
 ---
-
 <style>
     /* Add caption styling */
     .media-caption {
         padding: 10px;
         font-family: helvetica, arial, sans-serif;
         font-size: 0.9rem;
-        color: #444;
+        color: #0d0d0f;
         text-align: center;
-        background: #f8f8f8;
+        background: #f2f2f0;
         border-top: 1px solid #eee;
     }
-
     .header {
         text-align: center;
         padding: 20px;
-        font-size: 2rem;
+        font-size: 1rem;
         font-family: helvetica, arial, sans-serif;
     }
-
     .moodboard {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
@@ -27,20 +24,17 @@
         padding: 15px;
         align-items: start;
     }
-
     .media-item {
         break-inside: avoid;
         margin-bottom: 15px;
         contain: layout;
     }
-
     .media-item img,
     .media-item video {
         width: 100%;
         height: auto;
         display: block;
     }
-
     .menu-item {
         font-family: helvetica, arial, sans-serif;
         position: fixed;
@@ -49,26 +43,41 @@
         font-size: 10vh;
         transition: all .3s ease;
     }
-
     .bottom-right {
         bottom: 2%;
         right: 2%;
     }
-
     .menu-item:hover {
         color: #00f;
         text-decoration: underline;
     }
+    /* Top right home button styling */
+    .top-home {
+        font-family: helvetica, arial, sans-serif;
+        position:absolute;
+        top: 20px;
+        right: 20px;
+        text-decoration: none;
+        font-size: 2vh;
+        color: #0d0d0f;
+        padding: 5px 10px;
+        z-index: 100;
+    }
+    /* Mobile responsiveness for home button */
+    @media screen and (max-width: 720px) {
+        .top-home {
+            font-size: 12px;
+            padding: 4px 8px;
+        }
+    }
 </style>
-
 <link rel="preconnect" href="https://www.psswordprotectd.com">
-
-<div class="header">ALL WORK MADE BY ME</div>
-
+<a href="https://www.psswordprotectd.com/" class="top-home">Home</a>
+<div class="header">All Work Made By Me</div>
 <div class="moodboard">
     {% assign media_files = site.static_files | where_exp: "file", "file.path contains 'portfolio/'" %}
     {% assign captions = site.data.portfolio_captions %}
-    
+   
     {% for file in media_files %}
     <div class="media-item">
         {% if file.extname == '.mp4' or file.extname == '.webm' or file.extname == '.ogg' %}
@@ -78,7 +87,6 @@
         {% else %}
         <img src="{{ file.path | relative_url }}" alt="" loading="lazy" width="250" height="250">
         {% endif %}
-
         <!-- Caption section -->
         <div class="media-caption">
             {% assign filename = file.path | split: '/' | last %}
@@ -91,7 +99,6 @@
     </div>
     {% endfor %}
 </div>
-
 <script>
     // ... keep existing JavaScript unchanged ...
 </script>
