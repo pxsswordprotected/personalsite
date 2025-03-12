@@ -49,8 +49,15 @@ body {
 }
 
 .menu-item.bottom-right {
-    top: 2%;
-    right: 2%;
+    font-family: helvetica, arial, sans-serif;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+    padding: 5px 10px;
+    z-index: 100;
 }
 
 .line {
