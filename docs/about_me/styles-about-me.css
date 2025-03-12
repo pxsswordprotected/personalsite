@@ -25,7 +25,7 @@ body {
 
 .about-me-text {
     position: absolute;
-    top: 40px;
+    top: 70px;
     padding-bottom: 40px;
     max-width: 500px;
     left: 50%;
@@ -51,8 +51,8 @@ body {
 .menu-item.bottom-right {
     font-family: helvetica, arial, sans-serif;
     position: absolute;
-    top: 5px;
-    right: 20px;
+    top: 15px;
+    right: 50%;
     text-decoration: none;
     font-size: 1rem;
     color: #000000;
