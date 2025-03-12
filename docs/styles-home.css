@@ -7,14 +7,19 @@
   color: #000000;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 body {
   background-color: #ffffff;
   display: flex;
-  height: 100vh;
   align-items: center;
   padding: 0 5%;
-  flex-direction: row-reverse; 
-      max-width: 100%; 
+  flex-direction: row-reverse;
 }
 
 .left-container {
@@ -25,9 +30,10 @@ body {
 }
 
 .left-container img {
-  width: 80%;         /* ensures image is responsive */
-  height: auto;        /* maintains aspect ratio */
-  max-width: 80%;     /* prevents overflow beyond container */
+  width: 80%;
+  height: auto;
+  max-width: 80%;
+  object-fit: contain;
 }
 
 .right-container {
@@ -40,53 +46,89 @@ body {
 
 .intro-text {
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   line-height: 1.5;
+  font-size: 14px;
 }
 
-/* Menu items container */
 .menu-container {
   display: flex;
-  white-space: nowrap;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .menu-item {
   text-decoration: none;
-  margin-right: 20px;
-  font-size: 14px; 
+  margin: 0 20px 10px 0;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1200px) {
   body {
-    padding: 5%;
+    padding: 5% 5% 0;
     flex-direction: column;
-    overflow-y: hidden; /* prevents vertical scrolling */
+    justify-content: center;
   }
-
+  
   .left-container {
-    margin-top: 1vh;
     width: 100%;
-    margin-bottom: 40px;
-    order: 1; /* Image appears first */
+    height: 40vh;
+    margin-bottom: 20px;
+    order: 1;
   }
-
+  
   .left-container img {
-    height: auto;        /* maintains aspect ratio */
-    max-width: 50vh;     /* prevents overflow beyond container */
+    max-height: 100%;
+    max-width: 100%;
   }
-
+  
   .right-container {
     width: 100%;
-    margin-bottom: 30px;
-    order: 2; /* Text appears second */
+    height: 45vh;
+    order: 2;
+    align-items: center;
   }
-
+  
+  .intro-text {
+    margin-bottom: 15px;
+    font-size: 13px;
+    max-height: 30vh;
+    overflow: hidden;
+    text-align: center;
+  }
+  
   .menu-container {
     flex-wrap: wrap;
+    justify-content: center;
   }
-
+  
   .menu-item {
-    margin-bottom: 10px;
+    margin: 5px 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left-container {
+    height: 35vh;
+  }
+  
+  .right-container {
+    height: 40vh;
+  }
+  
+  .intro-text {
+    font-size: 12px;
+  }
+  
+  .menu-container {
+    margin-top: 10px;
+  }
+  
+  .menu-item {
+    margin: 6px 8px;
+    font-size: 13px;
   }
 }
