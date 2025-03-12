@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Progress</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: helvetica, arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Center the "In Progress..." text */
+        .center-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        /* Keep home button styling */
+        .top-home {
+            font-family: helvetica, arial, sans-serif;
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            color: #000000;
+            padding: 5px 10px;
+            z-index: 100;
+        }
+        
+        /* Top container for spacing */
+        .top-container {
+            position: relative;
+            width: 100%;
+            height: 1vh;
+        }
+        
+        /* Mobile responsiveness for home button */
+        @media screen and (max-width: 720px) {
+            .top-home {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-container">
+        <a href="https://www.psswordprotectd.com/" class="top-home">Home</a>
+    </div>
+    <div class="center-content">
+        <p>In Progress...</p>
+    </div>
+</body>
+</html>
