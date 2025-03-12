@@ -42,17 +42,12 @@
             padding: 0;
         }
        
-        /* Home button styling */
-        .top-home {
-            font-family: helvetica, arial, sans-serif;
-            position: absolute;
-            top: 5px;
-            right: 20px;
+        /* Home link styling - now below the content */
+        .home-link {
+            margin-top: 30px;
             text-decoration: none;
             font-size: 1rem;
             color: #000000;
-            padding: 5px 10px;
-            z-index: 100;
         }
        
         /* Top container for spacing */
@@ -64,21 +59,23 @@
        
         /* Mobile responsiveness */
         @media screen and (max-width: 720px) {
-            .top-home {
+            .home-link {
                 font-size: 1rem;
-                padding: 4px 8px;
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="top-container">
-        <a href="https://www.psswordprotectd.com/" class="top-home">Home</a>
+        <!-- Former home link location -->
     </div>
     <div class="center-content">
         <p>Nopedia</p>
         <p>Freelance</p>
         <p>Passion Projects</p>
+ 
+        <a href="https://www.psswordprotectd.com/" class="home-link">Home</a>
     </div>
 </body>
 </html>
