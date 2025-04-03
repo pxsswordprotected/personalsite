@@ -28,8 +28,6 @@ body {
     top: 70px;
     padding-bottom: 40px;
     max-width: 500px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 
