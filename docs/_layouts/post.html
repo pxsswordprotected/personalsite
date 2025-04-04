@@ -1,114 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <style>
+    /* Basic Reset & Styling */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #FFFFFF;  /* White bg */
+      color: #000000;            /* Black text */
+      font-family: Helvetica, Arial, sans-serif; 
+    }
 
-        html {
-            overflow-x: hidden;
-        }
-        .menu-item {
-            position: fixed;
-            color: black;
-            text-decoration: none;
-            font-size: 10vh;
-            transition: all 0.3s ease;
-        }
+    /* Main container with max width, centered */
+    .post-container {
+      max-width: 500px;
+      margin: 0 auto; /* Center horizontally */
+      padding: 0 15px; 
+    }
 
-        .bottom-right {
-            bottom: 2%;
-            right: 2%;
-        }
+    /* Title styling (match homepage "My Writing" size) */
+    .post-title {
+      margin-top: 25px;
+      margin-bottom: 30px;
+      font-size: 1.3rem; 
+      font-weight: normal; /* optional, if you prefer normal weight */
+    }
 
-        .menu-item:hover {
-            color: #0000fe;
-            text-decoration: underline;
-        }
+    /* Published date styling */
+    .post-date {
+      margin: 0 0 20px 0;
+      color: #000; /* black text */
+      font-size: 1rem; 
+    }
 
-        body {
-            font-family: sans-serif;
-            max-width: 100%;
-            margin: 0px;
-            line-height: 1.6;
-            font-weight: normal;
-            padding: 0 1%;
-            box-sizing: border-box;
-            margin-top: 15px;
-            margin-left: 761px;
-            width: 600px;
-            color: #000; 
-            background-color: #eeeeee;
-        }
+    /* Main post content */
+    .post-content {
+      line-height: 1.6;
+    }
 
-        .post-date{
-            margin-top:-10px;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: normal;
-            margin: 0;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .line {
-            position: fixed;
-            background-color: #0000fe;
-            z-index:-1000;
-        }
-        
-        .line.horizontal {
-            height: 0.06vh;
-            width: 100vw;
-            position:absolute;
-            left: 0; 
-        }
-        
-        .line.horizontal:nth-child(1) {
-            top: 24px;
-        }
-        
-        .line.vertical {
-            width: 1px; 
-            height: 100%;
-            position: fixed;
-        }
-        
-        .line.vertical:nth-child(2) {
-            right: 43px;
-            top: 0; 
-        }
-        
-        .line.vertical:nth-child(3) {
-            left: 777px;
-            top: 0; 
-            z-index:1000 !important;
-        }
-
-    </style>
+    /* Home button fixed at bottom-right (same as homepage) */
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
 </head>
-<body class="post-background">
+<body>
+  <div class="post-container">
     <article>
-        <header>
-            <h1>{{ page.title }}</h1>
-            <div class="post-date">LAST UPDATED: {{ page.date | date: "%B %d, %Y" }}</div>
-        </header>
-        
-        <div class="post-content">
-            {{ content }}
+      <header>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <!-- Replaces "LAST UPDATED" with "Published:" in black -->
+        <div class="post-date">
+          Published: {{ page.date | date: "%B %d, %Y" }}
         </div>
+      </header>
+      
+      <div class="post-content">
+        {{ content }}
+      </div>
     </article>
+  </div>
 
-    <div class="grid">
-        <div class="line horizontal"></div>
-        <div class="line vertical"></div>
-        <div class="line vertical"></div>
-    </div>
-
-    <a href="{{ '/my_writing/' | relative_url }}" class="menu-item bottom-right">HOME</a>
+  <!-- Same Home button style as your homepage -->
+  <a href="{{ site.baseurl }}/" class="home-button">Home</a>
 </body>
 </html>

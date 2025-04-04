@@ -1,173 +1,89 @@
----
-pagination:
-  enabled: true
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY WRITING</title>
-    <style>
-        html {
-            overflow-x: hidden;
-        }
+    <title>My Writing</title>
+  <style>
+    /* Force scrollbar to avoid side-shift when content grows taller */
+    html {
+      overflow-y: scroll; 
+    }
 
-        body {
-            font-family: sans-serif;
-            max-width: 100%;
-            margin: 0px;
-            line-height: 1.6;
-            font-weight: normal;
-            padding: 0 1%;
-            box-sizing: border-box;
-            margin-top: 15px;
-            margin-left: 761px;
-            width: 1000px;
-            color: #000; 
-            background-color: #eeeeee;
-        }
+    /* Use border-box for more predictable widths and padding */
+    * {
+      box-sizing: border-box;
+    }
 
-        .line {
-            position: fixed;
-            background-color: #0000fe;
-            z-index:-1000;
-        }
-        
-        .line.horizontal {
-            height: 0.06vh;
-            width: 100vw;
-            position:absolute;
-            left: 0; 
-            top: 24px;
-        }
-        
-        .line.vertical {
-            width: 1px; 
-            height: 100%;
-            position: fixed;
-        }
-        
-        .line.vertical:nth-child(2) {
-            right: 43px;
-            top: 0; 
-        }
-        
-        .line.vertical:nth-child(3) {
-            left: 777px;
-            top: 0; 
-            z-index:1000 !important;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #000;
+    }
 
-        .menu-item {
-            position: fixed;
-            color: black;
-            text-decoration: none;
-            font-size: 10vh;
-            transition: all 0.3s ease;
-        }
+    /* The main container is centered, with a max width, 
+       and optional side padding for breathing room */
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 15px; 
+    }
 
-        .bottom-right {
-            bottom: 2%;
-            right: 2%;
-        }
+    .heading {
+      margin: 25px 0 30px 0;
+      font-size: 1.3rem;
+    }
 
-        .menu-item:hover {
-            color: #0000fe;
-            text-decoration: underline;
-        }
+    .item {
+      margin-bottom: 1.5rem;
+    }
 
-        .list-items {
-            font-size: 4vh;
-            color: #0000ff;
-            text-transform: uppercase;
-        }
+    .item a {
+      text-decoration: none;
+      color: #000; 
+      font-size: 1rem; 
+    }
 
-        .item {
-            margin-bottom: 2rem;
-        }
+    .description {
+      margin: 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
 
-        .item a {
-            text-decoration: none !important;
-            color: inherit;
-        }
-
-        .item a:hover {
-            text-decoration: underline !important;
-        }
-
-        .description {
-            margin-top:-11px;
-            font-size: 0.9rem;
-            color: #000;
-            text-transform: uppercase;
-        }
-
-        .pagination {
-            position: fixed;
-            top: 2%;
-            right: 2%;
-            display: flex;
-            gap: 20px;
-        }
-
-        .pagination a, .current-page {
-            color: black;
-            text-decoration: none;
-            font-size: 10vh;
-        }
-
-        .pagination a:hover {
-            color: #0000fe;
-            text-decoration: underline;
-        }
-
-        .top-left {
-            position: fixed;
-            right: 44px;
-            top: 41px;
-            font-size: 2vh;
-        }
-    </style>
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
 </head>
 <body>
-    <div class="list-items">
-        <!-- Pinned Posts First -->
-        {% assign pinned_posts = site.posts | where: 'pinned', true %}
-        {% for post in pinned_posts %}
-            <div class="item">
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
-            </div>
-        {% endfor %}
-    
-        <!-- Regular Posts After -->
-        {% assign regular_posts = site.posts | where_exp: 'post', 'post.pinned != true' %}
-        {% for post in regular_posts %}
-            <div class="item">
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
-            </div>
-        {% endfor %}
-    </div>
+  <div class="container">
+    <div class="heading">My Writing</div>
 
-    <div class="grid">
-        <div class="line horizontal"></div>
-        <div class="line vertical"></div>
-        <div class="line vertical"></div>
-    </div>
+    <!-- Pinned Posts -->
+    {% assign pinned_posts = site.posts | where: 'pinned', true | sort: 'date' | reverse %}
+    {% for post in pinned_posts %}
+      <div class="item">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
+      </div>
+    {% endfor %}
 
-    <div class="pagination">
-        {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}">←</a>
-        {% endif %}
-        <span class="current-page">{{ paginator.page }}</span>
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}">→</a>
-        {% endif %}
-    </div>
+    <!-- Regular Posts -->
+    {% assign regular_posts = site.posts | where_exp: 'post', 'post.pinned != true' | sort: 'date' | reverse %}
+    {% for post in regular_posts %}
+      <div class="item">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
+      </div>
+    {% endfor %}
+  </div>
 
-    <div class="top-left">{{ paginator.page }}</div>
-    <a href="https://www.psswordprotectd.com/" class="menu-item bottom-right">HOME</a>
+  <a href="{{ site.baseurl }}/" class="home-button">Home</a>
 </body>
 </html>
