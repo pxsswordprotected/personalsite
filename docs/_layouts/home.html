@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Log (Learning & Building in Public)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Log (Learning &amp; Building in Public)</title>
   <style>
-    /* Force scrollbar to avoid side-shift when content grows taller */
-    html {
-      overflow-y: scroll; 
-    }
-
-    /* Use border-box for more predictable widths and padding */
-    * {
-      box-sizing: border-box;
-    }
+    html { overflow-y: scroll; }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -22,27 +15,31 @@
       color: #000;
     }
 
-    /* The main container is centered, with a max width, 
-       and optional side padding for breathing room */
     .container {
       max-width: 500px;
       margin: 0 auto;
-      padding: 0 15px; 
+      padding: 0 15px;
     }
 
     .heading {
-      margin: 25px 0 30px 0;
+      margin: 25px 0 0 0;
       font-size: 1.3rem;
+      font-weight: 700;
     }
 
-    .item {
-      margin-bottom: 1.5rem;
+    .subheading {
+      margin: 0 0 30px 0;
+      font-size: 1.1rem;          /* slightly smaller */
+      font-weight: 700;           /* same weight */
+      color: #333;                /* lighter than black */
     }
+
+    .item { margin-bottom: 1.5rem; }
 
     .item a {
       text-decoration: none;
-      color: #000; 
-      font-size: 1rem; 
+      color: #000;
+      font-size: 1rem;
     }
 
     .description {
@@ -63,7 +60,8 @@
 </head>
 <body>
   <div class="container">
-    <div class="heading">My Writing</div>
+    <div class="heading">Design Log</div>
+    <div class="subheading">Learning &amp; Building in Public</div>
 
     <!-- Pinned Posts -->
     {% assign pinned_posts = site.posts | where: 'pinned', true | sort: 'date' | reverse %}
