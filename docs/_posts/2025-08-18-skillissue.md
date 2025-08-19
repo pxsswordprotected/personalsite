@@ -17,6 +17,7 @@ Ultrapseaking drilled into my brain that speech is a skill. This then hit me lik
 
 The third thing that really nailed this belief into my head, was Math Academy. Their pedagogy is both inspirational and obviously intentional. The emphasis on deliberate practice is so obviously intentionality coded that the two go hand in hand. Deliberate practice IS ~75% of the work, and this is a practice not separate from your source of agency. What I mean is that intentionality is cultivated through a greater presence of agency which then leads to a greater habit of deliberate practice with all skills if done in the right way. Math Academy's pedagogy stresses rules within learning that are clearly imperative and can be applied across ~all domains. This is what leads to talent development with purpose and non-chance. 
 <br>
+<br>
 Reactivity to emotions can be worked on, showing up in relationships is a skill issue, healing our nervous systems is a skill issue, working with people we dislike can be improved, and so on. 
 <br>
 
