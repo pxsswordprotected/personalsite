@@ -3,18 +3,20 @@ layout: post
 title:  "It's Skill Issues All The Way Down"
 ---
 
-Ever since I've been exposed to two things, I've come around to the belief that most things in life are skill issues.
+Ever since I've been exposed to three things, I've come around to the belief that most things in life are skill issues.
 
 
-Those two things are <a href="https://www.artofaccomplishment.com/">Art of Accomplishment</a> and <a href="https://ultraspeaking.com">Ultraspeaking</a>.
+Those three things are <a href="https://www.artofaccomplishment.com/">Art of Accomplishment</a>, <a href="https://ultraspeaking.com">Ultraspeaking</a>, and <a href="https://docs.google.com/document/d/1LLZK_34Oer9LwuqAv-pqxfXlR8n7V8zJ_MO323R7egI/edit?tab=t.0#heading=h.yrv4a62sjkb">Math Academy</a>.
 <br>
 
 AOA made me realize that emotions can be worked with effectively and skillfully, and downstream of discovering AOA, things that I once thought were too esoteric or I did not even know about such as somatic work actually exist, I just had to find them. 
 <br>
 
-Ultrapseaking drilled into my brain that speech is a skill. This then hit me like a ton of bricks because it helped me fully grok the importance of intentionality in skill building. This then helped me realize we can be intentional about improving anything, and it can happen, even if bottlenecked by circumstances determined by third parties. Yes obviously there are limits to this, but if you show up in everything you do with the intention to improve (whatever that may mean for your context) on it, it all comes down to skill issues.
+Ultrapseaking drilled into my brain that speech is a skill. This then hit me like a ton of bricks because it helped me fully grok the importance of intentionality in skill building. This then helped me realize we can be intentional about improving anything at anytime, and it can happen, even if bottlenecked by circumstances determined by third parties. Yes obviously there are limits to this, but if you show up in everything you do with the intention to improve (whatever that may mean for your context) on it, it all comes down to skill issues.
 <br>
 
+The third thing that really nailed this belief into my head, was Math Academy. Their pedagogy is both inspirational and obviously intentional. The emphasis on deliberate practice is so obviously intentionality coded that the two go hand in hand. Deliberate practice IS ~75% of the work, and this is a practice not separate from your source of agency. What I mean is that intentionality is cultivated through a greater presence of agency which then leads to a greater habit of deliberate practice with all skills if done in the right way. Math Academy's pedagogy stresses rules within learning that are clearly imperative and can be applied across ~all domains. This is what leads to talent development with purpose and non-chance. 
+<br>
 Reactivity to emotions can be worked on, showing up in relationships is a skill issue, healing our nervous systems is a skill issue, working with people we dislike can be improved, and so on. 
 <br>
 
