@@ -9,7 +9,7 @@ Ever since I've been exposed to three things, I've come around to the belief tha
 Those three things are <a href="https://www.artofaccomplishment.com/">Art of Accomplishment</a>, <a href="https://ultraspeaking.com">Ultraspeaking</a>, and <a href="https://docs.google.com/document/d/1LLZK_34Oer9LwuqAv-pqxfXlR8n7V8zJ_MO323R7egI/edit?tab=t.0#heading=h.yrv4a62sjkb">Math Academy</a>.
 <br>
 
-AOA made me realize that emotions can be worked with effectively and skillfully, and downstream of discovering AOA, things that I once thought were too esoteric or I did not even know about such as somatic work actually exist, I just had to find them. 
+AOA made me realize that emotionsz   can be worked with effectively and skillfully, and downstream of discovering AOA, things that I once thought were too esoteric or I did not even know about such as somatic work actually exist, I just had to find them. 
 <br>
 
 Ultrapseaking drilled into my brain that speech is a skill. This then hit me like a ton of bricks because it helped me fully grok the importance of intentionality in skill building. This then helped me realize we can be intentional about improving anything at anytime, and it can happen, even if bottlenecked by circumstances determined by third parties. Yes obviously there are limits to this, but if you show up in everything you do with the intention to improve (whatever that may mean for your context) on it, it all comes down to skill issues.
