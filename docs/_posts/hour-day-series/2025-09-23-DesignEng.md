@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "One Hour a Day of Design Engineering "
-series: One Hour a Day of Design Engineering
+series_name: One Hour a Day of Design Engineering
 
 ---
 
