@@ -1,86 +1,67 @@
 * {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #000000;
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  html, body {
-    height: 100%;
-    width: 100%;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-    left: 0;
-    max-width: 500px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #000000;
+  scrollbar-width: none; /* Firefox */
+}
 
-  }
-  
-  
-  .links-div {
-    display: flex;
-    flex-direction: column-reverse; 
-    gap: 2em;
-    margin: 1em 0;
-    max-width: 500px;
-  }
-  
-  .links-div a {
-    text-decoration: underline;
-    align-self: flex-start; /* Only use the width of the content */
-  }
-  
-  .links-container a:hover {
-    text-decoration: underline;
-  }
-  
-  h1 {
-    margin: 1em 0;
-    width: 100%;
-    text-decoration: none;
-  }
-  
-  .menu-item {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: black;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  
-  .about-top {
-    padding-bottom: 30px;
-  }
-  
-  /* Media queries for responsiveness */
-  @media screen and (min-width: 768px) {
-    body {
-      left: 33%; /* Apply the original left positioning only on desktop */
-    
-    }
-  }
-  
-  @media screen and (max-width: 767px) {
-    body {
-      justify-content: flex-start;
-      padding: 0 15px;
-    }
-    
-    .menu-item {
-      bottom: 15px;
-      right: 15px;
-      font-size: 1.8rem;
-    }
-  }
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 500px;
+  padding: 20px 15px;
+}
+
+
+
+.links-div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2em;
+  margin: 1em 0;
+  max-width: 500px;
+  width: 100%;
+  justify-items: center;
+}
+
+.links-div a {
+  text-decoration: underline;
+  align-self: flex-start;
+  margin: 10px 0;
+}
+
+.links-container a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 1em 0;
+  width: 100%;
+  text-decoration: none;
+}
+
+.menu-item {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  z-index: 100;
+}
+
+.about-top {
+  padding-bottom: 30px;
+  margin-top: 0;
+}
+
