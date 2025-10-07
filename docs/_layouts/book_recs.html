@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Book recs</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 1vw;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #ffffff; /* White bg */
+        color: #000000; /* Black text */
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      .container {
+        width: 85vw;
+        height: auto;
+      }
+
+
+      .gri-container {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+                align-items: center;   
+
+      }
+
+      .gri-item {
+        display:flex;
+        flex-direction: column;
+          justify-content: center; /* centers horizontally */
+  align-items: center;
+        margin: 30px;
+      }
+
+      .gri-img {
+        width: 20vw;
+        height: 30vw;
+      }
+
+      a {
+        margin-top: 20px;
+        color: black;
+        text-decoration: none;
+        text-align: center;
+      }
+
+a::after {
+  content: "↗"; /* simple diagonal arrow */
+  margin-left: 5px;
+}
+
+
+      .home-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gri-container">
+        <div class="gri-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61yDWO+GjQL._SL1360_.jpg"
+          class="gri-img"/>
+          <a
+            href="https://www.amazon.com/Seeing-That-Frees-Robert-Burbea/dp/0992848911" target="_blank"
+            >Seeing That Frees by Rob Burbea</a
+          >
+        </div>
+        <div class="gri-item">
+          <img
+            src="https://www.justinmath.com/files/icon-advice-on-upskilling.png"
+          class="gri-img"/>
+          <a href="https://www.justinmath.com/files/advice-on-upskilling.pdf" target="_blank"
+            >Advice on Upskilling by Justin Skycak</a
+          >
+        </div>
+        <div class="gri-item">
+          <img
+            src="https://m.media-amazon.com/images/I/81k4qFSv3VL._SY466_.jpg"
+          class="gri-img"/>
+          <a
+            href="https://www.amazon.com/Already-Free-Buddhism-Psychotherapy-Liberation/dp/1622034112" target="_blank"
+            >Already Free by Bruce Tift</a
+          >
+        </div>
+        <div class="gri-item">
+          <img
+            src="https://m.media-amazon.com/images/I/71hGs52aTNL._SL1500_.jpg"
+          class="gri-img"/>
+          <a
+            href="https://www.amazon.com/Emotional-Clearing-Releasing-Awakening-Unconditional/dp/0962929530" target="_blank"
+            >Emotional Clearing by John Ruskan</a
+          >
+        </div>
+        <div class="gri-item">
+          <img
+            src="https://m.media-amazon.com/images/I/61NpPe+wHAL._SL1200_.jpg"
+            alt="Psycho Cybernetics book cover"
+          class="gri-img"/>
+          <a
+            href="https://www.amazon.com/Psycho-Cybernetics-Updated-Expanded-Maxwell-Maltz/dp/0399176136/131-5965264-5581620?pd_rd_w=lspLL&content-id=amzn1.sym.2cd14f8d-eb5c-4042-b934-4a05eafd2874&pf_rd_p=2cd14f8d-eb5c-4042-b934-4a05eafd2874&pf_rd_r=1VPVRTHXVE4XACZ703X1&pd_rd_wg=YnvH4&pd_rd_r=c0ddb752-8df2-42e7-a670-e1f6ac6389f0&pd_rd_i=0399176136&psc=1"
+            target="_blank">Psycho-Cybernetics by Maxwell Maltz</a
+          >
+        </div>
+        <div class="gri-item">
+          <img src="https://m.media-amazon.com/images/I/41BpaRukGHL.jpg" class="gri-img"/>
+          <a
+            href="https://www.amazon.com/Operating-Manual-Spaceship-Buckminster-Fuller/dp/3037781262" target="_blank"
+            >Operating Manual for Spaceship Earth by R. Buckminster Fuller</a
+          >
+        </div>
+        <div class="gri-item">
+          <img
+            src="https://assets.lulu.com/cover_thumbs/8/d/8dm4m8-front-shortedge-384.jpg"
+          class="gri-img"/>
+          <a
+            href="https://www.lulu.com/shop/scott-alexander/the-library-of-scott-alexandria/hardcover/product-8dm4m8.html?page=1&pageSize=4"
+            target="_blank" >The Library of Scott Alexandria by Scott Alexander</a
+          >
+        </div>
+        <div class="gri-item">
+          <img
+            src="https://m.media-amazon.com/images/I/718XJQKpOdL._SL1500_.jpg"
+          class="gri-img"/>
+          <a
+            href="https://www.amazon.com/Finite-Infinite-Games-James-Carse/dp/1476731713"
+            target="_blank" >Finite and Infinite Games by James Carse</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <a href="{{ site.baseurl }}/" class="home-button">Home</a>
+  </body>
+</html>
