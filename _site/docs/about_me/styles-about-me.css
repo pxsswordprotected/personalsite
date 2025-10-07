@@ -1,0 +1,141 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; 
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem; 
+}
+
+.about-me-text {
+    position: absolute;
+    top: 70px;
+    padding-bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 500px;
+}
+
+
+.menu-item.top-left {
+    top: 2%;
+    left: 2%;
+}
+
+.menu-item.top-right {
+    top: 2%;
+    right: 2%;
+}
+
+.menu-item.bottom-left {
+    bottom: 2%;
+    left: 2%;
+}
+
+.menu-item.bottom-right {
+    font-family: helvetica, arial, sans-serif;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+    padding: 5px 10px;
+    z-index: 100;
+}
+
+.line {
+    position: absolute;
+    background-color: #0000fe;
+    z-index: -1000;
+}
+
+.line.horizontal {
+    height: 0.06vh;
+    width: 100%;
+}
+
+/* Original horizontal line positions */
+.line.horizontal:nth-child(1) {
+    bottom: 40px;
+}
+
+.line.horizontal:nth-child(2) {
+    top: 101px;
+}
+
+.line.vertical {
+    width: 0.06vh;
+    height: 100%;
+}
+
+/* Original vertical line positions */
+.line.vertical:nth-child(3) {
+    right: 43px;
+}
+
+.line.vertical:nth-child(4) {
+    left: 707px;
+}
+
+/* ===========================================
+   Responsive Adjustments for Mobile View
+   =========================================== */
+@media (max-width: 800px) {
+    .about-me-text {
+        top: 70px;
+        max-width: 90%;
+        padding: 0 10px;
+        padding-bottom: 40px;
+
+    }   
+    
+    .menu-item {
+        /* Scale down the menu item size */
+        font-size: 1rem; 
+    }
+    
+    .line.horizontal:nth-child(1) {
+        bottom: 3%;
+    }
+    
+    .line.horizontal:nth-child(2) {
+        top: 15%;  /* Adjusted to ensure the line stays in view */
+    }
+    
+    /* Reposition the vertical line that was originally fixed at 707px */
+    .line.vertical:nth-child(4) {
+        left: 80%;  /* Use a percentage value for better responsiveness */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me-text {
+        top:70px;
+            padding-bottom: 40px;
+        min-width: 275px;
+
+    }
+    
+    .menu-item {
+        font-size: 1rem;
+ 
+    }
+}

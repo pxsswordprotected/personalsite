@@ -1,0 +1,114 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 100%;
+    margin: 0;
+    line-height: 1.6;
+    font-weight: normal;
+    padding: 0 1%;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-left: 761px;
+    width: 1000px;
+    color: #000;
+    background-color: #eeeeee;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.line {
+    position: fixed;
+    background-color: #0000fe;
+    z-index: -1000;
+}
+
+.line.horizontal {
+    height: 0.06vh;
+    width: 100vw;
+    position: absolute;
+    left: calc(-761px - 1%); /* Compensates for body margin + padding */
+    top: 24px;
+}
+
+.line.vertical {
+    width: 1px;
+    height: 100%;
+    position: fixed;
+}
+
+.line.vertical:nth-child(2) {
+    right: 43px;
+    top: 0;
+}
+
+.line.vertical:nth-child(3) {
+    left: 777px;
+    top: 0;
+    z-index: 1000 !important;
+}
+
+.menu-item {
+    position: fixed;
+    color: black;
+    text-decoration: none;
+    font-size: 10vh;
+}
+
+.bottom-right {
+    bottom: 2%;
+    right: 2%;
+}
+
+.menu-item:hover {
+    color: #0000fe;
+    text-decoration: underline;
+}
+
+.list-items {
+    font-size: 4vh;
+    color: #0000ff;
+    text-transform: uppercase;
+}
+
+.item {
+    margin-bottom: 2rem;
+}
+
+.item a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.item a:hover {
+    text-decoration: underline !important;
+}
+
+.description {
+    margin-top: -11px;
+    font-size: 0.9rem;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.top-left {
+    position: absolute;
+    right: -117px;
+    top: 1px;
+    font-size: 2vh;
+    text-transform:uppercase;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.list-items {
+    top:10px;
+    position:absolute;
+}

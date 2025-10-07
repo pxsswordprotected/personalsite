@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <style>
+    html { overflow-y: scroll; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .heading {
+      margin: 25px 0 0 0;
+      font-size: 1.3rem;
+    }
+    .subheading {
+      margin: 0 0 30px 0;
+      font-size: 1.0rem;
+      color: #666;
+    }
+    .item { margin-bottom: 1.5rem; }
+    .item a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem;
+    }
+    .description {
+      margin: 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">{{ page.title }}</div>
+    <div class="subheading">One Hour a Day of Design Engineering</div>
+    
+    {% assign series_posts = site.posts | where: 'series_name', 'One Hour a Day of Design Engineering' | sort: 'date' | reverse %}
+    {% for post in series_posts %}
+      <div class="item">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  <a href="{{ site.baseurl }}/" class="home-button">Home</a>
+</body>
+</html>

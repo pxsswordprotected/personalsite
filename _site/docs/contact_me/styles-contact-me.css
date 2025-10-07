@@ -1,0 +1,60 @@
+/* styles-contact-me.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+}
+
+.email, .instagram, .twitter {
+    margin: 5px 0; 
+        text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+}
+
+.home-button {
+    position: absolute;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    top: calc(50% + 60px);
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 720px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .email, .instagram, .twitter {
+        margin: 10px 0;
+    }
+    
+    .home-button {
+        position: relative;
+        top: auto;
+        margin-top: 40px;
+    }
+}
