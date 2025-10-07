@@ -75,8 +75,8 @@
       <p class="description">One Hour a Day of Design Engineering</p>
     </div>
 
-    <!-- Regular Posts -->
-    {% assign regular_posts = site.posts | where_exp: 'post', 'post.pinned != true and post.series_name == nil' | sort: 'date' | reverse %}
+    <!-- Regular Posts (excluding pinned and series posts) -->
+    {% assign regular_posts = site.posts | where_exp: 'post', 'post.pinned != true' | where_exp: 'post', 'post.series_name == nil' | sort: 'date' | reverse %}
     {% for post in regular_posts %}
       <div class="item">
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
