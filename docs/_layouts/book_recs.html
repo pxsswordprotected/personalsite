@@ -24,42 +24,44 @@
       }
 
       .container {
-        width: 85vw;
-        height: auto;
+          max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
       }
 
 
       .gri-container {
         display:grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         grid-template-rows: repeat(auto-fill, 1fr);
-                align-items: center;   
+        align-items: center;   
 
       }
 
       .gri-item {
         display:flex;
         flex-direction: column;
-          justify-content: center; /* centers horizontally */
-  align-items: center;
         margin: 30px;
+          gap: 20px
       }
 
       .gri-img {
-        width: 20vw;
-        height: 30vw;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3; /* maintains book cover proportions */
+        object-fit: cover;
       }
 
       a {
-        margin-top: 20px;
         color: black;
         text-decoration: none;
         text-align: center;
+          font-size: clamp(0.875rem, 2.5vw, 1.125rem);    
       }
 
-a::after {
-  content: "↗"; /* simple diagonal arrow */
-  margin-left: 5px;
+    a:not(.home-button)::after {
+    content: "↗";
+    margin-left: 5px;
 }
 
 
@@ -71,6 +73,7 @@ a::after {
         text-decoration: none;
         color: #000;
       }
+
     </style>
   </head>
   <body>
