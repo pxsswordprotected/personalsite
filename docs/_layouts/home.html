@@ -76,7 +76,7 @@
     </div>
 
     <!-- Regular Posts -->
-    {% assign regular_posts = site.posts | where_exp: 'post', 'post.pinned != true' | sort: 'date' | reverse %}
+    {% assign regular_posts = site.posts | where_exp: 'post', 'post.pinned != true and post.series_name == nil' | sort: 'date' | reverse %}
     {% for post in regular_posts %}
       <div class="item">
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
