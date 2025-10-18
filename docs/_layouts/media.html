@@ -1,57 +1,123 @@
 ---
 ---
 
-<style>.moodboard{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));grid-gap:15px;padding:15px;align-items:start}.media-item{break-inside:avoid;margin-bottom:15px;contain:layout}.media-item img,.media-item video{width:100%;height:auto;display:block}.menu-item{font-family:helvetica,arial,sans-serif;position:fixed;color:#000;text-decoration:none;font-size:5vh;transition:all .3s ease}.bottom-right{bottom:2%;right:2%}.menu-item:hover{color:rgb(0, 0, 0);}</style>
+<style>
 
-<link rel="preconnect" href="https://www.psswordprotectd.com">
+@font-face {
+  font-family: "PPNeueMontreal-Book";
+  src: url(assets/fonts/PPNeueMontreal-Book.woff2) format("woff2"),
+       url(assets/fonts/PPNeueMontreal-Book.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+    font-family: "PPNeueMontreal-Book", arial, sans-serif;
+    background-color: #FDFDFD;
+
+}
+
+  .moodboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 15px;
+    padding: 15px;
+    align-items: start;
+  }
+  .media-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    contain: layout;
+  }
+  .media-item img,
+  .media-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .menu-item {
+    font-family: "PPNeueMontreal-Book", arial, sans-serif;
+    position: fixed;
+    color: #191919;
+    text-decoration: none;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+  }
+  .bottom-right {
+    bottom: 2%;
+    right: 2%;
+  }
+  .menu-item:hover {
+    opacity: 0.7;
+  }
+</style>
+
+<link rel="preconnect" href="https://www.psswordprotectd.com" />
 
 <div class="moodboard">
-  {% assign media_files = site.static_files | where_exp: "file", "file.path contains 'media/'" %}
-  {% for file in media_files %}
+  {% assign media_files = site.static_files | where_exp: "file", "file.path
+  contains 'media/'" %} {% for file in media_files %}
   <div class="media-item">
-    {% if file.extname == '.mp4' or file.extname == '.webm' or file.extname == '.ogg' %}
-    <video controls playsinline style="width:100%">
-      <source src="{{ file.path | relative_url }}" type="video/{% case file.extname %}{% when '.mp4' %}mp4{% when '.webm' %}webm{% when '.ogg' %}ogg{% endcase %}">
+    {% if file.extname == '.mp4' or file.extname == '.webm' or file.extname ==
+    '.ogg' %}
+    <video controls playsinline style="width: 100%">
+      <source
+        src="{{ file.path | relative_url }}"
+        type="video/{% case file.extname %}{% when '.mp4' %}mp4{% when '.webm' %}webm{% when '.ogg' %}ogg{% endcase %}"
+      />
     </video>
     {% else %}
-    <img src="{{ file.path | relative_url }}" alt="" loading="lazy" width="250" height="250">
+    <img
+      src="{{ file.path | relative_url }}"
+      alt=""
+      loading="lazy"
+      width="250"
+      height="250"
+    />
     {% endif %}
   </div>
   {% endfor %}
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded",()=>{
-        const MIN_HEIGHT=400,COLUMN_SPAN=2,grid=document.querySelector(".moodboard"),
-            items=Array.from(grid.children);
-        
-        for(let i=items.length-1;i>0;i--){
-            const j=Math.floor(Math.random()*(i+1));
-            [items[i],items[j]]=[items[j],items[i]]
+  document.addEventListener("DOMContentLoaded", () => {
+    const MIN_HEIGHT = 400,
+      COLUMN_SPAN = 2,
+      grid = document.querySelector(".moodboard"),
+      items = Array.from(grid.children);
+
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    items.forEach((e) => grid.appendChild(e));
+
+    // media sizing
+    document.querySelectorAll(".media-item").forEach((container) => {
+      const media = container.querySelector("img, video");
+      const checkSize = () => {
+        const height =
+          media.tagName === "IMG" ? media.naturalHeight : media.videoHeight;
+        if (height < 500) {
+          container.style.gridColumn = `span ${COLUMN_SPAN}`;
+          container.style.gridRow = "span 2";
         }
-        items.forEach(e=>grid.appendChild(e));
-    
-        // media sizing
-        document.querySelectorAll(".media-item").forEach(container=>{
-            const media=container.querySelector("img, video");
-            const checkSize=()=>{
-                const height=media.tagName==="IMG" ? media.naturalHeight : media.videoHeight;
-                if(height<500){
-                    container.style.gridColumn=`span ${COLUMN_SPAN}`;
-                    container.style.gridRow="span 2";
-                }
-                if(width<300){
-                    container.style.gridColumn=`span ${COLUMN_SPAN}`;
-                    container.style.gridRow="span 2";
-                }
-            };
-            
-            if(media.tagName==="IMG"){
-                media.complete ? checkSize() : media.addEventListener("load",checkSize);
-            }else{
-                media.addEventListener("loadedmetadata",checkSize);
-            }
-        });
+        if (width < 300) {
+          container.style.gridColumn = `span ${COLUMN_SPAN}`;
+          container.style.gridRow = "span 2";
+        }
+      };
+
+      if (media.tagName === "IMG") {
+        media.complete
+          ? checkSize()
+          : media.addEventListener("load", checkSize);
+      } else {
+        media.addEventListener("loadedmetadata", checkSize);
+      }
     });
-    </script>
-<a href="https://www.psswordprotectd.com/" class="menu-item bottom-right">HOME</a>
+  });
+</script>
+<a href="https://www.psswordprotectd.com/" class="menu-item bottom-right"
+  >Home</a>
