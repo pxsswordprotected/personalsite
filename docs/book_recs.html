@@ -5,91 +5,157 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     >
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Book recs</title>
+    <title>Books</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
+      
+@font-face {
+  font-family: "PPNeueMontreal-Book";
+  src: url(assets/fonts/PPNeueMontreal-Book.woff2) format("woff2"),
+       url(assets/fonts/PPNeueMontreal-Book.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-      html {
-  font-size: 14px;
-  -webkit-text-size-adjust: 100%;
-} 
+:root {
+  --px: calc(1rem / 16);
+  
+  --item-spacing:        clamp(3rem, 10vh, 6rem);  
+  --gap-spacing:         clamp(1.25rem, 3vh, 2rem);     
+  --section-margin-size: clamp(2rem, 6vh, 4.5rem);
+  
+  --reg-font-size:    1.125rem;
+  --header-font-size:    1.25rem;
+  
+  --text-color-500: #191919;
+  --bg-color-light-500: #FDFDFD;
+}
 
-      html,
-      body {
-        margin: 1vw;
-        padding: 0;
-        overflow-x: hidden;
-        background-color: #ffffff; /* White bg */
-        color: #000000; /* Black text */
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 14px;
-      }
+html {
+  margin: clamp(1rem, 3vh, 2rem);
+  font-family: "PPNeueMontreal-Book", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: var(--reg-font-size);
+  box-sizing: border-box;
+  color: var(--text-color-500);
+  background-color: var(--bg-color-light-500);
+  letter-spacing: 0.025rem;  
+}
 
-      .container {
-          max-width: 1600px;
-            margin: 0 auto;
-            padding: 20px;
-      }
+*, *::before, *::after { 
+  box-sizing: inherit; 
+}
 
+header {
+    font-size: var(--header-font-size);
+    max-width: 61ch; 
+    margin: 0 auto;   
+}
 
-      .gri-container {
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        grid-template-rows: repeat(auto-fill, 1fr);
-        align-items: center;   
+.container {
+  margin-inline: auto;
+  max-width: 97ch;  
+  padding: clamp(1rem, 3vw, 2rem); 
+}
 
-      }
+.gri-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+    place-items: center;
+}
 
-      .gri-item {
-        display:flex;
-        flex-direction: column;
-        margin: 30px;
-          gap: 20px
-      }
+.gri-item {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: var(--item-spacing); 
+  gap: var(--gap-spacing);     
+  width: clamp(4rem, 50%, 10rem);
+}
 
-      .gri-img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 2/3; 
-        object-fit: cover;
-      }
+.gri-img {
+  width: 100%;  
+  height: auto;
+  aspect-ratio: 2/3; 
+  object-fit: cover;
+}
 
-      a {
-        color: black;
-        text-decoration: none;
-        text-align: center;
-        font-size: 1rem; 
-      }
+a {
+  color: var(--text-color-500);  
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--reg-font-size); 
+}
 
+a:hover {
+  opacity: 0.7;  
+}
 
+.home--div {
+    max-width: 76ch; 
+    margin: 0 auto;   
+    margin-bottom: 1rem;
+}
 
-      .home-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: #000;
-      }
+.home-button {  
+  font-size: 1rem;
+  text-decoration: underline;
+  color: var(--text-color-500);
+}
 
-      @media (max-width: 768px) {
+@media (min-width: 48rem) {
+  :root {
+    --reg-font-size:       1.125rem;
+    --section-margin-size: clamp(2rem, 8vh, 4.5rem);
+  }
+  
+  html {
+    margin: calc(1rem * 2);
+  }
+}
+
+@media (max-width: 768px) {
   .gri-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
   }
   
   .gri-item {
-    margin: 15px;
+    margin: calc(var(--item-spacing) / 2);  
   }
+  
+
+
+}
+
+@media (max-width: 1160px) {
+  header {
+      display: flex;
+      justify-content: center;
+  }
+
+  .home--div {
+        display: flex;
+      justify-content: center;
+  }
+}
+
+@media (min-width: 1160px) {
+    a {
+        text-align: left;
+    }
 }
 
 
     </style>
   </head>
   <body>
+    <!-- <header>Books I Recommend</header> -->
+
     <div class="container">
+            <div class="home--div"><a href="index.html" class="home-button">Home</a></div>
+
+            <header>Books I Recommend</header>
+
       <div class="gri-container">
         <div class="gri-item">
   <a href="https://www.amazon.com/Seeing-That-Frees-Robert-Burbea/dp/0992848911" target="_blank">
@@ -181,6 +247,5 @@
       </div>
     </div>
 
-    <a href="index.html" class="home-button">Home</a>
   </body>
 </html>

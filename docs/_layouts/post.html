@@ -5,36 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }}</title>
   <style>
-    /* Basic Reset & Styling */
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      background-color: #FFFFFF;  /* White bg */
-      color: #000000;            /* Black text */
-      font-family: Helvetica, Arial, sans-serif; 
+    @font-face {
+      font-family: "PPNeueMontreal-Book";
+      src: url(/assets/fonts/PPNeueMontreal-Book.woff2) format("woff2"),
+           url(/assets/fonts/PPNeueMontreal-Book.woff) format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
     }
 
-    /* Main container with max width, centered */
+    :root {
+      --px: calc(1rem / 16);
+      --section-margin-size: clamp(2rem, 6vh, 4.5rem);
+      --reg-font-size: calc(16 * var(--px));
+      --header-font-size: calc(20 * var(--px));
+      --text-color-500: #191919;
+      --bg-color-light-500: #FDFDFD;
+    }
+
+    html {
+      margin: clamp(1rem, 3vh, 2rem);
+      font-family: "PPNeueMontreal-Book", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: var(--reg-font-size);
+      box-sizing: border-box;
+      color: var(--text-color-500);
+      background-color: var(--bg-color-light-500);
+      letter-spacing: 0.025rem;
+    }
+
+    *, *::before, *::after { 
+      box-sizing: inherit; 
+    }
+
+    /* Top home button */
+    .home-button-top {
+      display: inline-block;
+      font-size: 1rem;
+      text-decoration: underline;
+      color: var(--text-color-500);
+      margin-bottom: clamp(1.5rem, 4vh, 3rem);
+    }
+
+    .home-button-top:hover {
+      opacity: 0.7;
+    }
+
+    /* Main container */
     .post-container {
-      max-width: 500px;
-      margin: 0 auto; /* Center horizontally */
-      padding: 0 15px; 
+      max-width: 60ch;
+      margin-inline: auto;
+      min-height: calc(100vh - (2 * clamp(1rem, 3vh, 2rem)));
     }
 
-    /* Title styling (match homepage "My Writing" size) */
+    /* Title styling */
     .post-title {
-      margin-top: 25px;
-      margin-bottom: 30px;
-      font-size: 1.3rem; 
-      font-weight: normal; /* optional, if you prefer normal weight */
+      margin-top: 0;
+      margin-bottom: clamp(1rem, 2vh, 1.5rem);
+      font-size: var(--header-font-size);
+      font-weight: normal;
     }
 
     /* Published date styling */
     .post-date {
-      margin: 0 0 20px 0;
-      color: #000; /* black text */
-      font-size: 1rem; 
+      margin: 0 0 var(--section-margin-size) 0;
+      color: var(--text-color-500);
+      font-size: 1rem;
+      opacity: 0.75;
     }
 
     /* Main post content */
@@ -42,35 +78,53 @@
       line-height: 1.6;
     }
 
-    /* Home button fixed at bottom-right (same as homepage) */
-    .home-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      font-size: 1.5rem;
-      text-decoration: none;
-      color: #000;
+    .post-content p {
+      margin-bottom: clamp(1rem, 3vh, 1.5rem);
+    }
+
+    .post-content a {
+      color: var(--text-color-500);
+      text-decoration: underline;
+    }
+
+    .post-content a:visited {
+      color: rgb(78, 78, 78);
+    }
+
+    .post-content a:hover {
+      opacity: 0.7;
+    }
+
+    /* Desktop adjustments */
+    @media (min-width: 48rem) {
+      :root {
+        --reg-font-size: calc(18 * var(--px));
+        --header-font-size: calc(20 * var(--px));
+        --section-margin-size: clamp(2rem, 8vh, 4.5rem);
+      }
+      
+      html {
+        margin: calc(1rem * 2);
+      }
     }
   </style>
 </head>
 <body>
   <div class="post-container">
+    <a href="{{ site.baseurl }}/" class="home-button-top">Home</a>
+    
     <article>
       <header>
         <h1 class="post-title">{{ page.title }}</h1>
-        <!-- Replaces "LAST UPDATED" with "Published:" in black -->
         <div class="post-date">
           Published: {{ page.date | date: "%B %d, %Y" }}
         </div>
       </header>
-      
+     
       <div class="post-content">
         {{ content }}
       </div>
     </article>
   </div>
-
-  <!-- Same Home button style as your homepage -->
-  <a href="{{ site.baseurl }}/" class="home-button">Home</a>
 </body>
 </html>

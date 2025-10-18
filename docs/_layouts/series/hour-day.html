@@ -4,55 +4,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <style>
-    html { overflow-y: scroll; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Helvetica, Arial, sans-serif;
-      background: #fff;
-      color: #000;
+    @font-face {
+      font-family: "PPNeueMontreal-Book";
+      src: url(/assets/fonts/PPNeueMontreal-Book.woff2) format("woff2"),
+           url(/assets/fonts/PPNeueMontreal-Book.woff) format("woff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
     }
+
+    :root {
+      --px: calc(1rem / 16);
+      --link-margin-size: clamp(0.75rem, 2vh, 1.25rem);
+      --intro-margin-size: clamp(1.5rem, 4vh, 3rem);
+      --section-margin-size: clamp(2rem, 6vh, 4.5rem);
+      --reg-font-size: calc(16 * var(--px));
+      --header-font-size: calc(20 * var(--px));
+      --text-color-500: #191919;
+      --bg-color-light-500: #FDFDFD;
+    }
+
+    html {
+      margin: clamp(1rem, 3vh, 2rem);
+      overflow-y: scroll;
+      font-family: "PPNeueMontreal-Book", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: var(--reg-font-size);
+      box-sizing: border-box;
+      color: var(--text-color-500);
+      background-color: var(--bg-color-light-500);
+      letter-spacing: 0.025rem;
+    }
+
+    *, *::before, *::after { 
+      box-sizing: inherit; 
+    }
+
     .container {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 0 15px;
+      max-width: 60ch;
+      margin-inline: auto;
+      min-height: calc(100vh - (2 * clamp(1rem, 3vh, 2rem)));
     }
+
+    /* Top home button */
+    .home-button-top {
+      display: inline-block;
+      font-size: 1rem;
+      text-decoration: underline;
+      color: var(--text-color-500);
+      margin-bottom: var(--intro-margin-size);
+    }
+
+    .home-button-top:hover {
+      opacity: 0.7;
+    }
+
     .heading {
-      margin: 25px 0 0 0;
-      font-size: 1.3rem;
+      margin: 0 0 clamp(0.5rem, 1vh, 0.75rem) 0;
+      font-size: var(--header-font-size);
+      font-weight: normal;
     }
+
     .subheading {
-      margin: 0 0 30px 0;
-      font-size: 1.0rem;
-      color: #666;
+      margin: 0 0 var(--section-margin-size) 0;
+      font-size: 1rem;
+      opacity: 0.75;
     }
-    .item { margin-bottom: 1.5rem; }
+
+    .item {
+      margin-bottom: var(--link-margin-size);
+    }
+
     .item a {
-      text-decoration: none;
-      color: #000;
+      text-decoration: underline;
+      color: var(--text-color-500);
       font-size: 1rem;
     }
-    .description {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
+
+    .item a:visited {
+      color: rgb(78, 78, 78);
     }
-    .home-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      font-size: 1.5rem;
-      text-decoration: none;
-      color: #000;
+
+    .item a:hover {
+      opacity: 0.7;
+    }
+
+    .description {
+      margin: clamp(0.25rem, 0.5vh, 0.5rem) 0 0 0;
+      opacity: 0.75;
+      font-size: 1rem;
+    }
+
+    @media (min-width: 48rem) {
+      :root {
+        --reg-font-size: calc(18 * var(--px));
+        --header-font-size: calc(20 * var(--px));
+        --section-margin-size: clamp(2rem, 8vh, 4.5rem);
+      }
+      
+      html {
+        margin: calc(1rem * 2);
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <a href="{{ site.baseurl }}/" class="home-button-top">Home</a>
+
     <div class="heading">{{ page.title }}</div>
     <div class="subheading">One Hour a Day of Design Engineering</div>
-    
+   
     {% assign series_posts = site.posts | where: 'series_name', 'One Hour a Day of Design Engineering' | sort: 'date' | reverse %}
     {% for post in series_posts %}
       <div class="item">
@@ -61,6 +122,5 @@
       </div>
     {% endfor %}
   </div>
-  <a href="{{ site.baseurl }}/" class="home-button">Home</a>
 </body>
 </html>
