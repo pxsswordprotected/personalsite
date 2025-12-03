@@ -1,491 +1,547 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Principles</title>
-    <style>
-      @font-face {
-        font-family: "PPNeueMontreal-Book";
-        src: url(assets/fonts/PPNeueMontreal-Book.woff2) format("woff2"),
-          url(assets/fonts/PPNeueMontreal-Book.woff) format("woff");
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Principles</title>
+        <style>
+            @font-face {
+                font-family: "PPNeueMontreal-Book";
+                src:
+                    url(assets/fonts/PPNeueMontreal-Book.woff2) format("woff2"),
+                    url(assets/fonts/PPNeueMontreal-Book.woff) format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
 
-      :root {
-        --px: calc(1rem / 16);
-        --link-margin-size: clamp(0.75rem, 2vh, 1.25rem);
-        --intro-margin-size: clamp(1.5rem, 4vh, 3rem);
-        --section-margin-size: clamp(2rem, 6vh, 4.5rem);
-        --reg-font-size: 1rem;
-        --header-font-size: 1.25rem;
-        --text-color-500: #191919;
-        --bg-color-light-500: #fdfdfd;
-      }
+            :root {
+                --px: calc(1rem / 16);
+                --link-margin-size: clamp(0.75rem, 2vh, 1.25rem);
+                --intro-margin-size: clamp(1.5rem, 4vh, 3rem);
+                --section-margin-size: clamp(2rem, 6vh, 4.5rem);
+                --reg-font-size: 1rem;
+                --header-font-size: 1.25rem;
+                --text-color-500: #191919;
+                --bg-color-light-500: #fdfdfd;
+            }
 
-      html {
-        margin: clamp(1rem, 3vh, 2rem);
-        font-family: "PPNeueMontreal-Book", system-ui, -apple-system, Segoe UI,
-          Roboto, Arial, sans-serif;
-        font-size: var(--reg-font-size);
-        box-sizing: border-box;
-        color: var(--text-color-500);
-        background-color: var(--bg-color-light-500);
-        letter-spacing: 0.025rem;
-      }
+            html {
+                margin: clamp(1rem, 3vh, 2rem);
+                font-family:
+                    "PPNeueMontreal-Book",
+                    system-ui,
+                    -apple-system,
+                    Segoe UI,
+                    Roboto,
+                    Arial,
+                    sans-serif;
+                font-size: var(--reg-font-size);
+                box-sizing: border-box;
+                color: var(--text-color-500);
+                background-color: var(--bg-color-light-500);
+                letter-spacing: 0.025rem;
+            }
 
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
+            *,
+            *::before,
+            *::after {
+                box-sizing: inherit;
+            }
 
-      .page {
-        margin-inline: auto;
-        max-width: 60ch;
-        min-height: calc(100vh - (2 * clamp(1rem, 3vh, 2rem)));
-      }
+            .page {
+                margin-inline: auto;
+                max-width: 60ch;
+                min-height: calc(100vh - (2 * clamp(1rem, 3vh, 2rem)));
+            }
 
-      header,
-      .nav--header {
-        font-size: var(--header-font-size);
-      }
+            header,
+            .nav--header {
+                font-size: var(--header-font-size);
+            }
 
-      main {
-        margin-top: var(--section-margin-size);
-      }
+            main {
+                margin-top: var(--section-margin-size);
+            }
 
-      .principles-intro {
-        margin-bottom: var(--intro-margin-size);
-      }
+            .principles-intro {
+                margin-bottom: var(--intro-margin-size);
+            }
 
-      .principles-section {
-        margin-bottom: var(--section-margin-size);
-      }
+            .principles-section {
+                margin-bottom: var(--section-margin-size);
+            }
 
-      ul {
-        list-style-type: square;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0;
-      }
+            ul {
+                list-style-type: square;
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0;
+            }
 
-      li + li {
-        margin-top: var(--link-margin-size);
-      }
+            li + li {
+                margin-top: var(--link-margin-size);
+            }
 
-      a {
-        text-decoration: underline;
-      }
+            a {
+                text-decoration: underline;
+            }
 
-      a:link {
-        color: var(--text-color-500);
-      }
+            a:link {
+                color: var(--text-color-500);
+            }
 
-      a:visited {
-        color: rgb(78, 78, 78);
-      }
+            a:visited {
+                color: rgb(78, 78, 78);
+            }
 
-      a:hover {
-        opacity: 0.7;
-      }
+            a:hover {
+                opacity: 0.7;
+            }
 
-      ::selection {
-        background-color: var(--text-color-500);
-        color: var(--bg-color-light-500);
-      }
+            ::selection {
+                background-color: var(--text-color-500);
+                color: var(--bg-color-light-500);
+            }
 
-      /* desktop */
-      @media (min-width: 48rem) {
-        :root {
-          --reg-font-size: 1.125rem;
-          --header-font-size: 1.25rem;
-        }
-        html {
-          margin: calc(1rem * 2);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="page">
-      <header>
-        <nav class="nav--header">
-          <a href="index.html">Home</a>
-        </nav>
-      </header>
+            /* desktop */
+            @media (min-width: 48rem) {
+                :root {
+                    --reg-font-size: 1.125rem;
+                    --header-font-size: 1.25rem;
+                }
+                html {
+                    margin: calc(1rem * 2);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <header>
+                <nav class="nav--header">
+                    <a href="index.html">Home</a>
+                </nav>
+            </header>
 
-      <main>
-        <div class="principles-intro">
-          <p>Collected since 2.25.25</p>
-        </div>
+            <main>
+                <div class="principles-intro">
+                    <p>Collected since 2.25.25</p>
+                </div>
 
-        <section class="principles-section">
-          <ul>
-            <li>
-              <a
-                href="https://www.psswordprotectd.com/2025/08/18/skillissue/"
-                target="_blank"
-                >Almost everything is a skill issue (more than we like to
-                think).</a
-              >
-            </li>
-            <li>
-              Make habits as easily accessible as possible. Reduce friction
-              wherever and whenever possible. Conversely, if you want to stop a
-              bad habit, put as much friction as possible between you and the
-              habit. This can include mental and physical friction.
-            </li>
-            <li>
-              If you want to be extraordinary, most of the standard life
-              milestones that guide others shouldn't apply to you. "A good way
-              to become higher agency is to act like probabilities based on the
-              average person don't apply to you."
-            </li>
-            <li>
-              Extraordinary results require extraordinary efforts (most of the
-              time).
-            </li>
-            <li>You don't have to have an opinion on things.</li>
-            <li>
-              Failures and mistakes should be reframed as both practice and a
-              gathering of new information, resulting in a form of constant
-              iteration.
-            </li>
-            <li>
-              Both child soldiers and child prodigies exist and it's naïve to
-              believe everyone else falls naturally in between those two
-              extremes.
-            </li>
-            <li>
-              Long term satisfaction is always worth the sacrifice of short term
-              pleasure.
-            </li>
-            <li>Everything is impermanent.</li>
-            <li>Almost no very successful person moves super slow.</li>
-            <li>
-              There will never be *the* thing or *the* idea or *the* material
-              possession that grants you ultimate satisfaction. It's all
-              unsatisfactory.
-            </li>
-            <li>
-              The better you are at delayed gratification, the happier you will
-              be.
-            </li>
-            <li>A lot of people don't really pass the Turing test.</li>
-            <li>
-              We are biological animals wired for survival attempting to
-              navigate a highly complex, modernized world.
-            </li>
-            <li>
-              Overcorrection in people, tribes, and systems is a very common
-              failure mode that should be recognized and avoided.
-            </li>
-            <li>
-              <a href="https://near.blog/free-alpha-by-design/" target="_blank"
-                >There is free alpha everywhere and most people do not do
-                anything about it due to locally optimal mindsets and states.</a
-              >
-            </li>
-            <li>
-              If you don't record it, it doesn't exist. The most effective
-              method of recording is writing it down.
-            </li>
-            <li>
-              If you're trying to make any progress about anything in your life,
-              RECORD YOUR JOURNEY. Recording your development and being able to
-              reflect back on where you used to be is one the most motivating
-              feelings.
-            </li>
-            <li>
-              <a href="https://sive.rs/kimo" target="_blank"
-                >There is no speed limit, but keep it within your sustainable
-                zone of control.</a
-              >
-            </li>
-            <li>Anti-fragility is extremely valuable and rare.</li>
-            <li>
-              Most people are bad at identifying why they are successful or have
-              succeeded.
-            </li>
-            <li>You can and should increase your potential for luck.</li>
-            <li>
-              Relatedly,
-              <a href="https://nat.org/" target="_blank"
-                >making more contact with reality</a
-              >
-              is correlated with more success. This is probably due to
-              increasing your surface area of luck and escaping local minimas
-              and moving to global maximas.
-            </li>
-            <li>
-              True confidence is trained trust built within a container of
-              self-love.
-            </li>
-            <li>
-              <a
-                href="https://x.com/visakanv/status/1471179134688661505"
-                target="_blank"
-                >Focus your time, energy, and attention on what you want to see
-                more of.</a
-              >
-            </li>
-            <li>
-              Your life is shaped by what you choose to focus on, so you must
-              actively control and invest your attention like your most valuable
-              resource.
-            </li>
-            <li>
-              Make good and hard decisions before you turn ~25 while your brain
-              is still plastic to secure your best future brain.
-            </li>
-            <li>
-              Learn what you like and and why, then apply those principles to
-              everything such as books, film, clothes, travel, social settings,
-              etc. Knowing yourself and being able to put yourself in the best
-              position possible for your personality and taste is a powerful
-              feeling.
-            </li>
-            <li>
-              "Ultimately it comes down to taste. It comes down to taste. It
-              comes down to trying to expose yourself to the best things that
-              humans have done and then try to bring those things in to what
-              you're doing." - Steve Jobs
-            </li>
-            <li>
-              <a href="https://nabeelqu.co/principles" target="_blank"
-                >Doing as much as you can every day is a form of life
-                extension.</a
-              >
-              Building wealth is also a form of life extension. Both of these
-              things go together sometimes and other times clash.
-            </li>
-            <li>
-              <a
-                href="https://uxmag.com/articles/were-just-temporarily-abled"
-                target="_blank"
-                >We're all just temporarily abled.</a
-              >
-            </li>
-            <li>
-              <a
-                href="http://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail?utm_source=tZero19e&utm_medium=email&utm_campaign=recommended-texts"
-                target="_blank"
-                >Reality is very very complicated and absolutes are always
-                wrong.</a
-              >
-            </li>
-            <li>A deontological model of habits can be harmful.</li>
-            <li>
-              Get attached to processes rather than outcomes. Outcomes are fake,
-              processes are not.
-            </li>
-            <li>
-              The dumber the disagreements, the better the world actually is. To
-              expand, as societies solve major problems and life generally
-              improves, people tend to lower their threshold for what
-              constitutes a problem, shifting their anxieties to increasingly
-              minor issues despite overall progress.
-            </li>
-            <li>
-              Our actions around other people are based on what our model is of
-              what their model is of us.
-            </li>
-            <li>Repetition builds intuition.</li>
-            <li>Goodhart's law runs the world.</li>
-            <li>Aesthetics are the differentiator but not enough.</li>
-            <!-- <li>Tanha is the cause of dukkha (suffering).</li> -->
-            <li>
-              In most contexts, it takes a lot less friction to destroy and tear
-              down vs to build and create. Protect your habits and creations.
-            </li>
-            <!-- <li>
+                <section class="principles-section">
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.psswordprotectd.com/2025/08/18/skillissue/"
+                                target="_blank"
+                                >Almost everything is a skill issue (more than
+                                we like to think).</a
+                            >
+                        </li>
+                        <li>
+                            Make habits as easily accessible as possible. Reduce
+                            friction wherever and whenever possible. Conversely,
+                            if you want to stop a bad habit, put as much
+                            friction as possible between you and the habit. This
+                            can include mental and physical friction.
+                        </li>
+                        <li>
+                            If you want to be extraordinary, most of the
+                            standard life milestones that guide others shouldn't
+                            apply to you. "A good way to become higher agency is
+                            to act like probabilities based on the average
+                            person don't apply to you."
+                        </li>
+                        <li>
+                            Extraordinary results require extraordinary efforts
+                            (most of the time).
+                        </li>
+                        <li>You don't have to have an opinion on things.</li>
+                        <li>
+                            Failures and mistakes should be reframed as both
+                            practice and a gathering of new information,
+                            resulting in a form of constant iteration.
+                        </li>
+                        <li>
+                            Both child soldiers and child prodigies exist and
+                            it's naïve to believe everyone else falls naturally
+                            in between those two extremes.
+                        </li>
+                        <li>
+                            Long term satisfaction is always worth the sacrifice
+                            of short term pleasure.
+                        </li>
+                        <li>Everything is impermanent.</li>
+                        <li>
+                            Almost no very successful person moves super slow.
+                        </li>
+                        <li>
+                            There will never be *the* thing or *the* idea or
+                            *the* material possession that grants you ultimate
+                            satisfaction. It's all unsatisfactory.
+                        </li>
+                        <li>
+                            The better you are at delayed gratification, the
+                            happier you will be.
+                        </li>
+                        <li>
+                            A lot of people don't really pass the Turing test.
+                        </li>
+                        <li>
+                            We are biological animals wired for survival
+                            attempting to navigate a highly complex, modernized
+                            world.
+                        </li>
+                        <li>
+                            Overcorrection in people, tribes, and systems is a
+                            very common failure mode that should be recognized
+                            and avoided.
+                        </li>
+                        <li>
+                            <a
+                                href="https://near.blog/free-alpha-by-design/"
+                                target="_blank"
+                                >There is free alpha everywhere and most people
+                                do not do anything about it due to locally
+                                optimal mindsets and states.</a
+                            >
+                        </li>
+                        <li>
+                            If you don't record it, it doesn't exist. The most
+                            effective method of recording is writing it down.
+                        </li>
+                        <li>
+                            If you're trying to make any progress about anything
+                            in your life, RECORD YOUR JOURNEY. Recording your
+                            development and being able to reflect back on where
+                            you used to be is one the most motivating feelings.
+                        </li>
+                        <li>
+                            <a href="https://sive.rs/kimo" target="_blank"
+                                >There is no speed limit, but keep it within
+                                your sustainable zone of control.</a
+                            >
+                        </li>
+                        <li>Anti-fragility is extremely valuable and rare.</li>
+                        <li>
+                            Most people are bad at identifying why they are
+                            successful or have succeeded.
+                        </li>
+                        <li>
+                            You can and should increase your potential for luck.
+                        </li>
+                        <li>
+                            Relatedly,
+                            <a href="https://nat.org/" target="_blank"
+                                >making more contact with reality</a
+                            >
+                            is correlated with more success. This is probably
+                            due to increasing your surface area of luck and
+                            escaping local minimas and moving to global maximas.
+                        </li>
+                        <li>
+                            True confidence is trained trust built within a
+                            container of self-love.
+                        </li>
+                        <li>
+                            <a
+                                href="https://x.com/visakanv/status/1471179134688661505"
+                                target="_blank"
+                                >Focus your time, energy, and attention on what
+                                you want to see more of.</a
+                            >
+                        </li>
+                        <li>
+                            Your life is shaped by what you choose to focus on,
+                            so you must actively control and invest your
+                            attention like your most valuable resource.
+                        </li>
+                        <li>
+                            Make good and hard decisions before you turn ~25
+                            while your brain is still plastic to secure your
+                            best future brain.
+                        </li>
+                        <li>
+                            Learn what you like and and why, then apply those
+                            principles to everything such as books, film,
+                            clothes, travel, social settings, etc. Knowing
+                            yourself and being able to put yourself in the best
+                            position possible for your personality and taste is
+                            a powerful feeling.
+                        </li>
+                        <li>
+                            "Ultimately it comes down to taste. It comes down to
+                            taste. It comes down to trying to expose yourself to
+                            the best things that humans have done and then try
+                            to bring those things in to what you're doing." -
+                            Steve Jobs
+                        </li>
+                        <li>
+                            <a
+                                href="https://nabeelqu.co/principles"
+                                target="_blank"
+                                >Doing as much as you can every day is a form of
+                                life extension.</a
+                            >
+                            Building wealth is also a form of life extension.
+                            Both of these things go together sometimes and other
+                            times clash.
+                        </li>
+                        <li>
+                            <a
+                                href="https://uxmag.com/articles/were-just-temporarily-abled"
+                                target="_blank"
+                                >We're all just temporarily abled.</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="http://johnsalvatier.org/blog/2017/reality-has-a-surprising-amount-of-detail?utm_source=tZero19e&utm_medium=email&utm_campaign=recommended-texts"
+                                target="_blank"
+                                >Reality is very very complicated and absolutes
+                                are always wrong.</a
+                            >
+                        </li>
+                        <li>A deontological model of habits can be harmful.</li>
+                        <li>
+                            Get attached to processes rather than outcomes.
+                            Outcomes are fake, processes are not.
+                        </li>
+                        <li>
+                            The dumber the disagreements, the better the world
+                            actually is. To expand, as societies solve major
+                            problems and life generally improves, people tend to
+                            lower their threshold for what constitutes a
+                            problem, shifting their anxieties to increasingly
+                            minor issues despite overall progress.
+                        </li>
+                        <li>
+                            Our actions around other people are based on what
+                            our model is of what their model is of us.
+                        </li>
+                        <li>Repetition builds intuition.</li>
+                        <li>Goodhart's law runs the world.</li>
+                        <li>
+                            Aesthetics are the differentiator but not enough.
+                        </li>
+                        <!-- <li>Tanha is the cause of dukkha (suffering).</li> -->
+                        <li>
+                            In most contexts, it takes a lot less friction to
+                            destroy and tear down vs to build and create.
+                            Protect your habits and creations.
+                        </li>
+                        <!-- <li>
               Each problem space comes with its own set of fundamentals that
               make it much easier to solve when you're aware of those
               fundamentals.
             </li> -->
-            <li>
-              "People tend to self sort into subcultures that best excuse their
-              weaknesses." Make sure you're not unconsciously doing this.
-            </li>
-            <li>
-              <a
-                href="https://www.psswordprotectd.com/2025/11/01/skillss/"
-                target="_blank"
-                >There are some skills you can learn that will affect all (or
-                most) facets of life in big ways. These are permanent skills.</a
-              >
-            </li>
-            <li>
-              Deliberate practice is as important for skill building as going to
-              failure is as important for building muscle. (requirement!!)
-            </li>
-            <li>
-              <a
-                href="https://www.lesswrong.com/posts/PBRWb2Em5SNeWYwwB/humans-are-not-automatically-strategic"
-                target="_blank"
-                >You're not pursuing your goals strategically and it's hurting
-                you.</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://passwordprotectedd.substack.com/p/the-epistemic-imperative"
-                target="_blank"
-                >Good sensemaking is a moral imperative.</a
-              >
-            </li>
-            <li>
-              Context determines value. The same object can be worthless or
-              valuable depending on its framing, presentation, aesthetics, and
-              the story attached to it. Think piece of trash in garbage vs in
-              museum.
-            </li>
-            <li>
-              Tacit knowledge is just a bunch of tiny experiments and iterations
-              done over a long time horizon.
-            </li>
-            <li>
-              Progress = action multiplied by input quality. If you practice
-              your thing everyday but going off garbage input, your action will
-              be garbage (think weightlifting without going to failure).
-            </li>
-            <li>
-              <a
-                href="https://x.com/jasminewsun/status/1857140493412688131"
-                target="_blank"
-                >"Garbage in, garbage out; we're all basically LLMs so find good
-                data to train on."</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://x.com/paulg/status/1605321011012026369"
-                target="_blank"
-                >"With ambition, you tend to get one step below what you aim
-                for. So unless you try to be the best, you won't even be
-                good."</a
-              >
-            </li>
-            <li>
-              Every act of discipline is an expression of self-love. Every act
-              of impulsiveness is an expression of self-abandonment. What you
-              think of as discipline is just compassion for your future self.
-            </li>
-            <li>
-              Never ever suppress emotions. Feel them fully and express them
-              healthily. Emotional triggers are a goldmine for growth.
-            </li>
-            <li>
-              <a
-                href="https://x.com/nickcammarata/status/1958300389922738268"
-                target="_blank"
-                >We've already figured out how to reduce/remove suffering from
-                subjective experience.</a
-              >
-              <a
-                href="https://www.youtube.com/watch?v=9u9nuSf9g1g"
-                target="_blank"
-                >Suffering = discomfort x resistance.</a
-              >
-            </li>
-            <li>Run towards the resistance.</li>
-            <li>
-              Systems and consistency > motivation or big one-time goals.
-              Prioritize daily habits and processes.
-            </li>
-            <li>
-              There will be months where nothing happens and days where
-              everything happens. The point of the months is to ensure you catch
-              the days where everything happens. This is skills meeting
-              opportunity.
-            </li>
-            <li>
-              There is a first-mover advantage in emerging domains. Think early
-              founders building DoorDash (mobile apps, gig economy, etc) or
-              Isaac Newton discovering the laws of physics. Take advantage of
-              this where you can.
-            </li>
-            <li>
-              <a href="https://how.complexsystems.fail/" target="_blank"
-                >Systems thinking is everything (but not perfect).</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/watch?v=T5-re2X-YSY"
-                target="_blank"
-                >"Invert, always invert"</a
-              >
-            </li>
-            <li>
-              Typically, 80% of results come from 20% of efforts. Identify and
-              double down on your highest-leverage activities.
-            </li>
-            <li>
-              <a
-                href="https://passwordprotectedd.substack.com/p/simplicity-begets-action"
-                target="_blank"
-              >
-                Simplicity begets action.</a
-              >
-              Keep it simple stupid.
-            </li>
-            <li>
-              "Never attribute to malice that which can be adequately explained
-              by stupidity."
-            </li>
-            <li>Well read ≠ well thought. Input ≠ processing.</li>
-            <li>
-              <a
-                href="https://justinmulvaney.substack.com/p/the-golden-algorithm"
-                target="_blank"
-                >When you avoid an emotion, you invite that emotion into your
-                life in exactly the way that you avoid it. All of your
-                unconscious and reactive patterns have, at their root, an
-                emotion or emotions that you’re trying to avoid.
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.lesswrong.com/w/the-map-is-not-the-territory"
-                target="_blank"
-                >The map is not the territory</a
-              >
-              but maps are all we can run on so develop good maps.
-            </li>
-            <li>
-              <a
-                href="https://x.com/nickcammarata/status/1981555368884129806"
-                target="_blank"
-                >"If you’re trying to do something and there’s a type of guy who
-                does that thing all waking hours for fun effortlessly and you
-                aren’t that type of guy it’s going to be hard. Really hard to
-                fight the type of guy you are."</a
-              >
-              Alignment > discipline.
-            </li>
-            <li>
-              <a
-                href="https://www.justinmath.com/fortify-your-f-ing-fundamentals/"
-                target="_blank"
-                >Study the fundamentals</a
-              >, do the
-              <a
-                href="https://commoncog.com/tacit-knowledge-is-a-real-thing/"
-                target="_blank"
-                >tacit</a
-              >
-              and
-              <a href="https://nav.al/specific-knowledge" target="_blank"
-                >specific knowledge.</a
-              >
-            </li>
-          </ul>
-        </section>
-      </main>
-    </div>
-  </body>
+                        <li>
+                            "People tend to self sort into subcultures that best
+                            excuse their weaknesses." Make sure you're not
+                            unconsciously doing this.
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.psswordprotectd.com/2025/11/01/skillss/"
+                                target="_blank"
+                                >There are some skills you can learn that will
+                                affect all (or most) facets of life in big ways.
+                                These are permanent skills.</a
+                            >
+                        </li>
+                        <li>
+                            Deliberate practice is as important for skill
+                            building as going to failure is as important for
+                            building muscle. (requirement!!)
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.lesswrong.com/posts/PBRWb2Em5SNeWYwwB/humans-are-not-automatically-strategic"
+                                target="_blank"
+                                >You're not pursuing your goals strategically
+                                and it's hurting you.</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://passwordprotectedd.substack.com/p/the-epistemic-imperative"
+                                target="_blank"
+                                >Good sensemaking is a moral imperative.</a
+                            >
+                        </li>
+                        <li>
+                            Context determines value. The same object can be
+                            worthless or valuable depending on its framing,
+                            presentation, aesthetics, and the story attached to
+                            it. Think piece of trash in garbage vs in museum.
+                        </li>
+                        <li>
+                            Tacit knowledge is just a bunch of tiny experiments
+                            and iterations done over a long time horizon.
+                        </li>
+                        <li>
+                            Progress = action multiplied by input quality. If
+                            you practice your thing everyday but going off
+                            garbage input, your action will be garbage (think
+                            weightlifting without going to failure).
+                        </li>
+                        <li>
+                            <a
+                                href="https://x.com/jasminewsun/status/1857140493412688131"
+                                target="_blank"
+                                >"Garbage in, garbage out; we're all basically
+                                LLMs so find good data to train on."</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://x.com/paulg/status/1605321011012026369"
+                                target="_blank"
+                                >"With ambition, you tend to get one step below
+                                what you aim for. So unless you try to be the
+                                best, you won't even be good."</a
+                            >
+                        </li>
+                        <li>
+                            Every act of discipline is an expression of
+                            self-love. Every act of impulsiveness is an
+                            expression of self-abandonment. What you think of as
+                            discipline is just compassion for your future self.
+                        </li>
+                        <li>
+                            Never ever suppress emotions. Feel them fully and
+                            express them healthily. Emotional triggers are a
+                            goldmine for growth.
+                        </li>
+                        <li>
+                            <a
+                                href="https://x.com/nickcammarata/status/1958300389922738268"
+                                target="_blank"
+                                >We've already figured out how to reduce/remove
+                                suffering from subjective experience.</a
+                            >
+                            <a
+                                href="https://www.youtube.com/watch?v=9u9nuSf9g1g"
+                                target="_blank"
+                                >Suffering = discomfort x resistance.</a
+                            >
+                        </li>
+                        <li>Run towards the resistance.</li>
+                        <li>
+                            Systems and consistency > motivation or big one-time
+                            goals. Prioritize daily habits and processes.
+                        </li>
+                        <li>
+                            There will be months where nothing happens and days
+                            where everything happens. The point of the months is
+                            to ensure you catch the days where everything
+                            happens. This is skills meeting opportunity.
+                        </li>
+                        <li>
+                            There is a first-mover advantage in emerging
+                            domains. Think early founders building DoorDash
+                            (mobile apps, gig economy, etc) or Isaac Newton
+                            discovering the laws of physics. Take advantage of
+                            this where you can.
+                        </li>
+                        <li>
+                            <a
+                                href="https://how.complexsystems.fail/"
+                                target="_blank"
+                                >Systems thinking is everything (but not
+                                perfect).</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.youtube.com/watch?v=T5-re2X-YSY"
+                                target="_blank"
+                                >"Invert, always invert"</a
+                            >
+                        </li>
+                        <li>
+                            Typically, 80% of results come from 20% of efforts.
+                            Identify and double down on your highest-leverage
+                            activities.
+                        </li>
+                        <li>
+                            <a
+                                href="https://passwordprotectedd.substack.com/p/simplicity-begets-action"
+                                target="_blank"
+                            >
+                                Simplicity begets action.</a
+                            >
+                            Keep it simple stupid.
+                        </li>
+                        <li>
+                            "Never attribute to malice that which can be
+                            adequately explained by stupidity."
+                        </li>
+                        <li>Well read ≠ well thought. Input ≠ processing.</li>
+                        <li>
+                            <a
+                                href="https://justinmulvaney.substack.com/p/the-golden-algorithm"
+                                target="_blank"
+                                >When you avoid an emotion, you invite that
+                                emotion into your life in exactly the way that
+                                you avoid it. All of your unconscious and
+                                reactive patterns have, at their root, an
+                                emotion or emotions that you’re trying to avoid.
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.lesswrong.com/w/the-map-is-not-the-territory"
+                                target="_blank"
+                                >The map is not the territory</a
+                            >
+                            but maps are all we can run on so develop good maps.
+                        </li>
+                        <li>
+                            <a
+                                href="https://x.com/nickcammarata/status/1981555368884129806"
+                                target="_blank"
+                                >"If you’re trying to do something and there’s a
+                                type of guy who does that thing all waking hours
+                                for fun effortlessly and you aren’t that type of
+                                guy it’s going to be hard. Really hard to fight
+                                the type of guy you are."</a
+                            >
+                            Alignment > discipline.
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.justinmath.com/fortify-your-f-ing-fundamentals/"
+                                target="_blank"
+                                >Study the fundamentals</a
+                            >, do the
+                            <a
+                                href="https://commoncog.com/tacit-knowledge-is-a-real-thing/"
+                                target="_blank"
+                                >tacit</a
+                            >
+                            and
+                            <a
+                                href="https://nav.al/specific-knowledge"
+                                target="_blank"
+                                >specific knowledge.</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.psswordprotectd.com/2025/12/02/meet-systems/"
+                                target="_blank"
+                                >To enact change within a system, you must meet
+                                it where it’s at.</a
+                            >
+                        </li>
+                        <li>
+                            What we resist persists. What we can feel will heal.
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </body>
 </html>
