@@ -19,7 +19,7 @@ I first came across this principle in Joe Hudson's work:
 
 "You meet people where they are. You meet people with the problems they think they have"    
 
-Both quotes illustrate a key point: don't try to enact change that's unfeasible for the system at its current state. If you do, overwhelm occurs. Systems seem to have a filtering mechanism that rejects things debasing them too far from equilibrium.    
+Both quotes illustrate the key point: don't try to enact change that's unfeasible for the system at its current state. If you do, overwhelm occurs. Systems seem to have a filtering mechanism that rejects things debasing them too far from equilibrium.    
 
 In Hudson's work, attempting to mold someone into the "correct" emotional landscape is naive and ineffective. True change occurs in small steps, iteratively, just beyond the system's current state.     
 
