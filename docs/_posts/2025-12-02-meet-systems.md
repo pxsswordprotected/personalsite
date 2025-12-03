@@ -7,7 +7,7 @@ To enact change within a system, you must meet it where it's at.
 
 I mostly have humans in mind when thinking about this, but I'm sure this can be applied broadly across most systems.   
 
-This principle applies across many aspects within humans. The simplest example to understand is progressive overload in weightlifting, or gradually increasing the stress on body over time. You must meet the system where it's at: too much weight and you are prone to injury, to little weight and the system won't grow, too much weight and you won't be able to do enough reps for proper hypertrophy growth. I could go on about the different margins you must stay within to meet the system where it's at, but you get the point.   
+This principle applies across many aspects within humans. The simplest example to understand is progressive overload in weightlifting, or gradually increasing the stress on body over time. You must meet the system where it's at: too much weight and you are prone to injury, too little weight and the system won't grow, too much weight and you won't be able to do enough reps for proper hypertrophy growth. I could go on about the different margins you must stay within to meet the system where it's at, but you get the point.   
 
 There exists a zone of development in which the system can integrate new information or stress because it's close enough to current capabilities. This allows for integration rather than rejection or collapse.    
 
