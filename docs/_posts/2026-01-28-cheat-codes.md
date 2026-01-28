@@ -7,11 +7,9 @@ title: "Cheat Codes"
   <dt>cheat code</dt>
   <dd><i>(n.)</i> a learnable skill or practice that produces disproportionately large results relative to the effort required to learn it, often because it operates on a leverage point that most people overlook or undervalue.</dd>
 </dl>
-<br>
 
 This is a non-definitive, ever-updating list of cheat codes for life:
-<br><br>
-
+<br>
 <ol>
   <li>Meditation</li>
   <li>Memory reconsolidation</li>
@@ -37,7 +35,7 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Mental models (eg first principles)</li>
   <li>Knowledge of incentive structures</li>
   <li>Knowledge of systems thinking</li>
-  <li><a href="https://consilienceproject.org/how-to-mislead-the-facts/" target="_blank">Sensemaking skills</li>
+  <li><a href="https://consilienceproject.org/how-to-mislead-the-facts/" target="_blank">Sensemaking skills</a></li>  
   <li><a href="https://defenderofthebasic.substack.com/" target="_blank">Memetics</a></li>
   <li>Mentors</li>
   <li>Death contemplation</li>
