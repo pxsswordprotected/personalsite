@@ -35,6 +35,7 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Writing well</li>
   <li>Knowledge of incentive structures</li>
   <li>Knowledge of systems thinking</li>
+  <li><a href="https://darkforest.metalabel.com/antimemetics" target="_blank">Memetics</a></li>
   <li>Mentors</li>
   <li>Death contemplation</li>
   <li>Environment design</li>
