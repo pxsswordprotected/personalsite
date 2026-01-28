@@ -18,6 +18,7 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li><a href="https://julyandavey.com/books/seeingthatfrees/" target="_blank">Emptiness</a></li>
   <li>Emotional fluidity</li>
   <li>Speed reading</li>
+  <li>Touch typing</li>
   <li>Deep work</li>
   <li>Charisma</li>
   <li>High agency</li>
@@ -33,9 +34,11 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Knowing what the good aesthetics are and application</li>
   <li>Thinking in writing</li>
   <li>Writing well</li>
+  <li>Mental models (eg first principles)</li>
   <li>Knowledge of incentive structures</li>
   <li>Knowledge of systems thinking</li>
-  <li><a href="https://darkforest.metalabel.com/antimemetics" target="_blank">Memetics</a></li>
+  <li><a href="https://consilienceproject.org/how-to-mislead-the-facts/" target="_blank">Sensemaking skills</li>
+  <li><a href="https://defenderofthebasic.substack.com/" target="_blank">Memetics</a></li>
   <li>Mentors</li>
   <li>Death contemplation</li>
   <li>Environment design</li>
@@ -44,7 +47,6 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Building in public</li>
   <li>Network effects</li>
   <li>Surface area of luck</li>
-  <li>Mental models (eg first principles)</li>
   <li>Compounding efforts</li>
   <li>Keyboard shortcuts</li>
   <li>Gratitude</li>
