@@ -40,7 +40,7 @@ Spaced repetition
 
 Deliberate practice
 
-Using LLMs for research and automation
+Effective use of LLMs (research, automation, etc)
 
 Knowing what the good aesthetics are and application 
 
