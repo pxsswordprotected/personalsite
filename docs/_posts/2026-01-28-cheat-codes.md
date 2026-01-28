@@ -12,66 +12,40 @@ title: "Cheat Codes"
 This is a non-definitive list of cheat codes for life:
 <br><br>
 
-Meditation
-
-Speed reading
-
-Emotional fluidity
-
-Deep work
-
-Charisma
-
-High agency
-
-Sleep optimization
-
-Zone 2 cardio
-
-Going to failure in the gym
-
-Nutritional knowledge
-
-Morning sunlight exposure
-
-Cold exposure
-
-Spaced repetition
-
-Deliberate practice
-
-Effective use of LLMs (research, automation, etc)
-
-Knowing what the good aesthetics are and application 
-
-Thinking in writing
-
-Writing well
-
-Knowledge of incentive strucutres
-
-Knowledge of systems thinking
-
-Mentors
-
-Death contemplation
-
-Environment design
-
-Weekly reviews
-
-Pre-mortems
-
-Building in public
-
-Network effects
-
-Surface area of luck 
-
-Mental models (eg first principles)
-
-Compounding efforts
-
-Keyboard shortcuts
-
-Gratitude
+<ol>
+  <li>Meditation</li>
+  <li>Memory reconsolidation</li>
+  <li><a href="https://julyandavey.com/books/seeingthatfrees/" target="_blank">Emptiness</a></li>
+  <li>Speed reading</li>
+  <li>Emotional fluidity</li>
+  <li>Deep work</li>
+  <li>Charisma</li>
+  <li>High agency</li>
+  <li>Sleep optimization</li>
+  <li>Zone 2 cardio</li>
+  <li>Going to failure in the gym</li>
+  <li>Nutritional knowledge</li>
+  <li>Morning sunlight exposure</li>
+  <li>Cold exposure</li>
+  <li>Spaced repetition</li>
+  <li>Deliberate practice</li>
+  <li>Effective use of LLMs (research, automation, etc)</li>
+  <li>Knowing what the good aesthetics are and application</li>
+  <li>Thinking in writing</li>
+  <li>Writing well</li>
+  <li>Knowledge of incentive structures</li>
+  <li>Knowledge of systems thinking</li>
+  <li>Mentors</li>
+  <li>Death contemplation</li>
+  <li>Environment design</li>
+  <li>Weekly reviews</li>
+  <li>Pre-mortems</li>
+  <li>Building in public</li>
+  <li>Network effects</li>
+  <li>Surface area of luck</li>
+  <li>Mental models (eg first principles)</li>
+  <li>Compounding efforts</li>
+  <li>Keyboard shortcuts</li>
+  <li>Gratitude</li>
+  <li>Compassion</li>
+</ol>
