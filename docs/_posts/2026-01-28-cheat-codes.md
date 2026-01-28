@@ -9,15 +9,15 @@ title: "Cheat Codes"
 </dl>
 <br>
 
-This is a non-definitive list of cheat codes for life:
+This is a non-definitive, ever-updating list of cheat codes for life:
 <br><br>
 
 <ol>
   <li>Meditation</li>
   <li>Memory reconsolidation</li>
   <li><a href="https://julyandavey.com/books/seeingthatfrees/" target="_blank">Emptiness</a></li>
-  <li>Speed reading</li>
   <li>Emotional fluidity</li>
+  <li>Speed reading</li>
   <li>Deep work</li>
   <li>Charisma</li>
   <li>High agency</li>
