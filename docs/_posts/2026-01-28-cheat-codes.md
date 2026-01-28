@@ -15,6 +15,7 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Memory reconsolidation</li>
   <li><a href="https://julyandavey.com/books/seeingthatfrees/" target="_blank">Emptiness</a></li>
   <li>Emotional fluidity</li>
+  <li><a href="https://www.youtube.com/watch?v=Q5SYHANl3j8" target="_blank">Nervous system hacking</a></li>
   <li>Speed reading</li>
   <li>Touch typing</li>
   <li>Deep work</li>
