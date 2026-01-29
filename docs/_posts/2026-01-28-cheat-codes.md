@@ -36,6 +36,7 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Thinking in writing</li>
   <li>Writing well</li>
   <li>Mental models (eg first principles)</li>
+  <li>Local optimas</li>
   <li>Knowledge of incentive structures</li>
   <li>Knowledge of systems thinking</li>
   <li><a href="https://consilienceproject.org/how-to-mislead-the-facts/" target="_blank">Sensemaking skills</a></li>  
