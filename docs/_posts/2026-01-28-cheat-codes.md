@@ -30,6 +30,7 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Cold exposure</li>
   <li>Spaced repetition</li>
   <li>Deliberate practice</li>
+  <li>Skill trees</li>
   <li>Effective use of LLMs (research, automation, etc)</li>
   <li>Knowing what the good aesthetics are and application</li>
   <li>Thinking in writing</li>
