@@ -19,6 +19,7 @@ This is a non-definitive, ever-updating list of cheat codes for life:
   <li>Speed reading</li>
   <li>Touch typing</li>
   <li>Deep work</li>
+  <li>Identifying and leveraging high quality input</li>
   <li>Charisma</li>
   <li>High agency</li>
   <li>Sleep optimization</li>
