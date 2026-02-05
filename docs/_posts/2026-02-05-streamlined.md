@@ -12,59 +12,57 @@ I'll be drawing on predictive processing, memory reconsolidation, Roger's (de)ob
 
 ---
 
-## What actually breaks at stream entry?
+What actually breaks at stream entry?
 
 The three fetters sound like three separate things, but I think they're really one thing seen from three angles.
 
-**Self-view (sakkaya-ditthi)** is the deep perceptual assumption that there is a fixed, central "me" that is the subject of experience. Not the intellectual belief ("I know there's no self"), but the felt sense that there is something behind your eyes doing the looking. After stream entry, this doesn't vanish entirely, but the mind has seen through it clearly enough that it can never fully buy it again. It's like an optical illusion after you've seen the trick. The illusion still appears, but you can't un-see what you saw.
+Self-view (sakkaya-ditthi) is the deep perceptual assumption that there is a fixed, central "me" that is the subject of experience. Not the intellectual belief ("I know there's no self"), but the felt sense that there is something behind your eyes doing the looking. After stream entry, this doesn't vanish entirely, but the mind has seen through it clearly enough that it can never fully buy it again. It's like an optical illusion after you've seen the trick. The illusion still appears, but you can't un-see what you saw.
 
-**Doubt (vicikiccha)** is not general skepticism. It's the specific doubt about whether awakening is real, whether the mind can actually update at this level, whether the path leads anywhere. This breaks automatically when you experience the mind updating at this level. You no longer need to believe it on faith because it happened.
+Doubt (vicikiccha) is not general skepticism. It's the specific doubt about whether awakening is real, whether the mind can actually update at this level, whether the path leads anywhere. This breaks automatically when you experience the mind updating at this level. You no longer need to believe it on faith because it happened.
 
-**Attachment to rites and rituals (silabbata-paramasa)** is the belief that some specific technique or external form is doing the work. After stream entry, you understand that the transformation happened through direct seeing, not through any particular method. The method was a tool, not the cause.
+Attachment to rites and rituals (silabbata-paramasa) is the belief that some specific technique or external form is doing the work. After stream entry, you understand that the transformation happened through direct seeing, not through any particular method. The method was a tool, not the cause.
 
 So really, breaking the first fetter is the core task. The other two are side effects. If the mind directly sees through the construction of self, doubt dissolves (because the seeing just happened) and attachment to method dissolves (because you know the method didn't do it, the seeing did).
 
-This gives us a clear target: **the mind needs to catch itself constructing "self" and see through the construction directly.**
+This gives us a clear target: *the mind needs to catch itself constructing "self" and see through the construction directly.*
 
 ---
 
-## Why is this hard? A predictive processing account.
+Why is this hard? A predictive processing account.
 
 Your brain is a prediction machine. It doesn't passively receive reality. It constantly generates models of what it expects to encounter and then checks those models against incoming sensory data. When predictions match, experience feels smooth and transparent. When they don't match, that discrepancy (prediction error) is the signal that drives learning and model updating.
 
 The prediction "I am a thing, located here, looking out at the world" is one of the deepest and most continuously reinforced predictions your mind runs. It's been confirmed billions of times. Every time you reached for a glass and your hand went where "you" intended, the self-model got another data point in its favor. It's not that the prediction is wrong in some simple sense (it's a useful model), but the mind has mistaken a *model* for a *fact*. It treats the self as a feature of reality rather than as something it is actively constructing.
 
-Meditation, from this angle, is about creating conditions where this prediction can finally generate a prediction error large enough to trigger a model update. But the self-prediction has extremely high **precision weighting**, meaning the mind treats it as very high-confidence and is very resistant to revising it. This is why you can read "there is no self" a thousand times and nothing changes. Intellectual understanding doesn't generate prediction errors at the level where the model actually operates. You need direct perceptual evidence that contradicts the prediction, experienced with enough clarity and equanimity that the error signal actually lands.
+Meditation, from this angle, is about creating conditions where this prediction can finally generate a prediction error large enough to trigger a model update. But the self-prediction has extremely high *precision weighting*, meaning the mind treats it as very high-confidence and is very resistant to revising it. This is why you can read "there is no self" a thousand times and nothing changes. Intellectual understanding doesn't generate prediction errors at the level where the model actually operates. You need direct perceptual evidence that contradicts the prediction, experienced with enough clarity and equanimity that the error signal actually lands.
 
 ---
 
-## The mechanism: objectify, then deobjectify
+Objectify, then deobjectify
 
 Roger's (de)objectification framework gives us the most precise description of what needs to happen.
 
-**Objectify the self:** Make the sense of self an object of awareness rather than the invisible subject. The self normally operates as the thing that is looking, not a thing being looked at. The first move is to catch it, find it in experience, and recognize it as something the mind is generating. You have to "thingify" the self in order to see that it is not, in fact, a fixed thing. This is harder than it sounds because looking for the self with the self is like trying to see your own eyes. Every attempt to find it tends to generate more of it.
+*Objectify the self:* Make the sense of self an object of awareness rather than the invisible subject. The self normally operates as the thing that is looking, not a thing being looked at. The first move is to catch it, find it in experience, and recognize it as something the mind is generating. You have to "thingify" the self in order to see that it is not, in fact, a fixed thing. This is harder than it sounds because looking for the self with the self is like trying to see your own eyes. Every attempt to find it tends to generate more of it.
 
-**Deobjectify the self:** Once the self has been objectified (you can actually perceive it as a phenomenon arising in awareness), you watch it arise and pass. You notice its impermanence. You notice that awareness continues even when the felt sense of self flickers out momentarily. The mind learns: reality doesn't depend on this. It's not a permanent feature of experience. It's a construction that comes and goes.
+*Deobjectify the self:* Once the self has been objectified (you can actually perceive it as a phenomenon arising in awareness), you watch it arise and pass. You notice its impermanence. You notice that awareness continues even when the felt sense of self flickers out momentarily. The mind learns: reality doesn't depend on this. It's not a permanent feature of experience. It's a construction that comes and goes.
 
 As Roger notes in his protocol, the objectification and deobjectification often happen almost simultaneously once you have the perceptual speed and clarity to catch the target. And, importantly, impermanence tends to be the easiest of the three characteristics to "grok" here. When you catch the self being constructed and see it arise and pass, the no-self insight and the unsatisfactoriness insight are basically embedded in that same moment.
 
 ---
 
-## The protocol
-
-### Prerequisites: what you need before attempting this
+Prerequisites: what you need before attempting this
 
 Unlike Roger's full enlightenment protocol, stream entry doesn't require you to work at the level of amodal perception or catch the pure concept of "thing." The self-model is higher in the fabrication stack than "thing-ness" itself. It's still subtle and fast, but it's more accessible.
 
 What you do need:
 
-**Concentration.** Enough to sustain attention on very subtle phenomena without getting pulled into thought content. Access concentration (the ability to stay with your meditation object with minimal distraction) is probably the minimum. First jhana access is better. You need the mind stable enough that when you turn attention toward the sense of self, you can actually stay with it.
+*Concentration.* Enough to sustain attention on very subtle phenomena without getting pulled into thought content. Access concentration (the ability to stay with your meditation object with minimal distraction) is probably the minimum. First jhana access is better. You need the mind stable enough that when you turn attention toward the sense of self, you can actually stay with it.
 
-**Sensory clarity.** The ability to detect individual moments of experience arising and passing, rather than experiencing everything as a continuous blur. This is what lets you catch the self being *constructed* rather than just encountering the finished product. Noting practice at 2-5+ notings per second builds this. The priority is always clarity over speed, but you need enough speed to catch fast-moving phenomena.
+*Sensory clarity.* The ability to detect individual moments of experience arising and passing, rather than experiencing everything as a continuous blur. This is what lets you catch the self being *constructed* rather than just encountering the finished product. Noting practice at 2-5+ notings per second builds this. The priority is always clarity over speed, but you need enough speed to catch fast-moving phenomena.
 
-**Equanimity.** The ability to observe whatever arises without reactivity. This isn't just a nice-to-have; it's mechanistically necessary. If you react to what you find when investigating the self (fear, excitement, grasping), you're adding more predictions on top of the one you're trying to see through. The update can only land if the mind is open enough to receive it.
+*Equanimity.* The ability to observe whatever arises without reactivity. This isn't just a nice-to-have; it's mechanistically necessary. If you react to what you find when investigating the self (fear, excitement, grasping), you're adding more predictions on top of the one you're trying to see through. The update can only land if the mind is open enough to receive it.
 
-### Phase 1: Build concentration and clarity through noting
+Phase 1: Build concentration and clarity through noting
 
 Noting meditation is the most direct training for the perceptual skills this protocol requires. Sit. Notice whatever is most prominent in experience. Label it with a soft mental note ("seeing," "hearing," "thinking," "feeling"). Move to the next thing. Gradually increase speed while maintaining clarity.
 
@@ -72,21 +70,21 @@ Start with the basic sense doors. Get comfortable noting at a steady pace. Then 
 
 You're not doing this to collect insights. You're building the perceptual instrument you'll need later. Think of it as building the microscope before you try to look at cells.
 
-### Phase 2: Turn the lens on the observer
+Phase 2: Turn the lens on the observer
 
 Once your noting practice is fast and clear enough that you're catching phenomena close to the moment they appear, shift the investigation toward the self.
 
 There are several entry points. Try them all and see which one gives you the most traction:
 
-**Hunt for the observer.** Turn attention around and try to find the thing that's looking. Where is the "I" that is aware right now? Look for it in the head, behind the eyes, in the chest, wherever it seems to live. What you'll find is that every time you look, you find sensations, space, or nothing at all, but never a fixed entity. Each failed attempt to find the self is a prediction error landing directly on the self-model.
+*Search for the observer.* Turn attention around and try to find the thing that's looking. Where is the "I" that is aware right now? Look for it in the head, behind the eyes, in the chest, wherever it seems to live. What you'll find is that every time you look, you find sensations, space, or nothing at all, but never a fixed entity. Each failed attempt to find the self is a prediction error landing directly on the self-model.
 
-**Catch the moment of "mine-ing."** In open awareness, watch for the instant when a bare experience gets tagged with ownership. There's a subtle moment where something goes from "just happening" to "happening to me." That moment is the self being constructed in real time. If your noting speed is high enough, you can catch it.
+*Catch the moment of "mine-ing."* In open awareness, watch for the instant when a bare experience gets tagged with ownership. There's a subtle moment where something goes from "just happening" to "happening to me." That moment is the self being constructed in real time. If your noting speed is high enough, you can catch it.
 
-**Note the self itself.** Add "selfing" or "me-ing" to your noting vocabulary. Treat the sense of self as just another phenomenon to note. When you notice the felt sense of being a self, note it. When it's absent, notice that too. This trains the mind to see the self as an event rather than a fact.
+*Note the self itself.* Add "selfing" or "me-ing" to your noting vocabulary. Treat the sense of self as just another phenomenon to note. When you notice the felt sense of being a self, note it. When it's absent, notice that too. This trains the mind to see the self as an event rather than a fact.
 
-**Investigate the aggregates.** Systematically examine each component of experience: body sensations, feeling-tone (pleasant/unpleasant/neutral), perception, mental formations (thoughts, intentions, reactions), and consciousness itself. For each one, notice: you can observe it, so it can't be the observer. It arises and passes, so it can't be a permanent self. Do this thoroughly and the mind runs out of places to locate the self.
+*Investigate the aggregates.* Systematically examine each component of experience: body sensations, feeling-tone (pleasant/unpleasant/neutral), perception, mental formations (thoughts, intentions, reactions), and consciousness itself. For each one, notice: you can observe it, so it can't be the observer. It arises and passes, so it can't be a permanent self. Do this thoroughly and the mind runs out of places to locate the self.
 
-### Phase 3: Let the deobjectification land
+Phase 3: Let the deobjectification land
 
 Once you can reliably catch the self being constructed (objectification), the deobjectification side is less about doing and more about allowing. You've seen it arise and pass. You've noticed awareness continuing in the gaps. Now the mind needs to actually update its model.
 
@@ -94,7 +92,7 @@ This is where equanimity earns its paycheck. The update will only happen if you'
 
 The paradox at the heart of this whole thing: the objectifying is active, deliberate work. The deobjectifying requires the mind to be relaxed enough to actually let its model revise. You're building the conditions, but you can't force the revision itself.
 
-### Phase 4: Retreat as an accelerant
+Optional Phase 4: Retreat as an accelerant
 
 This protocol can be worked with in daily practice. But if the framework we've laid out is correct, retreat conditions are not just "more practice." They're qualitatively different. Sustained, uninterrupted investigation over days creates conditions where the self-model can be challenged continuously rather than in isolated hour-long windows surrounded by 23 hours of the model being reinforced by daily life.
 
@@ -102,7 +100,7 @@ If you have access to retreat, bring this investigation with you. Get concentrat
 
 ---
 
-## On reconsolidation: clearing the mid-level noise
+On memory reconsolidation
 
 There's a related mechanism worth using, even though it probably isn't the main driver of stream entry itself.
 
@@ -116,7 +114,7 @@ This won't produce stream entry on its own. But it clears the field so the real 
 
 ---
 
-## The honest summary
+Summary
 
 Stream entry requires the mind to directly catch itself constructing "self" and see through the construction. This is the objectify-deobjectify process applied to the self-model.
 
