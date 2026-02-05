@@ -6,7 +6,7 @@ title: "A Very Streamlined Stream Entry Protocol"
 
 Roger Thisdell's <a href="https://www.rogerthisdell.com/post/a-very-streamlined-enlightenment-protocol-part-2" target="_blank">*Streamlined Enlightenment Protocol*</a> targets full 4th Path(?) awakening by going straight to the base of the mind's constructive stack and (de)objectifying the concepts of "thing" and "nothing." It's ambitious, demanding, and by his own admission requires a very specific kind of person to pull off.
 
-This post is more modest. I want to ask: what would a streamlined protocol look like if we scoped it to just **stream entry** (first path)? Stream entry is traditionally defined as the breaking of three fetters: self-view, doubt, and attachment to rites and rituals. It's not the whole journey, but it's the critical first shift, the one that makes everything after it feel like a matter of time rather than a matter of faith.
+This post is more modest. I want to ask: what would a streamlined protocol look like if we scoped it to just stream entry (first path)? Stream entry is traditionally defined as the breaking of three fetters: self-view, doubt, and attachment to rites and rituals. It's not the whole journey, but it's the critical first shift, the one that makes everything after it feel like a matter of time rather than a matter of faith.
 
 I'll be drawing on predictive processing, memory reconsolidation, Roger's (de)objectification framework, and classical Buddhist phenomenology. The goal is to reverse-engineer stream entry from the target backward to the method.
 
