@@ -58,7 +58,7 @@ header,
 }
 
 main {
-    margin-top: var(--section-margin-size);
+    margin-top: 40px;
 }
 
 .about-me-text {
