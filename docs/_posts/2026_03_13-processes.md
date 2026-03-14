@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Processes Over Content (On What Understanding Entails)"
-date: 2026-03-13
 ---
 
 There's this great [tweet by @nosilverv]([https://x.com/nosilverv/status/1969356527732511130?s=20]) in which he outlines a "jumping" mechanism that happens in consciousness, where a new type of Thing is exposed to you and suddenly another dimension of reality is opened up.
