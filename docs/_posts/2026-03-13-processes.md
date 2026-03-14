@@ -5,7 +5,7 @@ title: "Processes Over Content (On What Understanding Entails)"
 
 There's this great <a href="https://x.com/nosilverv/status/1969356527732511130?s=20">tweet by @nosilverv</a> in which he outlines a "jumping" mechanism that happens in consciousness, where a new type of Thing is exposed to you and suddenly another dimension of reality is opened up.
 <br><br>
-<img src="/assets/images/nosilverv2.png" alt="nosilverv tweet on jumping in consciousness">
+<img src="/assets/images/nosilver2.png" alt="nosilverv tweet on jumping in consciousness">
 <br><br>
 This tweet made me realize something important related to jumps in epistemology: what you best learn from others is about processes, not content. Content is simply a semantic pointer to the process. When you have learned from someone or something, what you are picking up on is the <i>way</i> in which you think about something, not the <i>thing</i> you think.
 <br><br>
