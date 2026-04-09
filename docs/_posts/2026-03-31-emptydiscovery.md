@@ -48,6 +48,8 @@ As one spends time in solitude, they no longer bump up against other boundaries 
 </blockquote>
 
 Notice here how Grothendieck says "to question and to listen is the simplest, most natural thing in the world." This is what the child does when not stuck in a solid state of conditioning like adults are. This is why adults have a harder time doing this (to question and listen), for we do not realize the wisdom of emptiness, of the illusory nature of what we think reality is, which naturally leads us to a fate we have decided for ourselves. And we decide to bask in this fate as if it is deterministic, as if we do not have the agency to return to that state of awe and naturality. 
+
+(edit 4/9/26: This <a href="https://www.visakanv.com/blog/do100things/" target="_blank">snippet</a> by Visa captures this state of simply questioning and listening quite well. Visa's 'Do 100 Things' is a very practical framework to help with applying these insights: "I had a breakthrough recently as a musician, which helped me bust a rut I’d been in for about a decade. I Expected to become a better musician and my Expectation kept me from becoming a better musician. I suddenly started becoming better when I Accepted failure & LISTENED.")
  
 <blockquote>
   <p>My relationship to mathematics (and especially to mathematical achievement) was heavily weighted by ego, and this was not the case with Mike. He really gave the impression of doing maths like a kid having fun, while also not forgetting to eat and drink.</p>
