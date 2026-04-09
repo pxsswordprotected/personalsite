@@ -20,3 +20,5 @@ include:
   - Media
   - Media/images
   - Media/videos
+
+  future: true
