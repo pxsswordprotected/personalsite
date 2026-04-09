@@ -5,6 +5,8 @@ description: >-
 baseurl: ""
 url: "https://psswordprotectd.com"
 
+future: true
+
 # Build settings
 theme: minima
 plugins:
@@ -13,12 +15,10 @@ plugins:
 
 paginate: 10
 paginate_path: /page:num/
-permalink: pretty  # <- Fixed line
+permalink: pretty # <- Fixed line
 timezone: America/Chicago
 
 include:
   - Media
   - Media/images
   - Media/videos
-
-  future: true
