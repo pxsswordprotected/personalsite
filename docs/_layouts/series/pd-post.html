@@ -124,9 +124,8 @@
             <div class="heading">{{ page.title }}</div>
             <div class="subheading">One Post a Day on Design Engineering</div>
 
-            {% assign series_posts = site.posts | where: 'series_name', 'One
-            Post a Day on Design Engineering' | sort: 'date' | reverse %} {% for
-            post in series_posts %}
+            {% assign series_posts = site.posts | where: 'series_name', 'One Post a Day on Design Engineering' | sort: 'date' | reverse %}
+            {% for post in series_posts %}
             <div class="item">
                 <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                 <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
