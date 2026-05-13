@@ -27,7 +27,8 @@
             }
 
             html {
-                margin: clamp(1rem, 3vh, 2rem);
+                padding: clamp(1rem, 3vh, 2rem);
+                min-height: 100vh;
                 overflow-y: scroll;
                 font-family:
                     "PPNeueMontreal-Book",
@@ -48,6 +49,10 @@
             *::before,
             *::after {
                 box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
             }
 
             .container {
@@ -119,7 +124,7 @@
                 }
 
                 html {
-                    margin: calc(1rem * 2);
+                    padding: calc(1rem * 2);
                 }
             }
         </style>

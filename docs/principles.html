@@ -27,7 +27,8 @@
             }
 
             html {
-                margin: clamp(1rem, 3vh, 2rem);
+                padding: clamp(1rem, 3vh, 2rem);
+                min-height: 100vh;
                 font-family:
                     "PPNeueMontreal-Book",
                     system-ui,
@@ -47,6 +48,10 @@
             *::before,
             *::after {
                 box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
             }
 
             .page {
@@ -116,7 +121,7 @@
                     --header-font-size: 1.25rem;
                 }
                 html {
-                    margin: calc(1rem * 2);
+                    padding: calc(1rem * 2);
                 }
             }
         </style>

@@ -20,7 +20,8 @@
 }
 
 html {
-    margin: clamp(1rem, 3vh, 2rem);
+    padding: clamp(1rem, 3vh, 2rem);
+    min-height: 100vh;
     font-family:
         "PPNeueMontreal-Book",
         system-ui,
@@ -40,6 +41,10 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+body {
+    margin: 0;
 }
 
 .page {
@@ -147,7 +152,7 @@ address > a:hover {
     }
 
     html {
-        margin: calc(1rem * 2);
+        padding: calc(1rem * 2);
     }
 }
 
