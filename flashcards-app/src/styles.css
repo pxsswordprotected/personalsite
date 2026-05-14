@@ -95,13 +95,6 @@
     text-transform: none;
 }
 
-@media (min-width: 48rem) {
-    .fc-select,
-    .fc-counter {
-        letter-spacing: 0.04em;
-    }
-}
-
 .fc-counter-wrap {
     display: inline-flex;
     align-items: center;
@@ -185,7 +178,7 @@ button.fc-counter-wrap svg {
     top: 14px;
     left: 18px;
     font-size: 0.75rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.025rem;
     color: #999;
     text-transform: uppercase;
 }
@@ -224,7 +217,7 @@ button.fc-counter-wrap svg {
 .fc-controls button {
     font-family: inherit;
     font-size: 0.95rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.025rem;
     padding: 14px 0;
     border: 0;
     background: linear-gradient(180deg, #fafafa 0%, #e2e3e5 100%);
@@ -270,7 +263,7 @@ button.fc-counter-wrap svg {
 .fc-hint {
     font-size: 0.75rem;
     color: #888;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.025rem;
 }
 
 .fc-message {
