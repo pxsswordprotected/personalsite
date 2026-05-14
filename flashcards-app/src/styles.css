@@ -70,7 +70,7 @@
     padding: 10px 24px 10px 0;
     font-family: inherit;
     font-size: 1rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.025rem;
     color: #4a4a4a;
     field-sizing: content;
     cursor: pointer;
@@ -91,8 +91,15 @@
 
 .fc-counter {
     font-size: 0.95rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.025rem;
     text-transform: none;
+}
+
+@media (min-width: 48rem) {
+    .fc-select,
+    .fc-counter {
+        letter-spacing: 0.04em;
+    }
 }
 
 .fc-counter-wrap {
