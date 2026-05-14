@@ -369,3 +369,6 @@ A: Layout thrashing.
 
 Q: mental model of `clamp(min, preferred, max)` and vw?
 A: draws a line from your min to your max, and the `vw` part controls how steep that line is. `4vw` means "for every 100px of viewport width, add 4px."
+
+Q: `onClick` vs `onPointerDown` 
+A: onClick is for after click and release, onPointerDown is just for when the pointer goes down (mainly used for dragging interactions)

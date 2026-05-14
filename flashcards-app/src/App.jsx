@@ -69,7 +69,7 @@ export default function App({ manifestUrl }) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = currentDeck.file;
+    a.download = currentDeck.file.replace(/\.[^.]+$/, "") + ".md";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
