@@ -137,7 +137,7 @@ ID: 1775666045653
 
 
 Q: what does `useTransform` do in motion?
-A: takes a motion value and applies a transform function to it like `useTransform(xpValue, (v) => v*0.1);` and returns a new motion value 
+A: takes a motion value and applies a transform function to it like `useTransform(xpValue, (v) => v*0.1);` and returns a new motion value
 ID: 1775666045659
 
 
@@ -172,7 +172,7 @@ ID: 1775666045693
 
 
 Q: analogy for `useRef` and `current`
-A: `useRef` is like a box that is persistent throughout re-renders and `refName.current` is simply a way to access the value inside that box. refName is the name of the label of the box. 
+A: `useRef` is like a box that is persistent throughout re-renders and `refName.current` is simply a way to access the value inside that box. refName is the name of the label of the box.
 ID: 1775666045698
 
 
@@ -197,7 +197,7 @@ ID: 1775666045721
 
 
 Q: what if `useEffect` has a return statement?
-A: it's used as a saved clean up function for later. 
+A: it's used as a saved clean up function for later.
 ID: 1775666045726
 
 
@@ -232,14 +232,14 @@ ID: 1775666045758
 
 
 Q: when using `<AnimatePresence>`  what element must be inside for it to work?
-A: motion elements like `motion.div` . reg HTML elements are destroyed instantly 
+A: motion elements like `motion.div` . reg HTML elements are destroyed instantly
 ID: 1775666045763
 
 Q: when using `<AnimatePresence>` what is the point of using popLayout?
 A: it yanks elements out of the layout flow instantly by setting position to absolute. siblings can reflow during during the exit instead of after (reduces lag of positioning exit siblings)
 
 Q: when using `popLayout` when would you change the logic or redesign the animation and why?
-A: when the element that is exiting is not fading opacity since its siblings could clash and it would look jumbled together. 
+A: when the element that is exiting is not fading opacity since its siblings could clash and it would look jumbled together.
 
 Q: when does react motion read the `animate` attribute on something like a `motion.div`
 A: as soon as it is written to HTML
@@ -322,7 +322,7 @@ ID: 1775666045852
 
 
 Q: what does Motion automatically map to translateY under the hood?
-A: when you pass in `style={{ y }} ` into a motion.div 
+A: when you pass in `style={{ y }} ` into a motion.div
 ID: 1775666045858
 
 
@@ -370,5 +370,14 @@ A: Layout thrashing.
 Q: mental model of `clamp(min, preferred, max)` and vw?
 A: draws a line from your min to your max, and the `vw` part controls how steep that line is. `4vw` means "for every 100px of viewport width, add 4px."
 
-Q: `onClick` vs `onPointerDown` 
+Q: `onClick` vs `onPointerDown`
 A: onClick is for after click and release, onPointerDown is just for when the pointer goes down (mainly used for dragging interactions)
+
+Q: when using `box-shadow`, how do you pull a shadow inwards?
+A: use `inset` like  `box-shadow: inset 0 0 0 2px #8b8e91`
+
+Q: `<details>` and `<summary>` semantic elements usage
+A: creates a native disclosure widget. `<details>` is the container. `<summary>` is the label.
+
+Q: css property for ensuring no layout shifts when scrollbar appears
+A: `html { scrollbar-gutter:stable }`
