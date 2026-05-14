@@ -128,6 +128,7 @@ export default function App({ manifestUrl }) {
 
   return (
     <div className="fc-app">
+      <a href="/" className="fc-home">Home</a>
       <div className="fc-toolbar">
         <div className="fc-deck">
           <select
