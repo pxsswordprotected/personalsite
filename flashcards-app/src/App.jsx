@@ -128,7 +128,9 @@ export default function App({ manifestUrl }) {
 
   return (
     <div className="fc-app">
-      <a href="/" className="fc-home">Home</a>
+      <a href="/" className="fc-home">
+        Home
+      </a>
       <div className="fc-toolbar">
         <div className="fc-deck">
           <select
@@ -146,8 +148,8 @@ export default function App({ manifestUrl }) {
           </select>
           <svg
             className="fc-chevron"
-            width="8"
-            height="5"
+            width="10"
+            height="10"
             viewBox="0 0 8 5"
             aria-hidden="true"
           >
@@ -162,7 +164,10 @@ export default function App({ manifestUrl }) {
             aria-label={`Download ${currentDeck.name} deck`}
             title={`Download ${currentDeck.file}`}
           >
-            <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
+            <span className="fc-counter">
+              {`[${String(idx + 1).padStart(2, "0")}/${String(visibleCards.length).padStart(2, "0")}]`}
+            </span>
+            <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true">
               <path
                 d="M8 2v8m0 0l-3-3m3 3l3-3M2 13h12"
                 fill="none"
@@ -172,9 +177,6 @@ export default function App({ manifestUrl }) {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="fc-counter">
-              {`[${String(idx + 1).padStart(2, "0")}/${String(visibleCards.length).padStart(2, "0")}]`}
-            </span>
           </button>
         ) : (
           <div className="fc-counter-wrap">
@@ -210,6 +212,97 @@ export default function App({ manifestUrl }) {
           →
         </button>
       </div>
+      <details className="fc-about">
+        <summary>
+          <span className="fc-about-toggle" aria-hidden="true" />
+          <span className="fc-about-text">About</span>
+        </summary>
+        <div className="fc-about-body">
+          <p>
+            These are my personal decks of flashcards I use to memorize and
+            retain concepts that are important to me. I use these flashcards in
+            Anki with a spaced repetition algorithm that works best for my
+            personal situation. Feel free to download any deck as the markdown
+            file is normalized into a nice format so you can import it into any
+            service you want.
+          </p>
+          <hr className="fc-about-divider" />
+          <p className="fc-about-q">Q: Why even use flashcards?</p>
+          <div className="fc-about-a">
+            <p>
+              A: To quote Justin Skycak from{" "}
+              <em>Advice on Upskilling</em>:
+            </p>
+            <blockquote className="fc-about-quote">
+              <p>
+                At the end of the day, learning is memory. Understanding amounts
+                to memory that is well-connected and deeply ingrained. The
+                difference between "just memorizing" and "deeply understanding"
+                isn't the substrate of the representation, it's the depth of the
+                representation.
+              </p>
+              <p>
+                Deep understanding consists of not only declarative facts, but
+                also connections that link facts into related groups or "chunks"
+                (think: concepts), connections that link smaller chunks into
+                bigger chunks, and so on -- as well as procedures for operating
+                on chunks (think: skills), connections that chunk sub-procedures
+                into meta-procedures, and so on.
+              </p>
+              <p>
+                This is all raw mechanical memory. It's just storage and
+                retrieval of information. The point of building superior
+                representation is to build superior recall abilities, including
+                broadening and fine-tuning the range of stimuli that activate
+                the information. If someone is "just memorizing" as opposed to
+                "deeply understanding," it really means they haven't stored
+                enough information in memory.
+              </p>
+              <p>
+                "Learning is memory" might feel obvious, but many learners don't
+                fully grasp the implications. If you don't realize that learning
+                is memory, then you won't realize that the most effective way to
+                learn is to use memory-supporting training techniques.
+              </p>
+              <p>
+                It's easy to get confused, thinking: "Truly understanding
+                something is different from just memorizing it, so learning
+                doesn't require memory-focused techniques like retrieval
+                practice, spaced review, and interleaving (mixed practice).
+                Those are about memorization, not true understanding." And if
+                that's what you think, then you'll likely shirk the hard work
+                required to build memory, use fun/easy but ineffective training
+                techniques instead, and end up not actually learning much.
+              </p>
+              <p>
+                I used to think resistance to "learning is memory" was genuine
+                confusion, but now I think it's mostly laziness. If you accept
+                that learning is memory, then you have to accept that maximizing
+                learning requires memory-supporting training techniques. But
+                those techniques are highly effortful and measurable, which make
+                them unattractive to low-accountability / low-effort folks. The
+                only way to reject the premise is to latch onto the idea that
+                "understanding" is some supernatural thing that can't arise from
+                raw mechanical memory. Which is problematic because there's
+                decades of research showing how expertise arises from having
+                lots of domain-specific information encoded into memory that is
+                well-connected and deeply ingrained.
+              </p>
+              <p>
+                (A response to the most common genuine objection: Even learning
+                to generate new ideas amounts to searching a space of
+                possibilities, combining pieces of memory in ways that haven't
+                been combined before. Now you might say "aha, the skill of
+                searching/combining is something other than memory," but let me
+                ask you: when a someone trains the skill of coming up with novel
+                ideas, such as a grad student learning to come up with research
+                ideas that contribute to the cutting edge of knowledge in the
+                field, where is that skill stored for future use? In memory.)
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </details>
     </div>
   );
 }

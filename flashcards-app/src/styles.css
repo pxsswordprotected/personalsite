@@ -69,7 +69,7 @@
     margin: 0;
     padding: 10px 24px 10px 0;
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 1rem;
     letter-spacing: 0.04em;
     color: #4a4a4a;
     field-sizing: content;
@@ -278,6 +278,95 @@ button.fc-counter-wrap svg {
         Arial,
         sans-serif;
     color: #6b6b6b;
+}
+
+.fc-about {
+    width: 100%;
+    max-width: 560px;
+    font-size: 0.95rem;
+    color: #4a4a4a;
+}
+
+.fc-about > summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+    color: #191919;
+    text-decoration: none;
+    letter-spacing: 0.025rem;
+    transition: opacity 0.15s ease;
+}
+
+.fc-about-text {
+    text-decoration: underline;
+}
+
+.fc-about > summary::-webkit-details-marker {
+    display: none;
+}
+
+.fc-about > summary:hover {
+    opacity: 0.7;
+}
+
+.fc-about > summary:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.fc-about-toggle {
+    display: inline-block;
+    width: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    font-variant-numeric: tabular-nums;
+}
+
+.fc-about-toggle::before {
+    content: "+";
+}
+
+.fc-about[open] .fc-about-toggle::before {
+    content: "−";
+}
+
+.fc-about-body {
+    margin-top: 8px;
+    line-height: 1.6;
+    letter-spacing: 0.025rem;
+}
+
+.fc-about-body p {
+    margin: 0;
+}
+
+.fc-about-divider {
+    border: 0;
+    border-top: 1px solid #e3e3e0;
+    margin: 16px 0;
+}
+
+.fc-about-a {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fc-about-quote {
+    margin: 0;
+    padding-left: 12px;
+    border-left: 1px solid #c5c5c0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fc-about-quote p {
+    margin: 0;
 }
 
 @media (max-width: 720px) {
