@@ -1,7 +1,7 @@
 .fc-app {
     max-width: 720px;
     margin: 0 auto;
-    padding: 80px 24px 48px;
+    padding: clamp(1rem, 3vh, 2rem) 24px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -275,7 +275,6 @@ button.fc-counter-wrap svg {
 
 @media (max-width: 720px) {
     .fc-app {
-        padding-top: 56px;
         gap: 20px;
     }
     .card-text {
