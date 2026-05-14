@@ -34,3 +34,9 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Gemfile
 gem "jekyll-paginate"
+
+# Ruby 3.5+ removed these from the default stdlib, but Jekyll 4.3.x still requires them.
+gem "logger"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
