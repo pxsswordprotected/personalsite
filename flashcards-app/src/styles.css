@@ -23,9 +23,16 @@
     width: 100%;
     max-width: 560px;
     font-size: 1rem;
+    letter-spacing: 0.025rem;
     text-decoration: underline;
     color: #191919;
     transition: opacity 0.15s ease;
+}
+
+@media (min-width: 48rem) {
+    .fc-home {
+        font-size: 1.125rem;
+    }
 }
 
 .fc-home:hover {
