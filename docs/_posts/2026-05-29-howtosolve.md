@@ -29,13 +29,13 @@ I believe this book has been immensely helpful for my problem solving skills. Bu
 
 In comes LLMs. Essentially, I’ve been using the core Math Academy learning loop of: learn info -> observe a new task being done correctly -> attempt the task on my own -> get feedback -> practice task until mastery. I can do this by prompting it in such a way that uses points of the book, then asking for example problems to apply the heuristics and frameworks to. For example, here's a screenshot of an output that captures my core flow (but not limited to): 
 
-<img src="docs/assets/images/solving_1.png" alt="picture of setup"/>
+<img src="/assets/images/solving_1.png" alt="picture of setup"/>
 
 The questions here are quite trivial but they are used to make sure I understand the facts I have just learned and use them in such a manner that allows me to integrate the new info into my system. 
 
 And below is a screenshot of a problem-solving workflow, applying what I just learned to more robust example (again, the problem is quite trivial and you can choose to prompt to your own example or level of expertise):
 
-<img src="docs/assets/images/solving_2.png" alt="picture of problem solving workflow"/>
+<img src="/assets/images/solving_2.png" alt="picture of problem solving workflow"/>
 
 Using these questions and examples, it is quite important to write out your answers as writing is thinking. With multiple choice, you would just be applying top-down reasoning to problems that ask for bottom-up scaffolding which would do you almost no good. As Grothendieck states: “For mathematics, it seems that writing has always been an indispensable means, regardless of who is "doing maths": doing maths is above all writing. The same is undoubtedly true of any work of discovery in which the intellect plays a major role.” The role of writing in intellectual development cannot be understated, especially when doing something as general as solving problems. 
 
