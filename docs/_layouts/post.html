@@ -18,6 +18,7 @@
             :root {
                 --px: calc(1rem / 16);
                 --section-margin-size: clamp(0.75rem, 24px, 2rem);
+                --intro-margin-size: clamp(1.5rem, 2vh, 3rem);
                 --reg-font-size: calc(16 * var(--px));
                 --header-font-size: calc(20 * var(--px));
                 --text-color-500: #191919;
@@ -25,7 +26,9 @@
             }
 
             html {
-                margin: clamp(1rem, 3vh, 2rem);
+                padding: clamp(1rem, 3vh, 2rem);
+                min-height: 100vh;
+                overflow-y: scroll;
                 font-family:
                     "PPNeueMontreal-Book",
                     system-ui,
@@ -47,13 +50,17 @@
                 box-sizing: inherit;
             }
 
+            body {
+                margin: 0;
+            }
+
             /* Top home button */
             .home-button-top {
                 display: inline-block;
                 font-size: 1rem;
                 text-decoration: underline;
                 color: var(--text-color-500);
-                margin-bottom: clamp(1.5rem, 4vh, 3rem);
+                margin-bottom: var(--intro-margin-size);
             }
 
             .home-button-top:hover {
@@ -130,7 +137,7 @@
                 }
 
                 html {
-                    margin: 2rem;
+                    padding: calc(1rem * 2);
                 }
             }
         </style>
