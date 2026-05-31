@@ -3,6 +3,8 @@ layout: post
 title: "Processes Over Content (On What Understanding Entails)"
 ---
 
+"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes." — Marcel Proust
+
 There's this great <a href="https://x.com/nosilverv/status/1969356527732511130?s=20">tweet by @nosilverv</a> in which he outlines a "jumping" mechanism that happens in consciousness, where a new type of Thing is exposed to you and suddenly another dimension of reality is opened up.
 <br><br>
 <img src="/assets/images/nosilver2.png" alt="nosilverv tweet on jumping in consciousness">
