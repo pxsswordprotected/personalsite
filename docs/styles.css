@@ -128,6 +128,28 @@ li + li {
     margin-top: var(--link-margin-size);
 }
 
+.pages--list li {
+    width: fit-content;
+}
+
+.pages--list li::after {
+    content: "";
+    display: inline-block;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid var(--text-color-500);
+    vertical-align: middle;
+}
+
+.pages--list li:has(> .menu-item:hover)::after,
+.pages--list li:has(> .menu-item:focus-visible)::after {
+    visibility: visible;
+}
+
 footer {
     margin-top: var(--section-margin-size);
 }
