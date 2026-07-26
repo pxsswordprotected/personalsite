@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/assets/css/type-scale.css" />
         <style>
             @font-face {
                 font-family: "PPNeueMontreal-Book";
@@ -15,12 +16,9 @@
             }
 
             :root {
-                --px: calc(1rem / 16);
                 --link-margin-size: clamp(0.75rem, 2vh, 1.25rem);
                 --intro-margin-size: clamp(1.5rem, 4vh, 3rem);
                 --section-margin-size: clamp(0.75rem, 24px, 2rem);
-                --reg-font-size: calc(16 * var(--px));
-                --header-font-size: calc(20 * var(--px));
                 --text-color-500: #191919;
                 --bg-color-light-500: #fdfdfd;
             }
@@ -37,7 +35,6 @@
                     Roboto,
                     Arial,
                     sans-serif;
-                font-size: var(--reg-font-size);
                 box-sizing: border-box;
                 color: var(--text-color-500);
                 background-color: var(--bg-color-light-500);
@@ -63,7 +60,7 @@
             /* Top home button */
             .home-button-top {
                 display: inline-block;
-                font-size: 1rem;
+                font-size: var(--font-size-body);
                 text-decoration: underline;
                 color: var(--text-color-500);
                 margin-bottom: var(--intro-margin-size);
@@ -75,13 +72,13 @@
 
             .heading {
                 margin: 0 0 clamp(0.5rem, 1vh, 0.75rem) 0;
-                font-size: var(--header-font-size);
+                font-size: var(--font-size-heading);
                 font-weight: normal;
             }
 
             .subheading {
                 margin: 0 0 var(--section-margin-size) 0;
-                font-size: 1rem;
+                font-size: var(--font-size-body);
                 opacity: 0.75;
             }
 
@@ -92,7 +89,7 @@
             .item a {
                 text-decoration: underline;
                 color: var(--text-color-500);
-                font-size: 1rem;
+                font-size: var(--font-size-body);
             }
 
             .item a:visited {
@@ -106,15 +103,10 @@
             .description {
                 margin: clamp(0.25rem, 0.5vh, 0.5rem) 0 0 0;
                 opacity: 0.75;
-                font-size: 1rem;
+                font-size: var(--font-size-body);
             }
 
             @media (min-width: 48rem) {
-                :root {
-                    --reg-font-size: calc(18 * var(--px));
-                    --header-font-size: calc(20 * var(--px));
-                    --section-margin-size: clamp(0.75rem, 24px, 2rem);
-                }
 
                 html {
                     padding: calc(1rem * 2);

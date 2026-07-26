@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Principles</title>
+        <link rel="stylesheet" href="/assets/css/type-scale.css" />
         <style>
             @font-face {
                 font-family: "PPNeueMontreal-Book";
@@ -16,12 +17,9 @@
             }
 
             :root {
-                --px: calc(1rem / 16);
                 --link-margin-size: clamp(0.75rem, 2vh, 1.25rem);
                 --intro-margin-size: clamp(1.5rem, 4vh, 3rem);
                 --section-margin-size: clamp(2rem, 6vh, 4.5rem);
-                --reg-font-size: 1rem;
-                --header-font-size: 1.25rem;
                 --text-color-500: #191919;
                 --bg-color-light-500: #fdfdfd;
             }
@@ -37,7 +35,6 @@
                     Roboto,
                     Arial,
                     sans-serif;
-                font-size: var(--reg-font-size);
                 box-sizing: border-box;
                 color: var(--text-color-500);
                 background-color: var(--bg-color-light-500);
@@ -62,7 +59,7 @@
 
             header,
             .nav--header {
-                font-size: 1rem;
+                font-size: var(--font-size-body);
             }
 
             main {
@@ -116,10 +113,6 @@
 
             /* desktop */
             @media (min-width: 48rem) {
-                :root {
-                    --reg-font-size: 1.125rem;
-                    --header-font-size: 1.25rem;
-                }
                 html {
                     padding: calc(1rem * 2);
                 }

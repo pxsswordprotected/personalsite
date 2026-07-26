@@ -9,18 +9,15 @@
 }
 
 :root {
-    --px: calc(1rem / 16);
     --link-margin-size: clamp(0.75rem, 2vh, 1.25rem);
     --intro-margin-size: clamp(1.5rem, 4vh, 3rem);
     --section-margin-size: clamp(2rem, 6vh, 4.5rem);
-    --reg-font-size: 1rem;
-    --header-font-size: 1.25rem;
     --text-color-500: #191919;
     --bg-color-light-500: #fdfdfd;
 }
 
 html {
-    padding: clamp(1rem, 3vh, 2rem);
+    padding: clamp(1rem, 3vh, 2rem) clamp(1rem, 3vh, 2rem) 0;
     min-height: 100vh;
     font-family:
         "PPNeueMontreal-Book",
@@ -30,11 +27,11 @@ html {
         Roboto,
         Arial,
         sans-serif;
-    font-size: var(--reg-font-size);
     box-sizing: border-box;
     color: var(--text-color-500);
     background-color: var(--bg-color-light-500);
     letter-spacing: 0.025rem;
+    line-height: 1.38;
 }
 
 *,
@@ -47,20 +44,44 @@ body {
     margin: 0;
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    right: 0;
+    bottom: 0;
+        left: 0;
+        z-index: -10;
+        height: 30vh;
+    opacity: 0  ;
+    pointer-events: none;
+    background: url("/texture_site1.png") top / contain no-repeat;
+    mix-blend-mode: multiply;
+    transform: translateY(-280%);
+}
+
 .page {
     margin-inline: auto;
     max-width: 60ch;
-    min-height: calc(100vh - (2 * clamp(1rem, 3vh, 2rem)));
+    min-height: calc(100vh - clamp(1rem, 3vh, 2rem));
+    position: relative;
+    z-index: 1;
 }
 
-header,
 .nav--header {
-    font-size: var(--header-font-size);
+    font-size: var(--font-size-heading);
 }
 
-.age {
-    margin-left: calc(24 * var(--px));
+.tagline {
+    margin: 0;
+    font-size: calc(var(--font-size-body) - 0.125rem);
 }
+
+.tagline-letters {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 
 main {
     margin-top: 40px;
@@ -77,6 +98,19 @@ blockquote {
     border-left: none;
     font-style: normal;
     margin-bottom: var(--section-margin-size);
+}
+
+.quote em {
+    padding: 2px 4px 2px 2px;
+    color: #fff;
+    background-color: #000;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.quote em::selection {
+    color: #000;
+    background-color: #fff;
 }
 
 ul {
@@ -131,8 +165,9 @@ address > a:hover {
 
 .corner-gif {
     pointer-events: none;
-    width: 120px;
-    display: block;
+    mix-blend-mode: multiply;
+    width: min(120px, 30vw);
+    display: none;
     position: fixed;
     right: 24px;
     bottom: 24px;
@@ -146,13 +181,13 @@ address > a:hover {
 
 /* desktop */
 @media (min-width: 48rem) {
-    :root {
-        --reg-font-size: 1.125rem;
-        --header-font-size: 1.25rem;
-    }
 
     html {
-        padding: calc(1rem * 2);
+        padding: 2rem 2rem 0;
+    }
+
+    .page {
+        min-height: calc(100vh - 2rem);
     }
 }
 

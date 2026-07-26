@@ -1,3 +1,26 @@
+:root {
+    --font-size-body: clamp(0.875rem, calc(0.8385417rem + 0.1822917vw), 0.984375rem);
+    --font-size-heading: clamp(1.09375rem, calc(1.0208333rem + 0.3645833vw), 1.3125rem);
+    --font-size-title: clamp(1.3125rem, calc(1.1666667rem + 0.7291667vw), 1.75rem);
+    --font-size-display: clamp(1.75rem, calc(1.4583333rem + 1.4583333vw), 2.625rem);
+}
+
+body {
+    font-size: var(--font-size-body);
+}
+
+.fc-app,
+.fc-home,
+.fc-select,
+.fc-counter,
+.card-label,
+.card-code,
+.fc-controls button,
+.fc-hint,
+.fc-about {
+    font-size: var(--font-size-body);
+}
+
 .fc-app {
     max-width: 60ch;
     margin-inline: auto;
@@ -21,7 +44,6 @@
 
 .fc-home {
     width: 100%;
-    font-size: 1rem;
     letter-spacing: 0.025rem;
     text-decoration: underline;
     color: #191919;
@@ -65,7 +87,6 @@
     margin: 0;
     padding: 10px 24px 10px 0;
     font-family: inherit;
-    font-size: 1rem;
     letter-spacing: 0.025rem;
     color: #4a4a4a;
     field-sizing: content;
@@ -86,7 +107,6 @@
 }
 
 .fc-counter {
-    font-size: 0.95rem;
     letter-spacing: 0.025rem;
     text-transform: none;
 }
@@ -176,14 +196,13 @@ button.fc-counter-wrap svg {
     position: absolute;
     top: 14px;
     left: 18px;
-    font-size: 0.75rem;
     letter-spacing: 0.025rem;
     color: #999;
     text-transform: uppercase;
 }
 
 .card-text {
-    font-size: 1.5rem;
+    font-size: var(--font-size-title);
     line-height: 1.4;
     white-space: pre-wrap;
     user-select: text;
@@ -193,7 +212,6 @@ button.fc-counter-wrap svg {
 
 .card-code {
     font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
-    font-size: 0.85em;
     background: #ececea;
     padding: 2px 6px;
     border-radius: 3px;
@@ -215,7 +233,6 @@ button.fc-counter-wrap svg {
 
 .fc-controls button {
     font-family: inherit;
-    font-size: 0.95rem;
     letter-spacing: 0.025rem;
     padding: 14px 0;
     border: 0;
@@ -260,7 +277,6 @@ button.fc-counter-wrap svg {
 }
 
 .fc-hint {
-    font-size: 0.75rem;
     color: #888;
     letter-spacing: 0.025rem;
 }
@@ -282,7 +298,6 @@ button.fc-counter-wrap svg {
 .fc-about {
     width: 100%;
     max-width: 560px;
-    font-size: 0.95rem;
     color: #4a4a4a;
 }
 
@@ -371,9 +386,6 @@ button.fc-counter-wrap svg {
 @media (max-width: 720px) {
     .fc-app {
         gap: 20px;
-    }
-    .card-text {
-        font-size: 1.15rem;
     }
     .card-face {
         padding: 28px 24px;
