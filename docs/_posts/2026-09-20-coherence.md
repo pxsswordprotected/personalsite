@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Coherence as a Univrsal Property of Consciousness"
+title: "Coherence as a Universal Property of Consciousness"
 ---
 
 It would not surprise me if coherence was another property that could be found in a mathematical representation of consciousness, alongside symmetry.
@@ -41,7 +41,7 @@ There are two questions that are downstream of all of this. The first being, wha
 
 For the first question, I think it is possible to examine phenomenological perception and say gestalts are the different parts at play here. If you look at the image below, there are parts that clearly do not form expected gestalts. The image is presented to contain things that are unrecognizable, but the thing is, some things are clearly identifiable, like shapes and colors and vibes. But, these parts are clearly not very compatible, resulting in visual friction when our systems try to put these different parts together. I believe in states of low coherence, this is happening across experience, just in a form that is much more implicit and diffuse. Because the image is so low in coherence, there is no unifying organization driving the different parts to be compatible. And because there is no unifying organization, symmetry is much less likely to occur, which results in lower valence. Now, this does not tell us the formal structure driving these events in consciousness, but it's still a pointer. 
 
-![A visually fragmented scene with low coherence and low symmetry](/assets/images/low-coh-low-sym.jpg)
+![A visually fragmented scene w ith low coherence and low symmetry](/assets/images/low-coh-low-sym.jpg)
 
 For the second question, I don't really know, and I don't intend to explore this since I'm not a mathematician and I would butcher the math, but I still believe this is a strong candidate property of consciousness alongside symmetry. 
 
