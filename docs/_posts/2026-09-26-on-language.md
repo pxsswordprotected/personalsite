@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On Language"
+title: "Vascular Stances and Patterns of Tension Constrain Linguistic Output: On Language"
 ---
 
 Below is a quote tweet (see below for prerequisite original tweet) I have on language that I think is quite strong so I wanted to externalize it here:
