@@ -3,7 +3,7 @@ layout: post
 title: "On Language"
 ---
 
-Below is a quote tweet I have on language that I think is quite strong so I wanted to externalize it here:
+Below is a quote tweet (see below for prerequisite original tweet) I have on language that I think is quite strong so I wanted to externalize it here:
 
 this is a very interesting idea when examining the role(s) of language and behavior.
 
