@@ -108,10 +108,6 @@ blockquote {
     box-decoration-break: clone;
 }
 
-.quote em::selection {
-    color: #000;
-    background-color: #fff;
-}
 
 ul {
     list-style: none;
@@ -197,8 +193,8 @@ address > a:hover {
 }
 
 ::selection {
-    background-color: var(--text-color-500);
-    color: var(--bg-color-light-500);
+    background-color: #000;
+    color: #fff;
 }
 
 /* desktop */
