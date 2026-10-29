@@ -166,7 +166,7 @@ a:visited {
 }
 
 a:hover {
-    opacity: 0.7;
+    color: var(--signature-blue);
 }
 
 a:focus-visible {

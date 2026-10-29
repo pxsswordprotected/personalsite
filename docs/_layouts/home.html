@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Writing</title>
         <link rel="stylesheet" href="/assets/css/type-scale.css" />
+        <link rel="stylesheet" href="/assets/css/colors.css" />
         <style>
             @font-face {
                 font-family: "PPNeueMontreal-Book";
@@ -68,7 +69,7 @@
             }
 
             .home-button-top:hover {
-                opacity: 0.7;
+                color: var(--signature-blue);
             }
 
             .heading {
@@ -98,7 +99,20 @@
             }
 
             .item a:hover {
-                opacity: 0.7;
+                color: var(--signature-blue);
+            }
+
+            .item-link::after {
+                content: "+";
+                display: inline-block;
+                visibility: hidden;
+                margin-left: 4px;
+                color: var(--text-color-500);
+            }
+
+            .item-link:has(> a:hover)::after,
+            .item-link:has(> a:focus-visible)::after {
+                visibility: visible;
             }
 
             a:focus-visible {
@@ -132,21 +146,25 @@
             {% assign pinned_posts = site.posts | where: 'pinned', true | sort:
             'date' | reverse %} {% for post in pinned_posts %}
             <div class="item">
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <span class="item-link"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></span>
                 <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
             </div>
             {% endfor %}
 
             <div class="item">
-                <a href="{{ site.baseurl }}/pd-post-series/"
-                    >One Post a Day on Design Engineering</a
+                <span class="item-link"
+                    ><a href="{{ site.baseurl }}/pd-post-series/"
+                        >One Post a Day on Design Engineering</a
+                    ></span
                 >
                 <p class="description">One Post a Day on Design Engineering</p>
             </div>
 
             <div class="item">
-                <a href="{{ site.baseurl }}/hour-day-series/"
-                    >Design Engineering Series</a
+                <span class="item-link"
+                    ><a href="{{ site.baseurl }}/hour-day-series/"
+                        >Design Engineering Series</a
+                    ></span
                 >
                 <p class="description">One Hour a Day of Design Engineering</p>
             </div>
@@ -156,7 +174,7 @@
             'post.pinned != true' | where_exp: 'post', 'post.series_name == nil'
             | sort: 'date' | reverse %} {% for post in regular_posts %}
             <div class="item">
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <span class="item-link"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></span>
                 <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
             </div>
             {% endfor %}

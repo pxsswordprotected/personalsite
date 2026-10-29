@@ -1,0 +1,7 @@
+:root {
+  --signature-blue: #457FEA;
+}
+
+a:hover {
+  color: var(--signature-blue);
+}
