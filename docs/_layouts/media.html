@@ -53,6 +53,17 @@ html {
   .menu-item:hover {
     color: var(--signature-blue);
   }
+  .menu-item::after {
+    content: "\2212";
+    display: inline-block;
+    visibility: hidden;
+    margin-left: 4px;
+    color: #191919;
+  }
+  .menu-item:hover::after,
+  .menu-item:focus-visible::after {
+    visibility: visible;
+  }
 </style>
 
 <link rel="preconnect" href="https://www.psswordprotectd.com" />

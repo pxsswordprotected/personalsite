@@ -65,6 +65,19 @@
                 color: var(--signature-blue);
             }
 
+            .home-button-top::after {
+                content: "\2212";
+                display: inline-block;
+                visibility: hidden;
+                margin-left: 4px;
+                color: var(--text-color-500);
+            }
+
+            .home-button-top:hover::after,
+            .home-button-top:focus-visible::after {
+                visibility: visible;
+            }
+
             ::selection {
                 background-color: var(--text-color-500);
                 color: var(--bg-color-light-500);

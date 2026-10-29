@@ -41,6 +41,17 @@
       opacity: 1;
       color: var(--signature-blue);
     }
+    .fc-home::after {
+      content: "\2212";
+      display: inline-block;
+      visibility: hidden;
+      margin-left: 4px;
+      color: #191919;
+    }
+    .fc-home:hover::after,
+    .fc-home:focus-visible::after {
+      visibility: visible;
+    }
     @media (min-width: 48rem) {
       html {
         padding: calc(1rem * 2);

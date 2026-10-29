@@ -63,6 +63,19 @@
                 font-size: var(--font-size-body);
             }
 
+            .nav--header a::after {
+                content: "\2212";
+                display: inline-block;
+                visibility: hidden;
+                margin-left: 4px;
+                color: var(--text-color-500);
+            }
+
+            .nav--header a:hover::after,
+            .nav--header a:focus-visible::after {
+                visibility: visible;
+            }
+
             main {
                 margin-top: var(--section-margin-size);
             }
