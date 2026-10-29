@@ -2,6 +2,16 @@
   --signature-blue: #457FEA;
 }
 
+a {
+  text-underline-offset: 0.2em;
+}
+
 a:hover {
   color: var(--signature-blue);
+}
+
+p,
+li,
+blockquote {
+  text-wrap: pretty;
 }
