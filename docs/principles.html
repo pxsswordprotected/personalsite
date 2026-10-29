@@ -77,11 +77,15 @@
             }
 
             main {
-                margin-top: var(--section-margin-size);
+                margin-top: clamp(1.5rem, 2vh, 3rem);
             }
 
             .principles-intro {
                 margin-bottom: var(--intro-margin-size);
+            }
+
+            .principles-intro p {
+                margin-top: 0;
             }
 
             .principles-section {
