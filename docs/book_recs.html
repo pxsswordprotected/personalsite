@@ -32,7 +32,7 @@
 }
 
 html {
-  padding: clamp(1rem, 3vh, 2rem);
+  padding: clamp(16px, 3vh, 32px);
   min-height: 100vh;
   font-family: "PPNeueMontreal-Book", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-size: var(--reg-font-size);
@@ -59,7 +59,7 @@ header {
 .container {
   margin-inline: auto;
   max-width: 97ch;  
-  padding: clamp(1rem, 3vw, 2rem); 
+  padding: 0 clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
 }
 
 .gri-container {
@@ -114,7 +114,7 @@ a:hover {
   }
   
   html {
-    padding: calc(1rem * 2);
+    padding: 32px;
   }
 }
 
@@ -157,7 +157,7 @@ a:hover {
     <!-- <header>Books I Recommend</header> -->
 
     <div class="container">
-            <div class="home--div"><a href="index.html" class="home-button">Home</a></div>
+            <div class="home--div"><a href="/" class="home-button">Home</a></div>
 
             <header>Books I Recommend</header>
 
