@@ -126,6 +126,11 @@ blockquote {
     text-decoration: none;
 }
 
+.quote a:hover em,
+.quote a:focus-visible em {
+    background-color: #3f3f3f;
+}
+
 
 ul {
     list-style: none;
