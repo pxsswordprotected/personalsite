@@ -2,8 +2,10 @@
 layout: post
 title:  "On Staying Static"
 ---
-<blockquote cite="https://quoteinvestigator.com/2018/02/20/greater/"><em>The purpose of life is to be defeated by greater and greater things.</em></blockquote>
-—Rainer Maria Rilke
+<blockquote cite="https://quoteinvestigator.com/2018/02/20/greater/">
+  <p>The purpose of life is to be defeated by greater and greater things.</p>
+  <footer>— Rainer Maria Rilke</footer>
+</blockquote>
 <br> <br>
 
 
