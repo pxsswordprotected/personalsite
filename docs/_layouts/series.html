@@ -123,9 +123,10 @@
     <a href="{{ site.baseurl }}/my_writing/" class="home-button-top">Writing</a>
 
     <div class="heading">{{ page.title }}</div>
-    <div class="subheading">One Hour a Day of Design Engineering</div>
-   
-    {% assign series_posts = site.posts | where: 'series_name', 'One Hour a Day of Design Engineering' | sort: 'date' | reverse %}
+    <div class="subheading">{{ page.description }}</div>
+
+    {% capture series_dir %}_posts/{{ page.slug }}/{% endcapture %}
+    {% assign series_posts = site.posts | where_exp: 'post', 'post.relative_path contains series_dir' | sort: 'date' | reverse %}
     {% for post in series_posts %}
       <div class="item">
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>

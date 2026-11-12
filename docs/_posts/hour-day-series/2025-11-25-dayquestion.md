@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "One Hour a Day of Design Engineering - Days ??-??"
-series_name: One Hour a Day of Design Engineering
 ---
 
 It's been a long time since my last post. But worry not, I've still been working hard. I finished full stack open a while ago and have learned a bit of tailwind, tho definietly not good at it yet. Today I sat down and designed some product for 2-3 hours. I forgot how good designing feels. It feels so natural to me, like alignemnet. Sure some things I do not enjoy, but even then I can find the wonder in those moments. It's a reminder as to why I'm learning this stuff. Automatic skills feel wonderful. I want to engineer like I can design, like my brain works when I am designing.

@@ -18,6 +18,20 @@ paginate_path: /page:num/
 permalink: pretty # <- Fixed line
 timezone: America/Chicago
 
+# Series: each file in _series/ makes a page at /<filename>/ listing every post
+# in the matching _posts/<filename>/ folder.
+collections:
+  series:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: series
+    values:
+      layout: series
+
 include:
   - Media
   - Media/images

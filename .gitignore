@@ -1,3 +1,4 @@
 flashcards-app/node_modules
 flashcards-app/dist
 *.log
+SERIES.md

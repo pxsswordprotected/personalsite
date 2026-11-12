@@ -164,41 +164,24 @@
             </div>
             {% endfor %}
 
+            <!-- Series (one per file in _series/) -->
+            {% for series in site.series %}
             <div class="item">
-                <span class="item-link"
-                    ><a href="{{ site.baseurl }}/pd-post-series/"
-                        >One Post a Day on Design Engineering</a
-                    ></span
-                >
-                <p class="description">One Post a Day on Design Engineering</p>
+                <span class="item-link"><a href="{{ site.baseurl }}{{ series.url }}">{{ series.title }}</a></span>
+                <p class="description">{{ series.description }}</p>
             </div>
+            {% endfor %}
 
-            <div class="item">
-                <span class="item-link"
-                    ><a href="{{ site.baseurl }}/hour-day-series/"
-                        >Design Engineering Series</a
-                    ></span
-                >
-                <p class="description">One Hour a Day of Design Engineering</p>
-            </div>
-
-            <div class="item">
-                <span class="item-link"
-                    ><a href="{{ site.baseurl }}/fine-min-day-series/"
-                        >My Day in Five Minutes</a
-                    ></span
-                >
-                <p class="description">My Day in Five Minutes</p>
-            </div>
-
-            <!-- Regular Posts (excluding pinned and series posts) -->
+            <!-- Regular Posts (excluding pinned posts and posts in _posts/ subfolders, which belong to a series) -->
             {% assign regular_posts = site.posts | where_exp: 'post',
-            'post.pinned != true' | where_exp: 'post', 'post.series_name == nil'
-            | sort: 'date' | reverse %} {% for post in regular_posts %}
+            'post.pinned != true' | sort: 'date' | reverse %} {% for post in regular_posts %}
+            {% assign path_parts = post.relative_path | split: '/' %}
+            {% if path_parts.size == 2 %}
             <div class="item">
                 <span class="item-link"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></span>
                 <p class="description">{{ post.date | date: "%B %d, %Y" }}</p>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </body>
