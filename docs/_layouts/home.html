@@ -182,6 +182,15 @@
                 <p class="description">One Hour a Day of Design Engineering</p>
             </div>
 
+            <div class="item">
+                <span class="item-link"
+                    ><a href="{{ site.baseurl }}/fine-min-day-series/"
+                        >My Day in Five Minutes</a
+                    ></span
+                >
+                <p class="description">My Day in Five Minutes</p>
+            </div>
+
             <!-- Regular Posts (excluding pinned and series posts) -->
             {% assign regular_posts = site.posts | where_exp: 'post',
             'post.pinned != true' | where_exp: 'post', 'post.series_name == nil'
